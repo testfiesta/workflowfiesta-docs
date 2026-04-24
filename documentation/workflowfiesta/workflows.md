@@ -13,6 +13,7 @@ A workflow is a multi-step automation that runs on a schedule, responds to an ev
 ## What Is a Workflow?
 
 A workflow is a sequence of steps that runs automatically. Each step can:
+
 - **Invoke an agent** — pass it a prompt and use its output
 - **Run a script** — execute Python, bash, or any code in a container
 - **Make an HTTP call** — send data to or receive data from any external service
@@ -33,6 +34,103 @@ WorkflowFiesta will ask:
 
 Answer the questions, and the workflow is built and scheduled. It runs automatically without any further action from you.
 
+---
+
+## Two Automation Patterns
+
+WorkflowFiesta supports two distinct patterns for building automation. Understanding the difference helps you pick the right one.
+
+{% tabs %}
+{% tab title="Sequential Workflow" %}
+### Pattern 1 — Multi-Agent Workflow
+
+A YAML workflow where each step calls a different specialist agent in order (or in parallel). The workflow is the conductor — it decides what runs, when, and in what order.
+
+**Best for:**
+- A defined process with a clear start and end
+- Steps that depend on each other's output
+- Repeatable pipelines you want to schedule or trigger automatically
+
+**Example — Blog Pipeline:**
+
+```
+SERP Analyst → Keyword Auditor → SEO Architect → Copywriter →
+Humanizer → Fact Checker → SEO Auditor → SEO Fixer →
+Cover Photo Builder → Article Reviewer → GitHub Push
+```
+
+Each agent receives the previous agent's output. The workflow is fixed and predictable.
+
+**When to use:** Anytime the process is predictable and the steps are known upfront.
+{% endtab %}
+
+{% tab title="Orchestrator Agent" %}
+### Pattern 2 — Orchestrator Agent + Sub-Agents
+
+A master agent that dynamically invokes specialist sub-agents based on what's needed — deciding at runtime which agents to call and in what order.
+
+**Best for:**
+- Processes where the path is not fixed (decisions need to be made mid-run)
+- Interactive workflows where a human is in the loop
+- Complex tasks where the orchestrator needs to reason about what to do next
+
+**Example — Agent Architect Pipeline:**
+
+```
+Agent Architect (master)
+  ├── calls Design Auditor
+  ├── calls Edge Case Analyst
+  └── calls Enhancement Scout
+         ↓
+  synthesizes all three → presents to user → builds on approval
+```
+
+The master agent decides what to call, synthesizes the results, and adapts based on what it finds.
+
+**When to use:** When the process requires judgment, branching, or dynamic routing.
+{% endtab %}
+
+{% tab title="Combined" %}
+### Pattern 3 — Workflow + Orchestrator
+
+You can combine both patterns. A scheduled workflow triggers an orchestrator agent, which then dynamically calls sub-agents based on what it discovers.
+
+**Example — Weekly CMO Report:**
+
+```
+Scheduled Trigger (Monday 7am)
+  → Report Orchestrator Agent
+      ├── calls Intercom Analytics Agent
+      ├── calls Jira Analytics Agent
+      ├── calls Google Ads Agent
+      └── calls GA4 Agent
+           ↓
+      synthesizes → generates HTML report → emails to team
+```
+
+The workflow handles scheduling and delivery. The orchestrator handles the reasoning and routing inside.
+
+**When to use:** Scheduled pipelines that need intelligent, adaptive behavior inside them.
+{% endtab %}
+{% endtabs %}
+
+### Which Pattern Should You Use?
+
+| Situation | Use |
+|---|---|
+| Fixed steps, always in the same order | Sequential Workflow |
+| Scheduled / runs automatically | Sequential Workflow |
+| Steps depend on previous output | Sequential Workflow |
+| Path depends on conditions or user input | Orchestrator Agent |
+| Human approval needed mid-process | Orchestrator Agent |
+| Scheduled pipeline with adaptive behavior inside | Workflow + Orchestrator |
+
+{% hint style="info" %}
+**Start with a workflow** if you can draw a flowchart of the steps upfront. **Use an orchestrator agent** when the process needs to think and adapt. Both patterns are first-class in WorkflowFiesta.
+{% endhint %}
+
+---
+
 ## Trigger Types
 
 {% tabs %}
@@ -49,6 +147,7 @@ Run a workflow at a fixed time or interval.
 
 Just describe the schedule in plain language when creating the workflow.
 {% endtab %}
+
 {% tab title="Webhook" %}
 ### Webhook Triggers
 
@@ -62,6 +161,7 @@ Run a workflow when an external system sends an HTTP request to the workflow's u
 
 WorkflowFiesta generates a unique webhook URL for each workflow. Share it with the external system and the workflow fires automatically.
 {% endtab %}
+
 {% tab title="Chat" %}
 ### Chat Triggers
 
@@ -72,6 +172,7 @@ Run a workflow directly from a conversation using a slash command.
 
 See [Custom Commands](custom-commands.md) to set up slash commands for your workflows.
 {% endtab %}
+
 {% tab title="API" %}
 ### API Triggers
 
@@ -83,6 +184,8 @@ Useful for:
 - CI/CD integrations
 {% endtab %}
 {% endtabs %}
+
+---
 
 ## Workflow Steps
 
@@ -120,6 +223,8 @@ An HTTP step makes an outbound request to any URL — a Slack webhook, a CRM API
   body: '{ "text": "{{ steps.summarize.output }}" }'
 ```
 
+---
+
 ## Passing Data Between Steps
 
 Steps reference each other's output using template syntax:
@@ -130,44 +235,47 @@ Steps reference each other's output using template syntax:
 
 The output of one step flows automatically into the next. You can reference any previous step's output anywhere in a subsequent step's prompt, script, or HTTP body.
 
+You can also reference trigger inputs:
+
+```
+{{ trigger.input.field_name }}
+```
+
+---
+
 ## Credentials in Workflows
 
-If a workflow step needs to authenticate with an external service, it uses credentials stored in WorkflowFiesta's secure credential store. Credentials are injected as environment variables at runtime — they never appear in the workflow definition or logs.
+If a workflow step needs access to an external service, credentials are injected securely — never hardcoded.
 
-> "Add a step that sends the report via Gmail."
+> "This workflow needs to send emails via Gmail. How do I connect it?"
 
-WorkflowFiesta will check if Gmail credentials exist. If not, it will open a secure form to collect them before adding the step.
+WorkflowFiesta will prompt you to add your Gmail credentials through a secure form. Once saved, they are referenced in the workflow automatically and never exposed in logs or code.
 
-See [Credentials](credentials.md).
+See [Credentials](credentials.md) for how credential storage works.
+
+---
 
 ## Monitoring Workflow Runs
 
-Every time a workflow runs, a run record is created. You can see:
-- When it ran and how long it took
-- The output of each step
-- Any errors that occurred
-- The full agent conversation for agent steps
+Every workflow run is logged. From the **Workflows** section of the platform you can:
 
-If a workflow fails, WorkflowFiesta will show you exactly which step failed and why.
+- See a history of every run — when it ran, how long it took, whether it succeeded
+- Drill into any run to see each step's output
+- View agent reasoning and tool calls within a step
+- Identify exactly where a failure occurred
 
-## Frequently Asked Questions
+{% hint style="warning" %}
+**Workflow runs are asynchronous.** After triggering a workflow, WorkflowFiesta will notify you when it completes. You do not need to wait or watch — it runs in the background.
+{% endhint %}
 
-<details>
-<summary>Can a workflow call multiple agents?</summary>
-Yes. A workflow can have as many agent steps as needed. Each agent step can call a different agent. This is how complex multi-agent pipelines work — a research agent gathers data, a writing agent drafts content, a review agent checks it, and a publishing agent sends it.
-</details>
+---
 
-<details>
-<summary>Can workflows trigger other workflows?</summary>
-Yes, via HTTP steps. One workflow can POST to another workflow's webhook URL to chain them together.
-</details>
+## What to Read Next
 
-<details>
-<summary>What happens if a step fails?</summary>
-The workflow stops at the failed step and logs the error. You can view the failure in the run history, fix the issue, and re-run from the beginning.
-</details>
-
-<details>
-<summary>Can I test a workflow before scheduling it?</summary>
-Yes. You can trigger any workflow manually from chat or from the workflow detail page to test it before enabling the schedule.
-</details>
+| Topic | Link |
+|---|---|
+| Build your first workflow | [Quickstart](../getting-started/quickstart.md) |
+| Understand agent steps | [Agents](agents.md) |
+| Connect external services | [Credentials](credentials.md) |
+| Run scripts on your machine | [Runner](runner.md) |
+| Add slash command triggers | [Custom Commands](custom-commands.md) |

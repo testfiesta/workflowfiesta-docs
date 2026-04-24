@@ -4,7 +4,7 @@ icon: user-hat-tie
 
 # Agents
 
-An agent is an AI specialist you create through conversation. It has a defined purpose, a personality, a set of capabilities, and access to the tools it needs to do its job.
+An agent is an AI specialist you create through conversation. It has a defined purpose, a set of instructions, and access to the tools it needs to do its job.
 
 {% hint style="success" %}
 **Agents are created through conversation.** You don't fill out a form or write a config file. You describe what you want, and WorkflowFiesta builds it with you.
@@ -41,7 +41,7 @@ WorkflowFiesta will ask clarifying questions:
 - Does it need access to your CRM?
 - Should it be aware of your product's pricing and positioning?
 
-Answer the questions, and the agent is created. It's available to your team immediately.
+Answer the questions, and the agent is created. It is available to your team immediately.
 
 {% hint style="info" %}
 **The more specific you are, the better the agent.** "Write emails" creates a generic agent. "Write cold outreach emails for a B2B SaaS product targeting QA engineers, using a problem-first approach, under 150 words" creates a specialist.
@@ -59,25 +59,90 @@ Or be more direct:
 
 WorkflowFiesta will show you a preview of the change and ask for confirmation before applying it.
 
-## Agent Skills
+---
 
-Skills extend agent behavior — making it consistent, efficient, and reusable across your organization. There are two types:
+## Agent Capabilities
 
-**Prompt skills** inject additional instructions into the agent's system prompt. They encode domain expertise, style rules, or institutional knowledge so the agent behaves correctly every time without re-prompting.
+An agent's ability to take action comes from its **platform access level** and **available tools** — not from skills. An agent with the right access level can already:
 
-**Script skills** package a specific script the agent can execute — for repeatable tasks like querying an API, processing data, or reading files.
+- Run bash scripts and execute code
+- Call external APIs
+- Send emails via Gmail or Outlook
+- Create and update Jira tickets
+- Read files from your local machine (with the Runner installed)
+- Search the web
+- Trigger and call other agents
 
-{% hint style="info" %}
-Skills don't unlock capabilities an agent doesn't otherwise have. An agent's ability to take action — run code, call APIs, send emails, create tickets — comes from its platform access level and available tools. Skills make behavior consistent and reusable.
-{% endhint %}
+**Skills** extend this by providing consistent, reusable instructions or pre-built scripts — but they do not gate what an agent is capable of. See [Skills](skills.md) for how skills work.
 
-To add a skill to an agent:
+### Platform Access Levels
 
-> "Add the Marketing Copy skill to the Content Agent so it always follows our brand voice."
+| Level | What the agent can do |
+|---|---|
+| **Read** | Read platform resources — list agents, workflows, skills |
+| **Write** | Create and update platform resources with user confirmation |
+| **Admin** | Full access — create, update, delete without confirmation gates |
+| **None** | Conversational only — no platform tool access |
 
-> "Give the Support Agent the Jira skill so it can create tickets from conversations."
+---
 
-See [Skills](skills.md) for the full reference.
+## Agent Patterns
+
+{% tabs %}
+{% tab title="Specialist" %}
+### Specialist Agent
+
+A focused agent with deep expertise in one domain. Given a clear, narrow system prompt and the tools it needs for that domain.
+
+**Examples:**
+- SEO Auditor — reviews articles against a 100-point SEO checklist
+- Jira Agent — manages tickets, sprints, and boards via the Jira API
+- Keyword Researcher — pulls search volume data and categorizes keywords by tier
+
+**When to use:** When you have a repeatable task that benefits from consistent, expert-level behavior every time.
+{% endtab %}
+
+{% tab title="Orchestrator" %}
+### Orchestrator Agent
+
+A master agent that coordinates other specialist agents. It receives a high-level goal, breaks it into sub-tasks, calls the right specialists, synthesizes their outputs, and delivers a final result.
+
+**Examples:**
+- Report Orchestrator — calls Intercom, Jira, GA4, and Google Ads agents, then synthesizes a CMO brief
+- Agent Architect — interviews the user, calls Design Auditor + Edge Case Analyst + Enhancement Scout in parallel, then builds the approved design
+
+**When to use:** When a task requires multiple specialists working together, or when the path through a process depends on what is discovered along the way.
+{% endtab %}
+
+{% tab title="Director" %}
+### Director Agent
+
+Similar to an orchestrator, but focused on managing a long-running pipeline. A director agent runs a fixed sequence of specialists end-to-end — like a production line.
+
+**Example — Blog Director:**
+```
+Brief → SERP Analyst → Keyword Auditor → SEO Architect →
+Copywriter → Humanizer → Fact Checker → SEO Fixer →
+Cover Photo Builder → Article Reviewer → GitHub Push
+```
+
+**When to use:** When you have a defined multi-step process that always runs in the same order and produces a finished artifact.
+{% endtab %}
+
+{% tab title="General" %}
+### General Agent
+
+A broad-purpose agent that handles a wide range of tasks for a team or department. Less specialized than a specialist, but more capable across domains.
+
+**Examples:**
+- Marketing Assistant — handles copy, briefs, research, and scheduling questions
+- Operations Agent — answers process questions, creates tickets, drafts SOPs
+
+**When to use:** As a team's day-to-day assistant — a first stop before routing to a specialist.
+{% endtab %}
+{% endtabs %}
+
+---
 
 ## Slash Commands
 
@@ -88,6 +153,8 @@ Every agent can be given a slash command — a shortcut that lets your team swit
 Now anyone on your team can type `/sales` in chat to immediately switch to the Sales Agent.
 
 See [Custom Commands](custom-commands.md) for more.
+
+---
 
 ## Agent Directory
 
@@ -102,48 +169,32 @@ All agents in your organization are listed in the **Agents** section of the plat
 **Agents are org-wide.** Any agent you create is available to everyone in your organization. If you want a private agent, create a separate workspace.
 {% endhint %}
 
-## Specialist vs. General Agents
+---
 
-{% tabs %}
-{% tab title="Specialist agents" %}
-A specialist agent has a narrow, well-defined job. It's better at that job than a general agent because its system prompt is focused and its instructions are targeted.
+## Agents vs. Workflows
 
-**Examples:**
-- SEO Copywriter — writes blog posts following SEO best practices
-- Incident Responder — manages production incidents with a structured runbook
-- Contract Reviewer — extracts key terms and flags risks in legal documents
+Agents and workflows are complementary — not competing.
 
-**When to use:** When a task is repeated often and quality matters.
-{% endtab %}
-{% tab title="General agents" %}
-A general agent can handle a wide range of tasks. It's useful for exploration, ad-hoc work, and situations where you don't know exactly what you need yet.
+| | Agent | Workflow |
+|---|---|---|
+| **Best for** | Conversation, judgment, dynamic tasks | Scheduled, repeatable, multi-step pipelines |
+| **Triggered by** | A message in chat | Schedule, webhook, API, or chat command |
+| **Runs** | Until the conversation ends | Until all steps complete |
+| **Can call** | Other agents, tools, APIs | Agents, scripts, HTTP endpoints |
+| **Human in the loop** | Always | Optional |
 
-**Examples:**
-- Chat Assistant — answers questions, helps with writing, does research
-- Dynamic Agent — activates only the skills relevant to each request
+Most production systems use both: a workflow handles scheduling and orchestration, and agents handle the reasoning and action within each step.
 
-**When to use:** For day-to-day work, one-off tasks, and getting started.
-{% endtab %}
-{% endtabs %}
+See [Workflows](workflows.md) for how the two patterns work together.
 
-## Frequently Asked Questions
+---
 
-<details>
-<summary>How many agents can I create?</summary>
-There's no hard limit on the number of agents. Create as many specialists as your team needs.
-</details>
+## What to Read Next
 
-<details>
-<summary>Can agents talk to each other?</summary>
-Yes. Workflows can chain agents together — one agent's output becomes another agent's input. This is how multi-step pipelines work. See [Workflows](workflows.md).
-</details>
-
-<details>
-<summary>Can I use different AI models for different agents?</summary>
-Yes. Each agent can be configured with a different model. See [Models & Providers](models.md).
-</details>
-
-<details>
-<summary>What happens if I delete an agent?</summary>
-The agent is removed from the directory and can no longer be used. Any workflows that reference it will fail. WorkflowFiesta will warn you before deletion.
-</details>
+| Topic | Link |
+|---|---|
+| Add reusable behavior to agents | [Skills](skills.md) |
+| Put agents into automated pipelines | [Workflows](workflows.md) |
+| Give agents access to local files | [Runner](runner.md) |
+| Connect agents to external services | [Credentials](credentials.md) |
+| Create slash command shortcuts | [Custom Commands](custom-commands.md) |
