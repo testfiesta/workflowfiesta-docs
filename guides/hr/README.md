@@ -1,57 +1,59 @@
-# 👥 HR
+# HR & People
 
-Job descriptions, onboarding workflows, policy Q&A, and recruiting automation for HR teams.
+People operations involves a huge amount of repetitive, time-sensitive communication. WorkflowFiesta handles the routine so your HR team can focus on the work that actually requires human connection.
 
-{% hint style="success" %}
-**All of these are built through conversation.** Copy any prompt below, paste it into WorkflowFiesta, and the platform will guide you through the setup.
-{% endhint %}
+## What HR teams automate with WorkflowFiesta
 
-## Automations
+{% tabs %}
+{% tab title="Recruiting" %}
+**Move faster on candidates without dropping the ball.**
 
-### Job Description Writer
+- Screen inbound applications against your job requirements
+- Draft personalized outreach to passive candidates
+- Schedule interviews and send confirmations automatically
+- Follow up with candidates who haven't responded
 
-Writes clear, compelling job descriptions that attract the right candidates — with structured requirements, responsibilities, and what you offer.
+> *"Screen these 50 applications against our senior engineer job description and rank the top 10 with a brief rationale for each."*
+{% endtab %}
 
-**Start with this prompt:**
+{% tab title="Onboarding" %}
+**Give every new hire the same great first day.**
 
-> "Create an agent that writes job descriptions. I'll give it the role title, team, key responsibilities, and must-have requirements. It should write a clear, compelling JD that doesn't use jargon and is honest about what the role involves."
+- Send offer letter and pre-boarding checklist automatically
+- Provision accounts across all required tools
+- Assign a 30-60-90 day plan in your project tool
+- Check in at key milestones and collect feedback
 
-**What the platform will ask:**
-- Which tools to connect (it will open secure forms for any credentials needed)
-- Specific configuration details (which channel, which project, what format)
-- Schedule or trigger preferences
+> *"When a new hire is added to our HRIS, send them the welcome email, create their Jira account, and schedule their Week 1 check-in."*
+{% endtab %}
 
-**What you'll have when done:**
-A working job description writer that runs automatically.
+{% tab title="Performance" %}
+**Run review cycles without the administrative overhead.**
 
-### Onboarding Workflow
+- Send self-assessment forms on schedule
+- Collect peer feedback and compile summaries
+- Remind managers of pending reviews
+- Generate anonymized team performance reports
 
-Sends a structured onboarding sequence to new hires — welcome email, day 1 checklist, week 1 goals, and 30-day check-in — automatically triggered when a new hire is added.
+> *"Every quarter, send the self-assessment form to all employees, collect responses, and compile a summary for each manager."*
+{% endtab %}
 
-**Start with this prompt:**
+{% tab title="Offboarding" %}
+**Consistent, thorough offboarding every time.**
 
-> "Create an onboarding workflow that triggers when a new hire is added to our system. It should send a welcome email, a day 1 checklist, week 1 goals on day 2, and schedule a 30-day check-in reminder."
+- Trigger offboarding checklist when an employee leaves
+- Revoke access across all connected systems
+- Send exit survey automatically
+- Archive employee records
 
-**What the platform will ask:**
-- Which tools to connect (it will open secure forms for any credentials needed)
-- Specific configuration details (which channel, which project, what format)
-- Schedule or trigger preferences
+> *"When an employee is marked as leaving in our HRIS, start the offboarding checklist and send the exit survey 3 days before their last day."*
+{% endtab %}
+{% endtabs %}
 
-**What you'll have when done:**
-A working onboarding workflow that runs automatically.
+## Getting started
 
-### Policy Q&A Agent
+Describe the HR process you want to automate. WorkflowFiesta will ask about your HRIS, communication tools, and team structure — then build the workflow.
 
-Answers employee questions about company policies, benefits, and procedures — based on your actual policy documents.
-
-**Start with this prompt:**
-
-> "Create a policy Q&A agent that can answer questions about our company policies. I'll give it our employee handbook and benefits guide. It should answer questions accurately and cite the relevant policy section."
-
-**What the platform will ask:**
-- Which tools to connect (it will open secure forms for any credentials needed)
-- Specific configuration details (which channel, which project, what format)
-- Schedule or trigger preferences
-
-**What you'll have when done:**
-A working policy q&a agent that runs automatically.
+{% content-ref url="../README.md" %}
+[Back to Guides](../README.md)
+{% endcontent-ref %}
