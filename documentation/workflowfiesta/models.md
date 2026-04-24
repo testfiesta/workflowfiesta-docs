@@ -1,69 +1,62 @@
----
-icon: openai
----
-
 # Models & Providers
 
-WorkflowFiesta is model-agnostic. You connect your own AI model API keys and choose which model powers each agent. Switch models at any time without rebuilding anything.
+WorkflowFiesta is model-agnostic. You can connect any AI model from any provider — and switch between them at any time without rebuilding your agents or workflows.
 
 {% hint style="success" %}
-**Bring your own model.** WorkflowFiesta never locks you into one AI provider. Connect OpenAI, Anthropic, AWS Bedrock, or any supported provider — and switch between them freely.
+**No lock-in.** Your agents, skills, and workflows are independent of the model powering them. Swap providers in seconds.
 {% endhint %}
 
-## Supported Providers
+## Supported providers
 
-| Provider        | Models                                           |
-| --------------- | ------------------------------------------------ |
-| **Anthropic**   | Claude 3.5 Sonnet, Claude 3 Opus, Claude 3 Haiku |
-| **OpenAI**      | GPT-4o, GPT-4 Turbo, GPT-3.5 Turbo               |
-| **AWS Bedrock** | Claude via Bedrock, Llama, Titan, and others     |
-| **Ollama**      | Any locally-hosted model                         |
+WorkflowFiesta works with every major AI model provider, including:
 
-## Connecting a Model Provider
+| Provider | Models |
+|----------|--------|
+| **Anthropic** | Claude 3.5 Sonnet, Claude 3 Opus, Claude 3 Haiku, and all Claude variants |
+| **OpenAI** | GPT-4o, GPT-4 Turbo, GPT-3.5 Turbo, o1, o1-mini, and all GPT variants |
+| **AWS Bedrock** | All Bedrock-hosted models including Llama, Mistral, Titan, and more |
+| **Google** | Gemini Pro, Gemini Flash, Gemini Ultra |
+| **Ollama** | Any locally-hosted model via Ollama (Llama 3, Mistral, Phi, Gemma, etc.) |
+| **Azure OpenAI** | All Azure-hosted OpenAI models |
+| **Any other provider** | If it has an API, WorkflowFiesta can connect to it |
 
-Ask WorkflowFiesta through conversation:
+## How to connect a model
 
-> "I want to connect my OpenAI API key."
+Tell WorkflowFiesta which provider you want to connect:
 
-> "Set up Anthropic as my model provider."
+> *"I want to connect my OpenAI API key."*
 
-> "Connect AWS Bedrock using my IAM credentials."
+WorkflowFiesta will:
+1. Open a secure credential form
+2. You paste your API key — it's encrypted immediately
+3. The model is available to all your agents
 
-The platform will open a secure form to collect your API key or credentials. They are encrypted and stored — never visible again after saving.
+You can connect multiple providers simultaneously and choose which model each agent uses.
 
-## Setting a Model for an Agent
+## Choosing a model for an agent
 
-Each agent can use a different model:
+Each agent can be configured to use a specific model. When creating or editing an agent, just tell WorkflowFiesta which model you want it to use:
 
-> "Set the Research Agent to use Claude 3.5 Sonnet."
+> *"Use Claude 3.5 Sonnet for this agent."*
+> *"Switch the report agent to GPT-4o."*
 
-> "Switch the Code Review Agent to GPT-4o."
+## Bring your own model (BYOM)
 
-> "Use the cheapest available model for the Email Formatter Agent."
+If your organization has its own model infrastructure — whether self-hosted, fine-tuned, or accessed through a private endpoint — WorkflowFiesta can connect to it. Just provide the API endpoint and credentials.
 
-## Default Model
+## Why model flexibility matters
 
-If no model is specified for an agent, it uses the organization's default model. Set the default through conversation:
+Different models have different strengths. You might use:
+- A fast, cost-efficient model for high-volume tasks like email triage
+- A more capable model for complex reasoning like strategy analysis
+- A locally-hosted model for sensitive data that shouldn't leave your network
 
-> "Set Claude 3.5 Sonnet as the default model for all agents."
+WorkflowFiesta lets you match the right model to the right task — and change your mind whenever you need to.
 
-## Model Selection Tips
+{% content-ref url="agents.md" %}
+[Configure models on agents](agents.md)
+{% endcontent-ref %}
 
-| Use case                          | Recommended model               |
-| --------------------------------- | ------------------------------- |
-| Complex reasoning, long documents | Claude 3.5 Sonnet or GPT-4o     |
-| Fast, high-volume tasks           | Claude 3 Haiku or GPT-3.5 Turbo |
-| Code generation and review        | GPT-4o or Claude 3.5 Sonnet     |
-| Cost-sensitive workflows          | Claude 3 Haiku                  |
-
-## Temperature
-
-Temperature controls how creative vs. precise an agent's responses are. Set it when creating or updating an agent:
-
-* **0.0–0.3** — Precise, consistent, factual (good for data extraction, classification)
-* **0.4–0.7** — Balanced (good for most tasks)
-* **0.8–1.5** — Creative, varied (good for brainstorming, copywriting)
-
-> "Set the Creative Writing Agent's temperature to 1.2."
-
-> "Make the Data Extraction Agent more precise — set temperature to 0.1."
+{% content-ref url="credentials.md" %}
+[Connect your API keys](credentials.md)
+{% endcontent-ref %}
