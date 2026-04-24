@@ -1,88 +1,67 @@
 # Credentials
 
-Credentials are how WorkflowFiesta connects to external services on your behalf — securely, without ever exposing your API keys or passwords.
+Credentials are the API keys, passwords, and tokens that WorkflowFiesta uses to connect to your external tools and services — things like your CRM, email provider, analytics platform, or any third-party API.
 
-{% hint style="success" %}
-**Credentials are encrypted and never exposed.** Once saved, your credentials are stored securely and injected into workflows at runtime. No one — including you — can read them back out of the platform.
+They are stored encrypted and never exposed. Once saved, a credential is referenced by name — no one ever sees the actual value again, including you.
+
+{% hint style="danger" %}
+**Never paste credentials into a chat message.** WorkflowFiesta will always open a secure form to collect sensitive values. If you are ever asked to type a key or password directly into a conversation, do not do it.
 {% endhint %}
 
 ## How credentials work
 
-When a workflow or agent needs to connect to an external service (Intercom, Jira, Slack, Google Analytics, etc.), it uses a stored credential. You provide the credential once through a secure form, and WorkflowFiesta handles the rest automatically.
+When you ask WorkflowFiesta to connect to a new tool, it will guide you through the process:
 
-You never paste API keys into chat messages or workflow configurations. The platform opens a secure form, you fill it in, and it's encrypted and saved.
+1. **You describe the connection** — "I want to connect to Intercom"
+2. **WorkflowFiesta tells you what it needs** — "I will need your Intercom API key. You can find it in your Intercom settings under Developer Hub → Authentication."
+3. **A secure form appears in the chat** — you enter the value directly into the form
+4. **The credential is saved and encrypted** — WorkflowFiesta confirms it is stored
+5. **Your agents and workflows can now use it** — referenced by name, never by value
 
-## How to add a credential
+You never need to manage this manually. WorkflowFiesta handles the entire process through conversation.
 
-Just tell WorkflowFiesta what you want to connect:
+## OAuth connections
 
-> *"I want to connect to Intercom."*
+For services that support OAuth — like Google, GitHub, Slack, HubSpot, and others — WorkflowFiesta opens the provider's own login screen in your browser. You authorize the connection there, and WorkflowFiesta stores the token securely. You never handle a token directly.
 
-WorkflowFiesta will:
-1. Tell you exactly where to find the API key or token in that service
-2. Open a secure credential form in the chat
-3. You paste the value into the form — it's masked immediately
-4. WorkflowFiesta saves it encrypted and confirms it's ready to use
+Supported OAuth providers include Google, Microsoft, GitHub, GitLab, Slack, Discord, Notion, Linear, HubSpot, Salesforce, Stripe, Airtable, Intercom, Zendesk, and more.
 
-That credential is then available to any workflow or agent in your organization.
-
-## Credential types
+## Security
 
 {% tabs %}
-{% tab title="API Keys & Tokens" %}
-The most common type. A secret key provided by an external service that grants access to its API.
-
-**Examples:** Intercom API token, Google Analytics API key, Jira API token, GitHub personal access token, OpenAI API key
-
-WorkflowFiesta will tell you exactly where to find each key in the external service's settings.
+{% tab title="Encryption" %}
+All credentials are encrypted at rest using industry-standard encryption. The raw value is never stored in plain text and is never logged.
 {% endtab %}
-
-{% tab title="Username & Password" %}
-For services that use traditional login credentials — typically email delivery services or legacy systems.
-
-**Examples:** Gmail SMTP (email + app password), Outlook SMTP
-
-{% hint style="warning" %}
-For Gmail, use an **App Password** rather than your regular account password. WorkflowFiesta will guide you through generating one.
-{% endhint %}
+{% tab title="Access" %}
+Credentials are scoped to your organization. Only agents and workflows within your org can use them — and only when explicitly authorized to do so.
 {% endtab %}
-
-{% tab title="OAuth" %}
-For services that use OAuth — you authorize WorkflowFiesta through the service's own login screen rather than providing a key manually.
-
-**Examples:** Google (Gmail, Calendar, Drive), GitHub, Slack, Discord, HubSpot, Salesforce, Notion, Linear, and many more.
-
-WorkflowFiesta opens the provider's authorization screen in a new tab. You log in and approve access. No keys to copy or paste.
+{% tab title="Exposure" %}
+Credential values are never shown in chat, never included in logs, and never visible after the initial save. If a credential needs to be rotated, you save a new value and the old one is replaced.
 {% endtab %}
 {% endtabs %}
 
-## Supported integrations
-
-WorkflowFiesta can connect to virtually any service with an API. Common integrations include:
-
-| Category | Services |
-|----------|----------|
-| **Communication** | Gmail, Outlook, Slack, Discord, Microsoft Teams |
-| **Project Management** | Jira, Linear, Asana, Notion, Monday |
-| **Analytics** | Google Analytics, Intercom, Mixpanel |
-| **Advertising** | Google Ads, Meta Ads |
-| **CRM & Sales** | HubSpot, Salesforce, Pipedrive |
-| **Development** | GitHub, GitLab, Bitbucket |
-| **Cloud Storage** | Google Drive, Dropbox, Box |
-| **AI Models** | OpenAI, Anthropic, AWS Bedrock, Ollama, and more |
-| **Billing** | Stripe |
-| **Documentation** | GitBook, Confluence |
-
-If the service you need isn't listed, ask WorkflowFiesta — if it has an API, it can likely be connected.
-
 ## Managing credentials
 
-All saved credentials are visible in **Settings → Credentials**. You can see which services are connected, delete credentials you no longer need, and add new ones at any time.
+All saved credentials are listed in **Settings → Credentials**. From there you can:
 
-{% hint style="danger" %}
-**Never paste credentials into a chat message.** Always use the secure credential form. WorkflowFiesta will automatically prompt you to use the form whenever a credential is needed.
-{% endhint %}
+- See which services are connected
+- Add new credentials
+- Rotate or replace existing ones
+- Delete credentials that are no longer needed
 
-{% content-ref url="workflows.md" %}
-[Use credentials in workflows](workflows.md)
-{% endcontent-ref %}
+You can also ask WorkflowFiesta directly: *"What credentials do I have saved?"* or *"Connect my SendGrid account"* — and it will handle everything through conversation.
+
+## Common integrations
+
+| Service | What it enables |
+|---------|----------------|
+| **Google** | Gmail, Google Analytics, Google Ads, Google Drive, Calendar |
+| **GitHub** | Read repos, manage PRs, trigger Actions, push code |
+| **Jira** | Create and update tickets, query sprints, manage boards |
+| **Slack** | Send messages, read channels, post summaries |
+| **HubSpot** | Read and write CRM contacts, deals, and companies |
+| **Intercom** | Pull user data, send messages, read conversations |
+| **Stripe** | Read billing data, subscriptions, and invoices |
+| **SendGrid** | Send transactional and marketing email |
+| **Any API** | If a service has an API and issues keys, WorkflowFiesta can connect to it |
+
