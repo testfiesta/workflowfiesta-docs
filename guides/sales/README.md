@@ -1,63 +1,59 @@
 # Sales
 
-Use WorkflowFiesta to automate your sales pipeline — from prospecting and outreach to follow-up and reporting. Your sales agents work around the clock so your team can focus on closing.
+Put your sales team's most time-consuming tasks on autopilot. WorkflowFiesta helps sales teams research prospects, draft outreach, update the CRM, and summarize pipeline — all through conversation.
+
+{% hint style="success" %}
+Sales teams using WorkflowFiesta typically reclaim 5–10 hours per rep per week by automating research, follow-up drafting, and CRM hygiene.
+{% endhint %}
 
 ## What sales teams automate with WorkflowFiesta
 
 {% tabs %}
 {% tab title="Prospecting" %}
-**Research and qualify leads automatically.**
+**Lead research automation**
 
-- Pull company data from LinkedIn, Crunchbase, or your CRM
-- Score leads based on your ideal customer profile
-- Enrich contact records with job titles, company size, and tech stack
-- Flag high-priority accounts for immediate outreach
+Tell WorkflowFiesta: *"Research this company and tell me who the decision makers are, what they do, recent news, and what pain points they likely have."*
 
-> *"Research these 20 companies and score them against our ICP. Flag anyone in Series A–C SaaS with 50–500 employees."*
+WorkflowFiesta pulls from LinkedIn, company websites, news sources, and your CRM to build a complete prospect brief in seconds.
 {% endtab %}
-
 {% tab title="Outreach" %}
-**Write and send personalized outreach at scale.**
+**Personalized outreach drafts**
 
-- Draft personalized cold emails based on each prospect's context
-- Generate follow-up sequences automatically
-- Adapt tone and messaging by industry or persona
-- Send via Gmail, Outlook, or any connected email service
+Tell WorkflowFiesta: *"Draft a cold outreach email to the VP of Engineering at Acme Corp. They're a 200-person SaaS company that recently raised a Series B."*
 
-> *"Write a personalized cold email for each of these 10 prospects. Use their recent LinkedIn activity as context."*
+WorkflowFiesta writes a personalized, specific email — not a template — based on the research it has gathered.
 {% endtab %}
+{% tab title="CRM" %}
+**CRM updates and hygiene**
 
+Tell WorkflowFiesta: *"Update HubSpot with notes from my call with Sarah at Acme — we discussed pricing, they want a demo next week, decision by end of quarter."*
+
+WorkflowFiesta writes the CRM note, updates the deal stage, and sets follow-up tasks — all from a single conversational prompt.
+{% endtab %}
 {% tab title="Pipeline" %}
-**Keep your CRM up to date without manual data entry.**
+**Pipeline summaries and forecasting**
 
-- Summarize sales calls and extract action items
-- Update HubSpot or Salesforce records automatically
-- Flag deals that have gone quiet
-- Generate pipeline reports on a schedule
+Tell WorkflowFiesta: *"Give me a pipeline summary for this week — what's closing, what's at risk, and what needs attention."*
 
-> *"After each sales call, summarize the key points and update the HubSpot deal record."*
-{% endtab %}
-
-{% tab title="Reporting" %}
-**Get weekly pipeline visibility without building dashboards.**
-
-- Pull open deals, stage distribution, and win rates
-- Identify deals at risk of stalling
-- Track rep performance across the team
-- Email the report to leadership every Monday
-
-> *"Every Monday, pull our HubSpot pipeline, flag deals that haven't moved in 14 days, and email me a summary."*
+WorkflowFiesta pulls your CRM data and delivers a crisp, prioritized summary — no spreadsheet required.
 {% endtab %}
 {% endtabs %}
 
+## Popular sales workflows
+
+| Workflow | What it does | Trigger |
+|----------|-------------|---------|
+| **Lead enrichment** | New CRM lead triggers research brief | New HubSpot contact |
+| **Follow-up drafter** | After a call, drafts follow-up email with next steps | Manual |
+| **Weekly pipeline digest** | Every Friday, summarizes open deals and flags risks | Schedule |
+| **Outreach sequence builder** | Builds a 4-touch outreach sequence for a prospect list | Manual |
+| **Win/loss analysis** | After a deal closes, summarizes what happened and why | Deal stage change |
+
 ## Getting started
 
-Tell WorkflowFiesta what you want to automate in your sales process. It will ask you a few questions about your CRM, email provider, and team setup — then build the workflow.
+Tell WorkflowFiesta what you want to automate first. A good starting point:
 
-{% hint style="info" %}
-**You'll need credentials** for your CRM (HubSpot, Salesforce, Pipedrive) and email provider connected before running sales workflows. WorkflowFiesta will guide you through connecting them.
-{% endhint %}
+> *"I want to automate my lead research. When I get a new lead in HubSpot, I want a research brief automatically prepared for me before my first call."*
 
-{% content-ref url="../README.md" %}
-[Back to Guides](../README.md)
-{% endcontent-ref %}
+WorkflowFiesta will ask you a few questions and build the workflow with you.
+
