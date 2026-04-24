@@ -1,3 +1,7 @@
+---
+icon: rectangle-ad
+---
+
 # Marketing
 
 Automate the repetitive parts of marketing — content creation, SEO pipelines, social scheduling, and campaign reporting — so your team spends time on strategy, not production.
@@ -10,17 +14,7 @@ Automate the repetitive parts of marketing — content creation, SEO pipelines, 
 
 ## What you can automate
 
-<table data-view="cards">
-  <thead><tr><th></th><th></th></tr></thead>
-  <tbody>
-    <tr><td>✍️ <strong>Blog Pipeline</strong></td><td>Keyword research → brief → draft → SEO audit → publish. Fully automated.</td></tr>
-    <tr><td>📱 <strong>Social Scheduling</strong></td><td>Generate a 30-day content calendar and auto-post to LinkedIn and Twitter.</td></tr>
-    <tr><td>📊 <strong>Weekly CMO Report</strong></td><td>Pull Intercom, GA4, and Jira data every Monday. Email a formatted brief.</td></tr>
-    <tr><td>🔍 <strong>SEO Monitoring</strong></td><td>Track keyword rankings, flag drops, and surface content gap opportunities.</td></tr>
-    <tr><td>📧 <strong>Email Campaigns</strong></td><td>Draft, review, and send drip sequences triggered by user behavior.</td></tr>
-    <tr><td>🎯 <strong>Ad Copy Generator</strong></td><td>Generate and A/B test ad copy variants across Google and LinkedIn.</td></tr>
-  </tbody>
-</table>
+<table data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>✍️ <strong>Blog Pipeline</strong></td><td>Keyword research → brief → draft → SEO audit → publish. Fully automated.</td></tr><tr><td>📱 <strong>Social Scheduling</strong></td><td>Generate a 30-day content calendar and auto-post to LinkedIn and Twitter.</td></tr><tr><td>📊 <strong>Weekly CMO Report</strong></td><td>Pull Intercom, GA4, and Jira data every Monday. Email a formatted brief.</td></tr><tr><td>🔍 <strong>SEO Monitoring</strong></td><td>Track keyword rankings, flag drops, and surface content gap opportunities.</td></tr><tr><td>📧 <strong>Email Campaigns</strong></td><td>Draft, review, and send drip sequences triggered by user behavior.</td></tr><tr><td>🎯 <strong>Ad Copy Generator</strong></td><td>Generate and A/B test ad copy variants across Google and LinkedIn.</td></tr></tbody></table>
 
 ***
 

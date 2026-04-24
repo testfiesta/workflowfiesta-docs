@@ -1,4 +1,8 @@
-# Help Center
+---
+icon: house-chimney-medical
+---
+
+# Help Center Home
 
 Find answers to common questions, troubleshoot issues, and get your workflows running smoothly.
 
@@ -10,46 +14,7 @@ Find answers to common questions, troubleshoot issues, and get your workflows ru
 
 ## Browse by Topic
 
-<table data-view="cards">
-  <thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead>
-  <tbody>
-    <tr>
-      <td>🚀 <strong>Getting Started FAQ</strong></td>
-      <td>Common questions from new users</td>
-      <td><a href="faq/getting-started.md">getting-started.md</a></td>
-    </tr>
-    <tr>
-      <td>⚙️ <strong>Troubleshooting Workflows</strong></td>
-      <td>Workflow not running? Start here.</td>
-      <td><a href="troubleshooting/workflows.md">workflows.md</a></td>
-    </tr>
-    <tr>
-      <td>🖥️ <strong>Troubleshooting the Runner</strong></td>
-      <td>Runner not connecting or going offline</td>
-      <td><a href="troubleshooting/runner.md">runner.md</a></td>
-    </tr>
-    <tr>
-      <td>🔑 <strong>Troubleshooting Credentials</strong></td>
-      <td>API key errors and authentication issues</td>
-      <td><a href="troubleshooting/credentials.md">credentials.md</a></td>
-    </tr>
-    <tr>
-      <td>🤖 <strong>Troubleshooting Models</strong></td>
-      <td>Model errors, rate limits, and provider issues</td>
-      <td><a href="troubleshooting/models.md">models.md</a></td>
-    </tr>
-    <tr>
-      <td>💳 <strong>Billing & Account</strong></td>
-      <td>Plans, invoices, and account settings</td>
-      <td><a href="account/billing.md">billing.md</a></td>
-    </tr>
-    <tr>
-      <td>👥 <strong>Team & Permissions</strong></td>
-      <td>Invite team members and manage roles</td>
-      <td><a href="account/team-permissions.md">team-permissions.md</a></td>
-    </tr>
-  </tbody>
-</table>
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>🚀 <strong>Getting Started FAQ</strong></td><td>Common questions from new users</td><td><a href="faq/getting-started.md">getting-started.md</a></td></tr><tr><td>⚙️ <strong>Troubleshooting Workflows</strong></td><td>Workflow not running? Start here.</td><td><a href="troubleshooting/workflows.md">workflows.md</a></td></tr><tr><td>🖥️ <strong>Troubleshooting the Runner</strong></td><td>Runner not connecting or going offline</td><td><a href="troubleshooting/runner.md">runner.md</a></td></tr><tr><td>🔑 <strong>Troubleshooting Credentials</strong></td><td>API key errors and authentication issues</td><td><a href="troubleshooting/credentials.md">credentials.md</a></td></tr><tr><td>🤖 <strong>Troubleshooting Models</strong></td><td>Model errors, rate limits, and provider issues</td><td><a href="troubleshooting/models.md">models.md</a></td></tr><tr><td>💳 <strong>Billing &#x26; Account</strong></td><td>Plans, invoices, and account settings</td><td><a href="account/billing.md">billing.md</a></td></tr><tr><td>👥 <strong>Team &#x26; Permissions</strong></td><td>Invite team members and manage roles</td><td><a href="account/team-permissions.md">team-permissions.md</a></td></tr></tbody></table>
 
 ***
 

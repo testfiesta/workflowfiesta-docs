@@ -1,3 +1,7 @@
-# Billing & Spend Limits
+---
+icon: file-invoice
+---
+
+# Billing & Account
 
 Placeholder — content coming.

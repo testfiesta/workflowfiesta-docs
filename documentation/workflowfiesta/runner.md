@@ -1,4 +1,8 @@
-# Install the Runner
+---
+icon: computer
+---
+
+# Runner
 
 The WorkflowFiesta Runner connects your local machine or server to the platform. Once installed, agents can read your local files, access internal databases, and run scripts on your own hardware.
 
@@ -10,32 +14,7 @@ The WorkflowFiesta Runner connects your local machine or server to the platform.
 
 ## What the Runner enables
 
-<table data-card-size="small" data-view="cards">
-  <thead>
-    <tr>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>📁 <strong>Local File Access</strong></td>
-      <td>Agents can read and write files on your machine — documents, spreadsheets, code repositories, config files.</td>
-    </tr>
-    <tr>
-      <td>🗄️ <strong>Internal Databases</strong></td>
-      <td>Query databases that aren't exposed to the internet — Postgres, MySQL, SQLite, internal APIs.</td>
-    </tr>
-    <tr>
-      <td>🔧 <strong>Local Tools</strong></td>
-      <td>Run any tool installed on your machine — Python scripts, CLI tools, custom executables.</td>
-    </tr>
-    <tr>
-      <td>🔒 <strong>Private Network Access</strong></td>
-      <td>Access services behind your firewall or VPN without exposing them to the internet.</td>
-    </tr>
-  </tbody>
-</table>
+<table data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>📁 <strong>Local File Access</strong></td><td>Agents can read and write files on your machine — documents, spreadsheets, code repositories, config files.</td></tr><tr><td>🗄️ <strong>Internal Databases</strong></td><td>Query databases that aren't exposed to the internet — Postgres, MySQL, SQLite, internal APIs.</td></tr><tr><td>🔧 <strong>Local Tools</strong></td><td>Run any tool installed on your machine — Python scripts, CLI tools, custom executables.</td></tr><tr><td>🔒 <strong>Private Network Access</strong></td><td>Access services behind your firewall or VPN without exposing them to the internet.</td></tr></tbody></table>
 
 ***
 
@@ -61,7 +40,7 @@ When a workflow step targets your Runner, WorkflowFiesta sends the script to the
 
 {% tabs %}
 {% tab title="macOS" %}
-### macOS (Apple Silicon or Intel)
+#### macOS (Apple Silicon or Intel)
 
 **Step 1 — Download the Runner**
 
@@ -96,7 +75,7 @@ To keep the Runner running after you close the terminal, add it to your login it
 {% endtab %}
 
 {% tab title="Linux" %}
-### Linux (headless or desktop)
+#### Linux (headless or desktop)
 
 **Step 1 — Download the Runner**
 
@@ -147,7 +126,7 @@ sudo systemctl status wff-runner
 {% endtab %}
 
 {% tab title="Windows" %}
-### Windows
+#### Windows
 
 **Option 1 — GUI Desktop App (recommended)**
 
@@ -177,6 +156,7 @@ After starting the Runner, go to **Settings → Runners** in WorkflowFiesta. You
 
 {% hint style="warning" %}
 If the runner shows as **Offline** or **Pending**:
+
 1. Check that the Runner process is still running on your machine
 2. Verify your machine has outbound internet access on port 443
 3. Check that the registration code hasn't expired (codes are valid for 60 minutes)
@@ -218,14 +198,16 @@ The script runs natively on your machine with full access to your filesystem.
 {% endhint %}
 
 **What the Runner can access:**
-- Files and directories accessible to the running user
-- Network resources accessible from the machine
-- Any tool or executable installed on the machine
+
+* Files and directories accessible to the running user
+* Network resources accessible from the machine
+* Any tool or executable installed on the machine
 
 **What WorkflowFiesta cannot do:**
-- Access your machine without a workflow step explicitly targeting your Runner
-- Read files that aren't accessible to the Runner's user account
-- Execute code outside of workflow step invocations
+
+* Access your machine without a workflow step explicitly targeting your Runner
+* Read files that aren't accessible to the Runner's user account
+* Execute code outside of workflow step invocations
 
 ***
 
@@ -236,6 +218,7 @@ The script runs natively on your machine with full access to your filesystem.
 <summary>Runner shows as Offline immediately after connecting</summary>
 
 This usually means the Runner process exited. Check:
+
 1. Is the terminal/process still running?
 2. Are there any error messages in the Runner output?
 3. Does your machine have stable internet access?
@@ -270,29 +253,4 @@ cat Documents/myfile.csv            # ⚠️ may not work — relative path
 
 ## What to read next
 
-<table data-view="cards">
-  <thead>
-    <tr>
-      <th></th>
-      <th></th>
-      <th data-hidden data-card-target data-type="content-ref"></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>⚙️ <strong>Build Your First Workflow</strong></td>
-      <td>Use your Runner in a workflow step to access local files and systems.</td>
-      <td><a href="../workflows/build-your-first-workflow.md">build-your-first-workflow.md</a></td>
-    </tr>
-    <tr>
-      <td>🧩 <strong>Add Skills to Your Agent</strong></td>
-      <td>Give your agents new capabilities that run on your Runner.</td>
-      <td><a href="../skills/add-skills-to-your-agent.md">add-skills-to-your-agent.md</a></td>
-    </tr>
-    <tr>
-      <td>🔑 <strong>Key Concepts</strong></td>
-      <td>Review environments, runners, and how they fit into the platform.</td>
-      <td><a href="../getting-started/key-concepts.md">key-concepts.md</a></td>
-    </tr>
-  </tbody>
-</table>
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>⚙️ <strong>Build Your First Workflow</strong></td><td>Use your Runner in a workflow step to access local files and systems.</td><td><a href="/broken/pages/rLfM8h3XRBsPDW5iRAIc">Broken link</a></td></tr><tr><td>🧩 <strong>Add Skills to Your Agent</strong></td><td>Give your agents new capabilities that run on your Runner.</td><td><a href="/broken/pages/cE4i4Xok4YQTVRxGz2RR">Broken link</a></td></tr><tr><td>🔑 <strong>Key Concepts</strong></td><td>Review environments, runners, and how they fit into the platform.</td><td><a href="/broken/pages/NTG9K8RkGRICSNDTJpqN">Broken link</a></td></tr></tbody></table>
