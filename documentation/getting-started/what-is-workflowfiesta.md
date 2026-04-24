@@ -22,7 +22,7 @@ WorkflowFiesta connects the steps. An agent can read your emails, pull data from
 {% tab title="Agents" %}
 #### Agents — your AI specialists
 
-An agent is an AI with a specific job. You give it a name, a purpose, and instructions. It uses the AI model you choose and the skills you attach to it.
+An agent is an AI with a specific job. You give it a name, a purpose, and instructions. It uses the AI model you choose and behaves according to the system prompt you define.
 
 **Example agents:**
 
@@ -38,23 +38,25 @@ WorkflowFiesta asks a few clarifying questions, then creates the agent. You can 
 {% endtab %}
 
 {% tab title="Skills" %}
-#### Skills — what agents can do
+#### Skills — consistent, reusable behavior
 
-A skill extends what an agent can do. Skills connect agents to tools, APIs, and data sources.
+A skill is a reusable building block that extends agent behavior across your organization. Once a skill exists, any agent can use it.
 
-**Example skills:**
+**Two types:**
 
-* **Gmail** — read and send email
-* **Jira** — create and update tickets
-* **Google Analytics** — pull traffic and conversion data
-* **Intercom** — read conversations and user data
-* **HubSpot** — update contacts and deals
+* **Prompt skills** inject additional instructions into an agent's system prompt — encoding domain expertise, style rules, or institutional knowledge so the agent behaves consistently every time. Examples: Marketing Copy, Code Review, Natural Writing, Jira.
 
-Skills are org-wide. Once a skill exists, any agent can use it. You add a skill to an agent by asking:
+* **Script skills** package a specific script an agent can execute for repeatable tasks — querying an API, processing data, reading files. Examples: Analytics Pull, Keyword Analyzer, Cohort Retention.
 
-> "Give my marketing agent the ability to post to LinkedIn and read Google Analytics."
+Skills are org-wide. You add a skill to an agent by asking:
+
+> "Give my marketing agent the Marketing Copy skill so it always follows our brand voice."
 
 If the skill requires credentials (an API key, OAuth connection, etc.), WorkflowFiesta walks you through connecting it securely — it opens a form, you paste the key, it's encrypted and stored. The key is never exposed in chat.
+
+{% hint style="info" %}
+Skills don't unlock capabilities an agent doesn't otherwise have. An agent's ability to take action comes from its platform access level and tools. Skills make behavior consistent and reusable.
+{% endhint %}
 {% endtab %}
 
 {% tab title="Workflows" %}
@@ -117,10 +119,10 @@ The Runner is optional. If everything you need is cloud-based (Gmail, HubSpot, J
 
 ## What to read next
 
-|                                                |                                           |
-| ---------------------------------------------- | ----------------------------------------- |
-| [🚀 Quickstart](quickstart.md)                 | Get your first agent running in 5 minutes |
-| [⚙️ Agents](../workflowfiesta/agents.md)       | Deep dive into how agents work            |
-| [🔁 Workflows](../workflowfiesta/workflows.md) | How to build automated pipelines          |
-| [🔧 Skills](../workflowfiesta/skills.md)       | What skills exist and how to add them     |
-| [👥 Discord](https://discord.gg/XEKxARDkNQ)    | Ask the community                         |
+| | |
+| --- | --- |
+| [🚀 Quickstart](quickstart.md) | Get your first agent running in 5 minutes |
+| [⚙️ Agents](../workflowfiesta/agents.md) | Deep dive into how agents work |
+| [🔁 Workflows](../workflowfiesta/workflows.md) | How to build automated pipelines |
+| [🔧 Skills](../workflowfiesta/skills.md) | What skills are and how to use them |
+| [👥 Discord](https://discord.gg/XEKxARDkNQ) | Ask the community |
