@@ -1,59 +1,57 @@
 # Operations
 
-Operations teams run on repetitive, high-stakes processes. WorkflowFiesta automates the routine so your team can focus on decisions that actually require human judgment.
+Operations teams run on information — pulling it from a dozen systems, formatting it, and distributing it to the right people. WorkflowFiesta automates the entire information layer so your ops team can focus on decisions, not data wrangling.
 
-## What operations teams automate with WorkflowFiesta
+{% hint style="success" %}
+The most common ops win: replacing a 2-hour weekly reporting process with a workflow that runs automatically every Monday morning and emails the finished report to stakeholders.
+{% endhint %}
+
+## What operations teams automate
 
 {% tabs %}
 {% tab title="Reporting" %}
-**Automated status reports across every system.**
+**Automated status reports**
 
-- Pull data from Jira, Notion, Asana, or any project tool
-- Consolidate team updates into a single weekly digest
-- Flag blockers, overdue tasks, and capacity issues
-- Distribute to stakeholders on a schedule
+Tell WorkflowFiesta: *"Every Monday at 8am, pull data from Jira, Google Analytics, and Intercom, summarize the key numbers, and email a report to the leadership team."*
 
-> *"Every Friday at 4pm, pull all open tasks across our projects, flag anything overdue, and email a summary to the leadership team."*
+WorkflowFiesta builds the workflow, connects to your tools, and delivers a formatted report every week — automatically.
 {% endtab %}
-
 {% tab title="Approvals" %}
-**Route requests and approvals without manual chasing.**
+**Approval workflows**
 
-- Receive requests via form, email, or Slack
-- Route to the right approver based on type or value
-- Send reminders for pending approvals
-- Log decisions and update records automatically
+Tell WorkflowFiesta: *"When a new expense over $500 is submitted, summarize it and send it to my manager for approval before it gets processed."*
 
-> *"When a purchase request comes in over $500, send it to the finance lead for approval and remind them after 24 hours if they haven't responded."*
+WorkflowFiesta routes requests, collects approvals, and updates the relevant system — all without manual coordination.
 {% endtab %}
+{% tab title="Data sync" %}
+**Cross-tool data sync**
 
-{% tab title="Onboarding" %}
-**Consistent onboarding for every new team member.**
+Tell WorkflowFiesta: *"When a deal closes in HubSpot, create an onboarding task in Jira and notify the customer success team in Slack."*
 
-- Create accounts across all required tools
-- Send welcome emails and first-week schedules
-- Assign onboarding tasks in your project tool
-- Check in at Day 7 and Day 30 automatically
-
-> *"When a new hire starts, set up their Jira access, send them the onboarding checklist, and schedule a check-in for their first week."*
+WorkflowFiesta connects your tools and keeps them in sync — no manual handoffs, no dropped balls.
 {% endtab %}
+{% tab title="Standup" %}
+**Daily standup summaries**
 
-{% tab title="Data Sync" %}
-**Keep systems in sync without manual updates.**
+Tell WorkflowFiesta: *"Every morning at 9am, pull yesterday's Jira updates from the team and post a standup summary to our Slack channel."*
 
-- Sync data between your CRM, project tool, and spreadsheets
-- Reconcile records across platforms on a schedule
-- Alert the team when data is inconsistent
-- Generate audit logs automatically
-
-> *"Every night, sync our HubSpot contacts with our internal database and flag any discrepancies."*
+Your team gets a clean summary every morning without anyone having to write it.
 {% endtab %}
 {% endtabs %}
 
+## Popular operations workflows
+
+| Workflow | What it does | Trigger |
+|----------|-------------|---------|
+| **Weekly ops report** | Pulls data from all tools, generates executive summary, emails stakeholders | Schedule |
+| **New hire checklist** | When a new employee is added, creates onboarding tasks across Jira, Slack, and email | Event |
+| **Incident summary** | After an incident is resolved, drafts a post-mortem and distributes it | Manual |
+| **Budget tracker** | Weekly spend summary pulled from finance tools and emailed to budget owners | Schedule |
+| **Cross-tool sync** | Keeps CRM, project management, and communication tools in sync automatically | Event |
+
 ## Getting started
 
-Describe the process you want to automate. WorkflowFiesta will ask about your tools, your team, and your approval structure — then build the workflow.
+> *"I want to automate our weekly ops report. Every Monday, pull data from Jira and our CRM, write a summary, and email it to the leadership team."*
 
-{% content-ref url="../README.md" %}
-[Back to Guides](../README.md)
-{% endcontent-ref %}
+WorkflowFiesta will ask which tools to connect, what data to pull, and who to send it to — then build the workflow.
+
