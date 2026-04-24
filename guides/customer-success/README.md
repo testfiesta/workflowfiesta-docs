@@ -1,58 +1,81 @@
-# Customer Success
+---
+description: Automate health monitoring, renewal alerts, QBR prep, and churn signals so your CS team focuses on the conversations that matter.
+---
 
-Customer success teams are responsible for retention, expansion, and satisfaction at scale. WorkflowFiesta automates the monitoring, communication, and reporting so your CS team can focus on the conversations that move the needle.
+# 🤝 Customer Success
 
-## What customer success teams automate with WorkflowFiesta
+Automate health monitoring, renewal alerts, QBR prep, and churn signals so your CS team focuses on the conversations that matter.
 
-{% tabs %}
-{% tab title="Health Monitoring" %}
-**Catch at-risk accounts before they churn.**
+---
 
-- Monitor product usage signals from your analytics platform
-- Flag accounts that haven't logged in for 14+ days
-- Score accounts by health based on usage, support tickets, and NPS
-- Alert the account owner when a customer goes quiet
+## What Customer Success teams automate
 
-> *"Every morning, check which accounts haven't logged in for 14 days and send me a list with their contract value and renewal date."*
-{% endtab %}
+### Health monitoring
+Track customer engagement signals and surface accounts that need attention before they churn.
 
-{% tab title="Onboarding" %}
-**Get every customer to value faster.**
+> *"Create a weekly workflow that reviews our customer activity data, flags any accounts with declining engagement, and sends me a prioritized list every Monday morning."*
 
-- Send onboarding email sequences triggered by signup
-- Check in at Day 3, Day 7, and Day 30 automatically
-- Escalate to a human CSM if the customer hasn't completed key setup steps
-- Collect early feedback via automated survey
+### Renewal alerts
+Get notified about upcoming renewals with enough lead time to act.
 
-> *"When a new customer signs up, start the onboarding sequence. If they haven't created their first project by Day 5, alert their CSM."*
-{% endtab %}
+> *"Alert me 90, 60, and 30 days before any customer contract renewal. Include their current plan, usage, and last contact date."*
 
-{% tab title="Renewals" %}
-**Never miss a renewal conversation.**
+### QBR preparation
+Generate quarterly business review decks and talking points from customer data.
 
-- Flag accounts 90, 60, and 30 days before renewal
-- Pull usage data and health score for each upcoming renewal
-- Draft personalized renewal outreach for the CSM to review
-- Track renewal status and update your CRM automatically
+> *"Prepare a QBR summary for Acme Corp. Pull their usage stats, key wins from the last quarter, and suggest 3 expansion opportunities."*
 
-> *"90 days before each renewal, pull the account's usage data and draft a renewal email for my review."*
-{% endtab %}
+### Churn signals
+Identify at-risk accounts based on usage patterns, support tickets, and engagement drops.
 
-{% tab title="Reporting" %}
-**Weekly visibility into your entire customer base.**
+> *"Which of our customers haven't logged in for 30 days? Rank them by contract value and flag anyone up for renewal in the next 60 days."*
 
-- Track NPS, CSAT, and churn metrics on a schedule
-- Identify expansion opportunities based on usage patterns
-- Generate QBR decks automatically from account data
-- Distribute health reports to the CS team every Monday
+### Customer communications
+Draft personalized check-in emails, renewal outreach, and expansion proposals.
 
-> *"Every Monday, generate a health report for all accounts, highlight the top 5 at-risk, and email it to the CS team."*
-{% endtab %}
-{% endtabs %}
+> *"Write a check-in email to a customer who hasn't used the product in 3 weeks. Warm tone, offer a quick call, mention a new feature they'd find useful."*
+
+---
 
 ## Getting started
 
-Tell WorkflowFiesta what customer success process you want to automate. It will ask about your CRM, analytics platform, and communication tools — then build the workflow.
+{% stepper %}
+{% step %}
+### Tell WorkflowFiesta what you want to automate
+Start with your most time-consuming recurring task. Describe it in plain language.
+{% endstep %}
+
+{% step %}
+### Answer a few questions
+WorkflowFiesta will ask about frequency, inputs, outputs, and who should receive the results.
+{% endstep %}
+
+{% step %}
+### Review and activate
+WorkflowFiesta shows you exactly what it's going to build. Approve it and it starts running.
+{% endstep %}
+{% endstepper %}
+
+---
+
+## Popular customer success automations
+
+| Automation | What it does |
+|------------|-------------|
+| **Weekly health digest** | Engagement signals → prioritized at-risk account list |
+| **Renewal pipeline** | Contract dates → tiered renewal alerts at 90/60/30 days |
+| **QBR builder** | Customer data → structured QBR summary and talking points |
+| **Churn signal monitor** | Usage data → flagged accounts with recommended actions |
+| **Check-in email generator** | Account context → personalized outreach draft |
+| **Expansion opportunity finder** | Usage patterns → upsell and cross-sell recommendations |
+
+---
+
+{% hint style="info" %}
+**Customer Success tip:** Connect WorkflowFiesta to your CRM so agents can pull real customer data. Ask: "Connect to HubSpot" and WorkflowFiesta will walk you through it.
+{% endhint %}
+
+---
 
 {% content-ref url="../README.md" %}
 [Back to Guides](../README.md)

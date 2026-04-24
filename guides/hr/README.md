@@ -1,58 +1,81 @@
-# HR & People
+---
+description: Automate job descriptions, onboarding, policy drafts, and people operations so your HR team focuses on people, not paperwork.
+---
 
-People operations involves a huge amount of repetitive, time-sensitive communication. WorkflowFiesta handles the routine so your HR team can focus on the work that actually requires human connection.
+# 👥 HR & People
 
-## What HR teams automate with WorkflowFiesta
+Automate job descriptions, onboarding, policy drafts, and people operations so your HR team focuses on people, not paperwork.
 
-{% tabs %}
-{% tab title="Recruiting" %}
-**Move faster on candidates without dropping the ball.**
+---
 
-- Screen inbound applications against your job requirements
-- Draft personalized outreach to passive candidates
-- Schedule interviews and send confirmations automatically
-- Follow up with candidates who haven't responded
+## What HR & People teams automate
 
-> *"Screen these 50 applications against our senior engineer job description and rank the top 10 with a brief rationale for each."*
-{% endtab %}
+### Job descriptions
+Generate complete, well-structured job descriptions from a brief conversation about the role.
 
-{% tab title="Onboarding" %}
-**Give every new hire the same great first day.**
+> *"Write a job description for a Senior Product Manager. We're a B2B SaaS company, Series B, remote-first. Focus on ownership and cross-functional collaboration."*
 
-- Send offer letter and pre-boarding checklist automatically
-- Provision accounts across all required tools
-- Assign a 30-60-90 day plan in your project tool
-- Check in at key milestones and collect feedback
+### Onboarding checklists
+Create personalized onboarding plans for new hires based on their role, team, and start date.
 
-> *"When a new hire is added to our HRIS, send them the welcome email, create their Jira account, and schedule their Week 1 check-in."*
-{% endtab %}
+> *"Create an onboarding checklist for a new marketing hire starting Monday. Include tools to set up, people to meet, and 30/60/90 day goals."*
 
-{% tab title="Performance" %}
-**Run review cycles without the administrative overhead.**
+### Policy drafts
+Draft HR policies, employee handbooks, and process documentation in plain language.
 
-- Send self-assessment forms on schedule
-- Collect peer feedback and compile summaries
-- Remind managers of pending reviews
-- Generate anonymized team performance reports
+> *"Draft a remote work policy for our company. We're fully remote, async-first, with team members in 6 time zones."*
 
-> *"Every quarter, send the self-assessment form to all employees, collect responses, and compile a summary for each manager."*
-{% endtab %}
+### Org announcements
+Write clear, professional internal communications for team changes, policy updates, and company news.
 
-{% tab title="Offboarding" %}
-**Consistent, thorough offboarding every time.**
+> *"Write an announcement for our all-hands about our new parental leave policy. Warm tone, clear on the details, no corporate speak."*
 
-- Trigger offboarding checklist when an employee leaves
-- Revoke access across all connected systems
-- Send exit survey automatically
-- Archive employee records
+### Interview guides
+Generate structured interview guides with role-specific questions and evaluation criteria.
 
-> *"When an employee is marked as leaving in our HRIS, start the offboarding checklist and send the exit survey 3 days before their last day."*
-{% endtab %}
-{% endtabs %}
+> *"Create an interview guide for a Customer Success Manager role. Include behavioral questions, a scoring rubric, and red flags to watch for."*
+
+---
 
 ## Getting started
 
-Describe the HR process you want to automate. WorkflowFiesta will ask about your HRIS, communication tools, and team structure — then build the workflow.
+{% stepper %}
+{% step %}
+### Tell WorkflowFiesta what you want to automate
+Start with your most time-consuming recurring task. Describe it in plain language.
+{% endstep %}
+
+{% step %}
+### Answer a few questions
+WorkflowFiesta will ask about frequency, inputs, outputs, and who should receive the results.
+{% endstep %}
+
+{% step %}
+### Review and activate
+WorkflowFiesta shows you exactly what it's going to build. Approve it and it starts running.
+{% endstep %}
+{% endstepper %}
+
+---
+
+## Popular hr & people automations
+
+| Automation | What it does |
+|------------|-------------|
+| **Job description generator** | Role brief in → complete JD out |
+| **Onboarding plan builder** | New hire details in → personalized checklist out |
+| **Policy drafter** | Policy topic in → full draft out |
+| **Interview guide creator** | Role details in → structured interview guide out |
+| **Org announcement writer** | Key facts in → polished announcement out |
+| **Weekly people update** | Summarize headcount changes, open roles, and team news |
+
+---
+
+{% hint style="info" %}
+**HR & People tip:** HR agents work best when you give them context about your company culture and tone. Tell WorkflowFiesta: "We're a remote-first, async company with a direct, no-jargon communication style" — and every output will match.
+{% endhint %}
+
+---
 
 {% content-ref url="../README.md" %}
 [Back to Guides](../README.md)

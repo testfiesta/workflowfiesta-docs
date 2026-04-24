@@ -1,62 +1,81 @@
-# DevOps
+---
+description: Automate deployment reports, incident runbooks, monitoring alerts, and infrastructure documentation so your engineers focus on building.
+---
 
-DevOps teams manage infrastructure, deployments, monitoring, and incident response. WorkflowFiesta automates the repetitive operational work so your engineers can focus on building.
+# ⚙️ DevOps
 
-## What DevOps teams automate with WorkflowFiesta
+Automate deployment reports, incident runbooks, monitoring alerts, and infrastructure documentation so your engineers focus on building.
 
-{% tabs %}
-{% tab title="Deployments" %}
-**Automate your release pipeline end to end.**
+---
 
-- Trigger deployments from a GitHub merge or manual command
-- Run pre-deployment checks and notify the team
-- Monitor rollout progress and alert on failures
-- Automatically roll back if health checks fail
+## What DevOps teams automate
 
-> *"When a PR is merged to main, run the deployment pipeline, monitor for errors, and post a status update to Slack."*
-{% endtab %}
+### Deployment summaries
+Generate clear deployment reports from commit logs, PR descriptions, and release notes.
 
-{% tab title="Monitoring" %}
-**Get alerted on what matters, not everything.**
+> *"Summarize what went out in today's deployment. Pull from the last 10 merged PRs and write a plain-language summary for the team."*
 
-- Monitor infrastructure health on a schedule
-- Summarize error logs and surface the most critical issues
-- Correlate alerts across multiple systems
-- Escalate to the on-call engineer when thresholds are breached
+### Incident runbooks
+Create and maintain incident response runbooks that stay current with your infrastructure.
 
-> *"Every hour, check our error rate. If it exceeds 1%, page the on-call engineer and post a summary to #incidents."*
-{% endtab %}
+> *"Create an incident runbook for a database outage. Include detection steps, escalation path, rollback procedure, and post-mortem template."*
 
-{% tab title="Incident Response" %}
-**Respond faster with automated triage.**
+### Monitoring alerts
+Set up intelligent alerting workflows that summarize what's wrong and suggest next steps.
 
-- Create incident channels and assign roles automatically
-- Pull relevant logs and metrics when an incident is declared
-- Draft status page updates based on what's known
-- Generate post-mortem templates after resolution
+> *"Create a workflow that receives PagerDuty alerts, summarizes the incident in plain language, and posts it to our #incidents Slack channel with suggested first steps."*
 
-> *"When an incident is declared, create a Slack channel, pull the last hour of error logs, and draft an initial status update."*
-{% endtab %}
+### Infrastructure documentation
+Keep your infra docs current by generating them from your actual configuration.
 
-{% tab title="Reporting" %}
-**Weekly engineering health reports without manual work.**
+> *"Document our Kubernetes cluster setup. Pull from our config files and write a clear architecture overview for new engineers."*
 
-- Track deployment frequency, lead time, and failure rate
-- Summarize open PRs, blocked issues, and tech debt
-- Report on infrastructure costs and anomalies
-- Email the engineering digest to leadership on Fridays
+### Post-mortem drafts
+Generate structured post-mortems from incident timelines and Slack threads.
 
-> *"Every Friday, pull our deployment metrics from GitHub Actions and infrastructure costs from AWS, and email a summary to the CTO."*
-{% endtab %}
-{% endtabs %}
+> *"Draft a post-mortem for last night's outage. Here's the incident timeline and the Slack thread. Write it in our standard format."*
+
+---
 
 ## Getting started
 
-Tell WorkflowFiesta what DevOps process you want to automate. It will ask about your CI/CD setup, cloud provider, and alerting tools — then build the workflow.
+{% stepper %}
+{% step %}
+### Tell WorkflowFiesta what you want to automate
+Start with your most time-consuming recurring task. Describe it in plain language.
+{% endstep %}
+
+{% step %}
+### Answer a few questions
+WorkflowFiesta will ask about frequency, inputs, outputs, and who should receive the results.
+{% endstep %}
+
+{% step %}
+### Review and activate
+WorkflowFiesta shows you exactly what it's going to build. Approve it and it starts running.
+{% endstep %}
+{% endstepper %}
+
+---
+
+## Popular devops automations
+
+| Automation | What it does |
+|------------|-------------|
+| **Deployment report** | Merged PRs → plain-language release summary |
+| **Incident runbook generator** | Incident type → structured response runbook |
+| **Alert summarizer** | PagerDuty/monitoring alert → plain-language summary + Slack post |
+| **Infra doc generator** | Config files → architecture documentation |
+| **Post-mortem drafter** | Incident timeline → structured post-mortem |
+| **On-call handoff** | Shift end → status summary for incoming on-call engineer |
+
+---
 
 {% hint style="info" %}
-**Install the Runner** on your infrastructure if you need agents to access internal systems, private networks, or local files. [Learn more about the Runner.](../../documentation/workflowfiesta/runner.md)
+**DevOps tip:** Install the WorkflowFiesta Runner on your infrastructure machines so agents can read config files, run scripts, and access internal systems directly.
 {% endhint %}
+
+---
 
 {% content-ref url="../README.md" %}
 [Back to Guides](../README.md)

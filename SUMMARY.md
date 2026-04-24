@@ -25,6 +25,12 @@
 * [Marketing](guides/marketing/README.md)
 * [QA & Testing](guides/qa/README.md)
 * [Development](guides/development/README.md)
+* [Sales](guides/sales/README.md)
+* [Operations](guides/operations/README.md)
+* [Finance](guides/finance/README.md)
+* [HR & People](guides/hr/README.md)
+* [Customer Success](guides/customer-success/README.md)
+* [DevOps](guides/devops/README.md)
 
 ## Help Center
 
@@ -34,5 +40,5 @@
 * [Troubleshooting the Runner](help-center/troubleshooting/runner.md)
 * [Troubleshooting Credentials](help-center/troubleshooting/credentials.md)
 * [Troubleshooting Models](help-center/troubleshooting/models.md)
-* [Billing & Account](help-center/account/billing.md)
+* [Billing & Plans](help-center/account/billing.md)
 * [Team & Permissions](help-center/account/team-permissions.md)
