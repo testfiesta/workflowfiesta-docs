@@ -1,4 +1,8 @@
-# 🧪 QA & Testing
+---
+icon: bug
+---
+
+# QA & Testing
 
 Test case generation, bug triage, coverage reports, and regression monitoring for QA teams.
 
@@ -17,12 +21,12 @@ Reads incoming bug reports, categorizes them by severity and component, assigns 
 > "Create a bug triage agent that reads bug reports, categorizes them by severity (critical/high/medium/low) and component, and creates Jira tickets with structured descriptions and acceptance criteria."
 
 **What the platform will ask:**
-- Which tools to connect (it will open secure forms for any credentials needed)
-- Specific configuration details (which channel, which project, what format)
-- Schedule or trigger preferences
 
-**What you'll have when done:**
-A working bug triage agent that runs automatically.
+* Which tools to connect (it will open secure forms for any credentials needed)
+* Specific configuration details (which channel, which project, what format)
+* Schedule or trigger preferences
+
+**What you'll have when done:** A working bug triage agent that runs automatically.
 
 ### Test Case Generator
 
@@ -33,12 +37,12 @@ Takes a feature description or user story and generates comprehensive test cases
 > "Create an agent that generates test cases from feature descriptions. It should cover happy paths, edge cases, boundary conditions, and error states. Output in a format compatible with our test management tool."
 
 **What the platform will ask:**
-- Which tools to connect (it will open secure forms for any credentials needed)
-- Specific configuration details (which channel, which project, what format)
-- Schedule or trigger preferences
 
-**What you'll have when done:**
-A working test case generator that runs automatically.
+* Which tools to connect (it will open secure forms for any credentials needed)
+* Specific configuration details (which channel, which project, what format)
+* Schedule or trigger preferences
+
+**What you'll have when done:** A working test case generator that runs automatically.
 
 ### Coverage Report
 
@@ -49,9 +53,9 @@ Pulls test run data from Jira, calculates coverage by feature area, and generate
 > "Create a workflow that runs every Friday, pulls test execution data from Jira, calculates coverage by epic and component, and sends a coverage report to the QA team."
 
 **What the platform will ask:**
-- Which tools to connect (it will open secure forms for any credentials needed)
-- Specific configuration details (which channel, which project, what format)
-- Schedule or trigger preferences
 
-**What you'll have when done:**
-A working coverage report that runs automatically.
+* Which tools to connect (it will open secure forms for any credentials needed)
+* Specific configuration details (which channel, which project, what format)
+* Schedule or trigger preferences
+
+**What you'll have when done:** A working coverage report that runs automatically.

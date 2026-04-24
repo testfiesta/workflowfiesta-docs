@@ -1,3 +1,7 @@
+---
+icon: computer
+---
+
 # Runner
 
 The WorkflowFiesta Runner is a lightweight app you install on your computer or server. Once connected, your agents can access local files, internal databases, and systems behind your firewall.
@@ -8,13 +12,13 @@ The WorkflowFiesta Runner is a lightweight app you install on your computer or s
 
 ## What the Runner Enables
 
-| Capability | Example |
-|---|---|
-| Read local files | "Summarize all the PDFs in my Downloads folder" |
-| Write local files | "Save this report to my Desktop" |
-| Access internal databases | "Query our internal Postgres database" |
-| Run local scripts | "Run the analytics script in my git repo" |
-| Work behind a firewall | Access systems on your company network |
+| Capability                | Example                                         |
+| ------------------------- | ----------------------------------------------- |
+| Read local files          | "Summarize all the PDFs in my Downloads folder" |
+| Write local files         | "Save this report to my Desktop"                |
+| Access internal databases | "Query our internal Postgres database"          |
+| Run local scripts         | "Run the analytics script in my git repo"       |
+| Work behind a firewall    | Access systems on your company network          |
 
 ## How It Works
 
@@ -34,6 +38,7 @@ The platform will ask what you want to name it, generate a registration code, an
 2. Open the app and paste your registration code
 3. Click **Connect**
 {% endtab %}
+
 {% tab title="Linux" %}
 ```bash
 curl -L https://github.com/ss-libs/workflowfiesta-runner/releases/latest/download/workflowfiesta-runner-linux-amd64 -o wf-runner
@@ -41,6 +46,7 @@ chmod +x wf-runner
 ./wf-runner --code YOUR_REGISTRATION_CODE
 ```
 {% endtab %}
+
 {% tab title="Windows" %}
 1. Download the Runner `.exe` from the WorkflowFiesta releases page
 2. Run the installer and paste your registration code
@@ -53,18 +59,24 @@ chmod +x wf-runner
 **The Runner executes code on your machine.** Only connect runners to WorkflowFiesta organizations you control.
 {% endhint %}
 
-- Connects outbound only — no inbound ports opened
-- All communication encrypted over HTTPS
-- Registration codes are one-time tokens
+* Connects outbound only — no inbound ports opened
+* All communication encrypted over HTTPS
+* Registration codes are one-time tokens
 
 ## Troubleshooting
 
 <details>
+
 <summary>My runner shows as offline</summary>
-The runner process may have stopped. Restart the Runner app. On Linux, run `systemctl restart workflowfiesta-runner`.
+
+The runner process may have stopped. Restart the Runner app. On Linux, run \`systemctl restart workflowfiesta-runner\`.
+
 </details>
 
 <details>
+
 <summary>I need a new registration code</summary>
+
 Ask WorkflowFiesta: "Generate a new runner registration code." The old code is revoked and a new one issued immediately.
+
 </details>

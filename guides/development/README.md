@@ -1,4 +1,8 @@
-# 💻 Development
+---
+icon: display-code
+---
+
+# Development
 
 Code review agents, PR summarizers, incident responders, and deployment monitors for engineering teams.
 
@@ -17,12 +21,12 @@ Reviews pull requests for correctness, security vulnerabilities, performance iss
 > "Create a code review agent that reviews pull requests. It should check for correctness, security vulnerabilities (OWASP Top 10), performance issues, and maintainability. Post feedback as PR comments with severity levels: critical, warning, suggestion."
 
 **What the platform will ask:**
-- Which tools to connect (it will open secure forms for any credentials needed)
-- Specific configuration details (which channel, which project, what format)
-- Schedule or trigger preferences
 
-**What you'll have when done:**
-A working code review agent that runs automatically.
+* Which tools to connect (it will open secure forms for any credentials needed)
+* Specific configuration details (which channel, which project, what format)
+* Schedule or trigger preferences
+
+**What you'll have when done:** A working code review agent that runs automatically.
 
 ### Incident Responder
 
@@ -33,12 +37,12 @@ Manages production incidents with a structured runbook. Declares severity, assig
 > "Create an incident response agent that follows a structured runbook. It should help declare incident severity, assign IC/comms/tech roles, draft customer status updates, track the timeline, and write the post-mortem."
 
 **What the platform will ask:**
-- Which tools to connect (it will open secure forms for any credentials needed)
-- Specific configuration details (which channel, which project, what format)
-- Schedule or trigger preferences
 
-**What you'll have when done:**
-A working incident responder that runs automatically.
+* Which tools to connect (it will open secure forms for any credentials needed)
+* Specific configuration details (which channel, which project, what format)
+* Schedule or trigger preferences
+
+**What you'll have when done:** A working incident responder that runs automatically.
 
 ### PR Summarizer
 
@@ -49,9 +53,9 @@ Reads a pull request and writes a clear summary of what changed, why, and how to
 > "Create an agent that summarizes pull requests. Given a diff or PR link, it should write a clear description of what changed, why it was changed, and how to test it."
 
 **What the platform will ask:**
-- Which tools to connect (it will open secure forms for any credentials needed)
-- Specific configuration details (which channel, which project, what format)
-- Schedule or trigger preferences
 
-**What you'll have when done:**
-A working pr summarizer that runs automatically.
+* Which tools to connect (it will open secure forms for any credentials needed)
+* Specific configuration details (which channel, which project, what format)
+* Schedule or trigger preferences
+
+**What you'll have when done:** A working pr summarizer that runs automatically.

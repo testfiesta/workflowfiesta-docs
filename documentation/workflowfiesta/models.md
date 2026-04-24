@@ -1,3 +1,7 @@
+---
+icon: openai
+---
+
 # Models & Providers
 
 WorkflowFiesta is model-agnostic. You connect your own AI model API keys and choose which model powers each agent. Switch models at any time without rebuilding anything.
@@ -8,12 +12,12 @@ WorkflowFiesta is model-agnostic. You connect your own AI model API keys and cho
 
 ## Supported Providers
 
-| Provider | Models |
-|---|---|
-| **Anthropic** | Claude 3.5 Sonnet, Claude 3 Opus, Claude 3 Haiku |
-| **OpenAI** | GPT-4o, GPT-4 Turbo, GPT-3.5 Turbo |
-| **AWS Bedrock** | Claude via Bedrock, Llama, Titan, and others |
-| **Ollama** | Any locally-hosted model |
+| Provider        | Models                                           |
+| --------------- | ------------------------------------------------ |
+| **Anthropic**   | Claude 3.5 Sonnet, Claude 3 Opus, Claude 3 Haiku |
+| **OpenAI**      | GPT-4o, GPT-4 Turbo, GPT-3.5 Turbo               |
+| **AWS Bedrock** | Claude via Bedrock, Llama, Titan, and others     |
+| **Ollama**      | Any locally-hosted model                         |
 
 ## Connecting a Model Provider
 
@@ -45,20 +49,20 @@ If no model is specified for an agent, it uses the organization's default model.
 
 ## Model Selection Tips
 
-| Use case | Recommended model |
-|---|---|
-| Complex reasoning, long documents | Claude 3.5 Sonnet or GPT-4o |
-| Fast, high-volume tasks | Claude 3 Haiku or GPT-3.5 Turbo |
-| Code generation and review | GPT-4o or Claude 3.5 Sonnet |
-| Cost-sensitive workflows | Claude 3 Haiku |
+| Use case                          | Recommended model               |
+| --------------------------------- | ------------------------------- |
+| Complex reasoning, long documents | Claude 3.5 Sonnet or GPT-4o     |
+| Fast, high-volume tasks           | Claude 3 Haiku or GPT-3.5 Turbo |
+| Code generation and review        | GPT-4o or Claude 3.5 Sonnet     |
+| Cost-sensitive workflows          | Claude 3 Haiku                  |
 
 ## Temperature
 
 Temperature controls how creative vs. precise an agent's responses are. Set it when creating or updating an agent:
 
-- **0.0–0.3** — Precise, consistent, factual (good for data extraction, classification)
-- **0.4–0.7** — Balanced (good for most tasks)
-- **0.8–1.5** — Creative, varied (good for brainstorming, copywriting)
+* **0.0–0.3** — Precise, consistent, factual (good for data extraction, classification)
+* **0.4–0.7** — Balanced (good for most tasks)
+* **0.8–1.5** — Creative, varied (good for brainstorming, copywriting)
 
 > "Set the Creative Writing Agent's temperature to 1.2."
 

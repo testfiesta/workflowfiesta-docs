@@ -1,3 +1,7 @@
+---
+icon: microchip-ai
+---
+
 # What is WorkflowFiesta?
 
 WorkflowFiesta is a conversational AI automation platform for business teams. You describe what you want automated — a report, a workflow, an AI assistant — and WorkflowFiesta builds it through conversation.
@@ -16,14 +20,15 @@ WorkflowFiesta connects the steps. An agent can read your emails, pull data from
 
 {% tabs %}
 {% tab title="Agents" %}
-### Agents — your AI specialists
+#### Agents — your AI specialists
 
 An agent is an AI with a specific job. You give it a name, a purpose, and instructions. It uses the AI model you choose and the skills you attach to it.
 
 **Example agents:**
-- A **Customer Support Agent** that reads incoming support emails, drafts responses, and flags urgent issues
-- A **Marketing Agent** that writes blog posts, social copy, and ad creative on demand
-- A **Sales Agent** that researches prospects, drafts outreach emails, and logs activity to your CRM
+
+* A **Customer Support Agent** that reads incoming support emails, drafts responses, and flags urgent issues
+* A **Marketing Agent** that writes blog posts, social copy, and ad creative on demand
+* A **Sales Agent** that researches prospects, drafts outreach emails, and logs activity to your CRM
 
 Agents are created through conversation:
 
@@ -31,17 +36,19 @@ Agents are created through conversation:
 
 WorkflowFiesta asks a few clarifying questions, then creates the agent. You can refine it by talking to it.
 {% endtab %}
+
 {% tab title="Skills" %}
-### Skills — what agents can do
+#### Skills — what agents can do
 
 A skill extends what an agent can do. Skills connect agents to tools, APIs, and data sources.
 
 **Example skills:**
-- **Gmail** — read and send email
-- **Jira** — create and update tickets
-- **Google Analytics** — pull traffic and conversion data
-- **Intercom** — read conversations and user data
-- **HubSpot** — update contacts and deals
+
+* **Gmail** — read and send email
+* **Jira** — create and update tickets
+* **Google Analytics** — pull traffic and conversion data
+* **Intercom** — read conversations and user data
+* **HubSpot** — update contacts and deals
 
 Skills are org-wide. Once a skill exists, any agent can use it. You add a skill to an agent by asking:
 
@@ -49,15 +56,17 @@ Skills are org-wide. Once a skill exists, any agent can use it. You add a skill 
 
 If the skill requires credentials (an API key, OAuth connection, etc.), WorkflowFiesta walks you through connecting it securely — it opens a form, you paste the key, it's encrypted and stored. The key is never exposed in chat.
 {% endtab %}
+
 {% tab title="Workflows" %}
-### Workflows — automation that runs itself
+#### Workflows — automation that runs itself
 
 A workflow is a sequence of steps that runs automatically. It can be triggered by a schedule, a webhook, an event, or a chat message.
 
 **Example workflows:**
-- Every Monday at 7am: pull Intercom data, generate a CMO report, email it to the leadership team
-- When a new lead is created in HubSpot: research the company, draft a personalized outreach email, assign it to the right rep
-- Every night: scan all open support tickets, summarize unresolved issues, post a digest to Slack
+
+* Every Monday at 7am: pull Intercom data, generate a CMO report, email it to the leadership team
+* When a new lead is created in HubSpot: research the company, draft a personalized outreach email, assign it to the right rep
+* Every night: scan all open support tickets, summarize unresolved issues, post a digest to Slack
 
 Workflows are built through conversation:
 
@@ -88,10 +97,11 @@ Results delivered to you (email, Slack, chat, dashboard)
 The Runner is a lightweight app you install on your computer or server. Once connected, agents can access your local files, internal databases, network drives, and tools that aren't on the internet.
 
 **You need the Runner if you want to:**
-- Read files from your local filesystem or network drive
-- Connect to an internal database not exposed to the internet
-- Run scripts on your own machine
-- Access tools behind a corporate firewall
+
+* Read files from your local filesystem or network drive
+* Connect to an internal database not exposed to the internet
+* Run scripts on your own machine
+* Access tools behind a corporate firewall
 
 The Runner is optional. If everything you need is cloud-based (Gmail, HubSpot, Jira, Slack), you don't need it.
 
@@ -107,10 +117,10 @@ The Runner is optional. If everything you need is cloud-based (Gmail, HubSpot, J
 
 ## What to read next
 
-| | |
-|---|---|
-| [🚀 Quickstart](quickstart.md) | Get your first agent running in 5 minutes |
-| [⚙️ Agents](../workflowfiesta/agents.md) | Deep dive into how agents work |
-| [🔁 Workflows](../workflowfiesta/workflows.md) | How to build automated pipelines |
-| [🔧 Skills](../workflowfiesta/skills.md) | What skills exist and how to add them |
-| [👥 Discord](https://discord.gg/XEKxARDkNQ) | Ask the community |
+|                                                |                                           |
+| ---------------------------------------------- | ----------------------------------------- |
+| [🚀 Quickstart](quickstart.md)                 | Get your first agent running in 5 minutes |
+| [⚙️ Agents](../workflowfiesta/agents.md)       | Deep dive into how agents work            |
+| [🔁 Workflows](../workflowfiesta/workflows.md) | How to build automated pipelines          |
+| [🔧 Skills](../workflowfiesta/skills.md)       | What skills exist and how to add them     |
+| [👥 Discord](https://discord.gg/XEKxARDkNQ)    | Ask the community                         |
