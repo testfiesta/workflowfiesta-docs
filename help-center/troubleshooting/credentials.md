@@ -4,6 +4,11 @@ icon: square-question
 
 # Troubleshooting Credentials
 
+{% hint style="info" %}
+**WorkflowFiesta agents are fully self-aware.** They know the platform, its capabilities, and can take most actions for you directly. If you have a question, the fastest answer is always to ask the agent itself — just type it in the chat.
+{% endhint %}
+
+
 Credential issues are the most common cause of workflow failures. Here's how to diagnose and fix them.
 
 ## Adding credentials

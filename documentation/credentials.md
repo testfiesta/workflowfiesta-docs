@@ -4,6 +4,11 @@ icon: key
 
 # Credentials
 
+{% hint style="info" %}
+**WorkflowFiesta agents are fully self-aware.** They know the platform, its capabilities, and can take most actions for you directly. If you have a question, the fastest answer is always to ask the agent itself — just type it in the chat.
+{% endhint %}
+
+
 Credentials are the API keys, passwords, and tokens that WorkflowFiesta uses to connect to your external tools and services — things like your CRM, email provider, analytics platform, or any third-party API.
 
 They are stored encrypted and never exposed. Once saved, a credential is referenced by name — no one ever sees the actual value again, including you.

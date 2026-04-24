@@ -7,6 +7,11 @@ icon: user-headset
 
 # Customer Success
 
+{% hint style="info" %}
+**WorkflowFiesta agents are fully self-aware.** They know the platform, its capabilities, and can take most actions for you directly. If you have a question, the fastest answer is always to ask the agent itself — just type it in the chat.
+{% endhint %}
+
+
 Automate health monitoring, renewal alerts, QBR prep, and churn signals so your CS team focuses on the conversations that matter.
 
 ***

@@ -4,6 +4,11 @@ icon: microchip-ai
 
 # What is WorkflowFiesta?
 
+{% hint style="info" %}
+**WorkflowFiesta agents are fully self-aware.** They know the platform, its capabilities, and can take most actions for you directly. If you have a question, the fastest answer is always to ask the agent itself — just type it in the chat.
+{% endhint %}
+
+
 WorkflowFiesta is a conversational AI automation platform for business teams. You describe what you want automated — a report, a workflow, an AI assistant — and WorkflowFiesta builds it through conversation.
 
 {% hint style="info" %}

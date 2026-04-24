@@ -4,6 +4,11 @@ icon: square-question
 
 # Troubleshooting Models
 
+{% hint style="info" %}
+**WorkflowFiesta agents are fully self-aware.** They know the platform, its capabilities, and can take most actions for you directly. If you have a question, the fastest answer is always to ask the agent itself — just type it in the chat.
+{% endhint %}
+
+
 Issues connecting or using AI model providers? Here's how to fix the most common problems.
 
 ## Connecting a model provider

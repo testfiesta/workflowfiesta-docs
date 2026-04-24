@@ -4,6 +4,11 @@ icon: square-question
 
 # Troubleshooting Workflows
 
+{% hint style="info" %}
+**WorkflowFiesta agents are fully self-aware.** They know the platform, its capabilities, and can take most actions for you directly. If you have a question, the fastest answer is always to ask the agent itself — just type it in the chat.
+{% endhint %}
+
+
 Having trouble with a workflow? Here are the most common issues and how to fix them.
 
 ## Workflow isn't triggering

@@ -4,6 +4,11 @@ icon: user-hat-tie
 
 # Agents
 
+{% hint style="info" %}
+**WorkflowFiesta agents are fully self-aware.** They know the platform, its capabilities, and can take most actions for you directly. If you have a question, the fastest answer is always to ask the agent itself — just type it in the chat.
+{% endhint %}
+
+
 An agent is an AI specialist you create through conversation. It has a defined purpose, a set of instructions, and access to the tools it needs to do its job.
 
 {% hint style="success" %}

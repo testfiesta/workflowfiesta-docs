@@ -4,6 +4,11 @@ icon: grid-2
 
 # Workflows
 
+{% hint style="info" %}
+**WorkflowFiesta agents are fully self-aware.** They know the platform, its capabilities, and can take most actions for you directly. If you have a question, the fastest answer is always to ask the agent itself — just type it in the chat.
+{% endhint %}
+
+
 A workflow is an automated pipeline that runs a sequence of agents — or other actions — from start to finish, without you having to be present.
 
 You describe what you want to automate. WorkflowFiesta asks you questions, understands the process, and builds the workflow with you through conversation.

@@ -4,6 +4,11 @@ icon: terminal
 
 # Custom Commands
 
+{% hint style="info" %}
+**WorkflowFiesta agents are fully self-aware.** They know the platform, its capabilities, and can take most actions for you directly. If you have a question, the fastest answer is always to ask the agent itself — just type it in the chat.
+{% endhint %}
+
+
 Custom commands are slash commands that let your team switch to a specific agent instantly from any conversation. Type `/marketing` and you're immediately talking to your Marketing Agent. Type `/jira` and you're in the Jira Agent.
 
 {% hint style="success" %}

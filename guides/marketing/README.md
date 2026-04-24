@@ -4,6 +4,11 @@ icon: magnifying-glass-chart
 
 # Marketing
 
+{% hint style="info" %}
+**WorkflowFiesta agents are fully self-aware.** They know the platform, its capabilities, and can take most actions for you directly. If you have a question, the fastest answer is always to ask the agent itself — just type it in the chat.
+{% endhint %}
+
+
 Content pipelines, SEO agents, performance reports, and social media automation for marketing teams.
 
 {% hint style="success" %}

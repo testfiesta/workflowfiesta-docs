@@ -4,6 +4,11 @@ icon: screen-users
 
 # Team & Permissions
 
+{% hint style="info" %}
+**WorkflowFiesta agents are fully self-aware.** They know the platform, its capabilities, and can take most actions for you directly. If you have a question, the fastest answer is always to ask the agent itself — just type it in the chat.
+{% endhint %}
+
+
 ## Roles
 
 WorkflowFiesta has three roles. Every member of your organization is assigned one.

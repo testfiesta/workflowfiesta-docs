@@ -7,6 +7,11 @@ icon: sitemap
 
 # DevOps
 
+{% hint style="info" %}
+**WorkflowFiesta agents are fully self-aware.** They know the platform, its capabilities, and can take most actions for you directly. If you have a question, the fastest answer is always to ask the agent itself — just type it in the chat.
+{% endhint %}
+
+
 Automate deployment reports, incident runbooks, monitoring alerts, and infrastructure documentation so your engineers focus on building.
 
 ***

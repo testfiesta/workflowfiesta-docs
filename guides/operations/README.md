@@ -4,6 +4,11 @@ icon: gears
 
 # Operations
 
+{% hint style="info" %}
+**WorkflowFiesta agents are fully self-aware.** They know the platform, its capabilities, and can take most actions for you directly. If you have a question, the fastest answer is always to ask the agent itself — just type it in the chat.
+{% endhint %}
+
+
 Operations teams run on information — pulling it from a dozen systems, formatting it, and distributing it to the right people. WorkflowFiesta automates the entire information layer so your ops team can focus on decisions, not data wrangling.
 
 {% hint style="success" %}
