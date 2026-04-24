@@ -1,17 +1,19 @@
-# Help Center
+# Table of contents
 
-## Help Center
-* [Help Center Home](README.md)
+* [Help Center](README.md)
 
-## FAQ
+## Getting Started
+
 * [Getting Started FAQ](faq/getting-started.md)
 
 ## Troubleshooting
-* [Workflows](troubleshooting/workflows.md)
-* [Runner](troubleshooting/runner.md)
-* [Credentials](troubleshooting/credentials.md)
-* [Models](troubleshooting/models.md)
 
-## Account
+* [Troubleshooting Workflows](troubleshooting/workflows.md)
+* [Troubleshooting Credentials](troubleshooting/credentials.md)
+* [Troubleshooting Models](troubleshooting/models.md)
+* [Troubleshooting the Runner](troubleshooting/runner.md)
+
+## Account & Billing
+
 * [Billing & Plans](account/billing.md)
 * [Team & Permissions](account/team-permissions.md)
