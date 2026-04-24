@@ -5,7 +5,12 @@
 * [What is WorkflowFiesta?](getting-started/what-is-workflowfiesta.md)
 * [Key Concepts](getting-started/key-concepts.md)
 * [Quickstart — Your First Agent](getting-started/quickstart.md)
-* [Install the Runner](getting-started/install-runner.md)
+* [Install the Runner](runner/install-the-runner.md)
+
+## Build
+* [Build Your First Agent](agents/build-your-first-agent.md)
+* [Build Your First Workflow](workflows/build-your-first-workflow.md)
+* [Add Skills to Your Agent](skills/add-skills-to-your-agent.md)
 
 ## Core Concepts
 * [Agents](core-concepts/agents.md)
