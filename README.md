@@ -1,15 +1,19 @@
-# WorkflowFiesta Docs
+---
+icon: house-chimney-window
+---
+
+# Home
 
 Build AI agents and automated workflows for your business — no engineering team required.
 
-{% content-ref url="documentation/README.md" %}
-[Documentation](documentation/README.md)
+{% content-ref url="documentation/" %}
+[documentation](documentation/)
 {% endcontent-ref %}
 
-{% content-ref url="guides/README.md" %}
-[Guides](guides/README.md)
+{% content-ref url="guides/" %}
+[guides](guides/)
 {% endcontent-ref %}
 
-{% content-ref url="help-center/README.md" %}
-[Help Center](help-center/README.md)
+{% content-ref url="help-center/" %}
+[help-center](help-center/)
 {% endcontent-ref %}

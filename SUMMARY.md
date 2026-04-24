@@ -1,11 +1,15 @@
-# Table of Contents
+# Table of contents
+
+* [Home](README.md)
 
 ## Documentation
+
 * [Overview](documentation/README.md)
 * [What is WorkflowFiesta?](documentation/getting-started/what-is-workflowfiesta.md)
 * [Quickstart](documentation/getting-started/quickstart.md)
 
-### WorkflowFiesta
+## WorkflowFiesta
+
 * [Agents](documentation/workflowfiesta/agents.md)
 * [Skills](documentation/workflowfiesta/skills.md)
 * [Workflows](documentation/workflowfiesta/workflows.md)
@@ -16,12 +20,14 @@
 * [Runner](documentation/workflowfiesta/runner.md)
 
 ## Guides
+
 * [Guides Home](guides/README.md)
 * [Marketing](guides/marketing/README.md)
 * [QA & Testing](guides/qa/README.md)
 * [Development](guides/development/README.md)
 
 ## Help Center
+
 * [Help Center Home](help-center/README.md)
 * [Getting Started FAQ](help-center/faq/getting-started.md)
 * [Troubleshooting Workflows](help-center/troubleshooting/workflows.md)
