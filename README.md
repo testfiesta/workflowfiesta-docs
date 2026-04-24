@@ -12,9 +12,7 @@ Everything in WorkflowFiesta is created through conversation. You describe what 
 
 ## Get Started
 
-<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td>Quick Start Guide</td><td><a href="get-started/quickstart.md">quickstart.md</a></td><td><a href=".gitbook/assets/Cover Image -YT 2560 x 1450 (1).jpg">Cover Image -YT 2560 x 1450 (1).jpg</a></td></tr><tr><td>Guides By Business Department</td><td></td><td><a href=".gitbook/assets/Cover Image -YT 2560 x 1451 (2).jpg">Cover Image -YT 2560 x 1451 (2).jpg</a></td></tr><tr><td>Help Center</td><td></td><td><a href=".gitbook/assets/Cover Image -YT 2560 x 1452 (1).jpg">Cover Image -YT 2560 x 1452 (1).jpg</a></td></tr></tbody></table>
-
-
+<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td>Quick Start Guide</td><td><a href="get-started/quickstart.md">quickstart.md</a></td><td><a href=".gitbook/assets/Cover Image -YT 2560 x 1450 (1).jpg">Cover Image -YT 2560 x 1450 (1).jpg</a></td></tr><tr><td>Guides By Business Department</td><td><a href="guides/">guides</a></td><td><a href=".gitbook/assets/Cover Image -YT 2560 x 1451 (2).jpg">Cover Image -YT 2560 x 1451 (2).jpg</a></td></tr><tr><td>Help Center</td><td><a href="help-center/">help-center</a></td><td><a href=".gitbook/assets/Cover Image -YT 2560 x 1452 (1).jpg">Cover Image -YT 2560 x 1452 (1).jpg</a></td></tr></tbody></table>
 
 ## Where do you want to start?
 
