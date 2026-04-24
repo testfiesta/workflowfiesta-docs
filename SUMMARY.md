@@ -1,6 +1,6 @@
 # Table of contents
 
-* [WorkflowFiesta Docs](documentation/README.md)
+* [Welcome to WorkflowFiesta](documentation/README.md)
 * [What is WorkflowFiesta?](documentation/getting-started/what-is-workflowfiesta.md)
 * [Key Concepts](documentation/getting-started/key-concepts.md)
 * [Quickstart](documentation/getting-started/quickstart.md)
