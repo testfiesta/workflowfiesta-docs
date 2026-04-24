@@ -7,7 +7,7 @@ icon: bolt-lightning
 Get your first AI agent running in five minutes. No code. No configuration files. Just a conversation.
 
 {% hint style="info" %}
-**Prerequisites:** A WorkflowFiesta account. [Sign up free](https://app.workflowfiesta.com) if you haven't already.
+**Prerequisites:** A WorkflowFiesta account. Don't have one yet? [Book a consultation](https://workflowfiesta.com) to get started — WorkflowFiesta is a fully managed AI transformation platform and we will get you set up personally.
 {% endhint %}
 
 ***
