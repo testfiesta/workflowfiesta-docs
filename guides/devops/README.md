@@ -1,57 +1,63 @@
-# 🚀 DevOps
+# DevOps
 
-CI/CD automation, infrastructure monitoring, deployment workflows, and incident response for DevOps teams.
+DevOps teams manage infrastructure, deployments, monitoring, and incident response. WorkflowFiesta automates the repetitive operational work so your engineers can focus on building.
 
-{% hint style="success" %}
-**All of these are built through conversation.** Copy any prompt below, paste it into WorkflowFiesta, and the platform will guide you through the setup.
+## What DevOps teams automate with WorkflowFiesta
+
+{% tabs %}
+{% tab title="Deployments" %}
+**Automate your release pipeline end to end.**
+
+- Trigger deployments from a GitHub merge or manual command
+- Run pre-deployment checks and notify the team
+- Monitor rollout progress and alert on failures
+- Automatically roll back if health checks fail
+
+> *"When a PR is merged to main, run the deployment pipeline, monitor for errors, and post a status update to Slack."*
+{% endtab %}
+
+{% tab title="Monitoring" %}
+**Get alerted on what matters, not everything.**
+
+- Monitor infrastructure health on a schedule
+- Summarize error logs and surface the most critical issues
+- Correlate alerts across multiple systems
+- Escalate to the on-call engineer when thresholds are breached
+
+> *"Every hour, check our error rate. If it exceeds 1%, page the on-call engineer and post a summary to #incidents."*
+{% endtab %}
+
+{% tab title="Incident Response" %}
+**Respond faster with automated triage.**
+
+- Create incident channels and assign roles automatically
+- Pull relevant logs and metrics when an incident is declared
+- Draft status page updates based on what's known
+- Generate post-mortem templates after resolution
+
+> *"When an incident is declared, create a Slack channel, pull the last hour of error logs, and draft an initial status update."*
+{% endtab %}
+
+{% tab title="Reporting" %}
+**Weekly engineering health reports without manual work.**
+
+- Track deployment frequency, lead time, and failure rate
+- Summarize open PRs, blocked issues, and tech debt
+- Report on infrastructure costs and anomalies
+- Email the engineering digest to leadership on Fridays
+
+> *"Every Friday, pull our deployment metrics from GitHub Actions and infrastructure costs from AWS, and email a summary to the CTO."*
+{% endtab %}
+{% endtabs %}
+
+## Getting started
+
+Tell WorkflowFiesta what DevOps process you want to automate. It will ask about your CI/CD setup, cloud provider, and alerting tools — then build the workflow.
+
+{% hint style="info" %}
+**Install the Runner** on your infrastructure if you need agents to access internal systems, private networks, or local files. [Learn more about the Runner.](../../documentation/workflowfiesta/runner.md)
 {% endhint %}
 
-## Automations
-
-### Deployment Monitor
-
-Watches your CI/CD pipeline, notifies the team on deployment start/success/failure, and triggers rollback procedures if health checks fail.
-
-**Start with this prompt:**
-
-> "Create a deployment monitor workflow that triggers on a webhook from our CI/CD system. It should notify the team on Slack when a deployment starts, report success or failure, and if health checks fail after deploy, alert the on-call engineer and open an incident."
-
-**What the platform will ask:**
-- Which tools to connect (it will open secure forms for any credentials needed)
-- Specific configuration details (which channel, which project, what format)
-- Schedule or trigger preferences
-
-**What you'll have when done:**
-A working deployment monitor that runs automatically.
-
-### Infrastructure Alert Responder
-
-Receives alerts from your monitoring system, triages severity, drafts a first response, and pages the right on-call engineer.
-
-**Start with this prompt:**
-
-> "Create an agent that handles infrastructure alerts. When it receives an alert, it should triage severity, check if it's a known issue, draft a status update, and page the on-call engineer if it's SEV-1 or SEV-2."
-
-**What the platform will ask:**
-- Which tools to connect (it will open secure forms for any credentials needed)
-- Specific configuration details (which channel, which project, what format)
-- Schedule or trigger preferences
-
-**What you'll have when done:**
-A working infrastructure alert responder that runs automatically.
-
-### Weekly Infrastructure Report
-
-Pulls metrics from your monitoring tools and generates a weekly infrastructure health report — uptime, error rates, cost, and capacity.
-
-**Start with this prompt:**
-
-> "Create a workflow that runs every Monday, pulls last week's infrastructure metrics (uptime, p99 latency, error rate, cost), generates a health report, and emails it to the engineering team."
-
-**What the platform will ask:**
-- Which tools to connect (it will open secure forms for any credentials needed)
-- Specific configuration details (which channel, which project, what format)
-- Schedule or trigger preferences
-
-**What you'll have when done:**
-A working weekly infrastructure report that runs automatically.
+{% content-ref url="../README.md" %}
+[Back to Guides](../README.md)
+{% endcontent-ref %}
