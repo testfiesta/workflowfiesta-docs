@@ -1,3 +1,7 @@
+---
+icon: bolt-lightning
+---
+
 # Quickstart
 
 Get your first AI agent running in five minutes. No code. No configuration files. Just a conversation.
@@ -18,7 +22,7 @@ By the end of this guide you'll have a working AI agent that can receive message
 
 {% stepper %}
 {% step %}
-### Create your first agent
+#### Create your first agent
 
 1. Open [app.workflowfiesta.com](https://app.workflowfiesta.com) and sign in
 2. Click **New Agent** in the left sidebar
@@ -27,7 +31,7 @@ By the end of this guide you'll have a working AI agent that can receive message
 
 **Example system prompt:**
 
-```text
+```
 You are a support triage assistant. When given a customer message,
 classify it as Bug, Feature Request, or Billing Question.
 Then write a one-sentence suggested reply.
@@ -39,7 +43,7 @@ Your agent is live immediately. No deploy step.
 {% endstep %}
 
 {% step %}
-### Talk to your agent
+#### Talk to your agent
 
 Click the chat panel on the right and send a message. Try something realistic — a customer email, a piece of data, a question your team gets every day.
 
@@ -51,7 +55,7 @@ Every change to the system prompt takes effect on the very next message. No rest
 {% endstep %}
 
 {% step %}
-### Add a skill
+#### Add a skill
 
 Skills give your agent new capabilities: sending email, reading data, calling APIs, writing to Jira.
 
@@ -67,7 +71,7 @@ The **Gmail SMTP** skill lets any agent send email. The **Jira** skill lets any 
 {% endstep %}
 
 {% step %}
-### Run a workflow
+#### Run a workflow
 
 Workflows chain agents, scripts, and HTTP calls into automated pipelines.
 
@@ -109,7 +113,7 @@ trigger:
 {% endstep %}
 
 {% step %}
-### Install the Runner (optional)
+#### Install the Runner (optional)
 
 The Runner is a lightweight binary you install on your own machine or server. Once connected, agents can read local files, access internal databases, and run scripts on your hardware.
 
@@ -156,29 +160,4 @@ The Runner is optional. You only need it if you want agents to access files or s
 
 ## You're set up. What's next?
 
-<table data-view="cards">
-  <thead>
-    <tr>
-      <th></th>
-      <th></th>
-      <th data-hidden data-card-target data-type="content-ref"></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>🧠 <strong>Key Concepts</strong></td>
-      <td>Understand agents, skills, workflows, and runners in depth.</td>
-      <td><a href="key-concepts.md">key-concepts.md</a></td>
-    </tr>
-    <tr>
-      <td>🤖 <strong>Build Your First Agent</strong></td>
-      <td>A deeper guide to system prompts, tools, and agent design.</td>
-      <td><a href="../agents/build-your-first-agent.md">build-your-first-agent.md</a></td>
-    </tr>
-    <tr>
-      <td>⚙️ <strong>Build Your First Workflow</strong></td>
-      <td>Chain multiple steps, pass data between them, and schedule runs.</td>
-      <td><a href="../workflows/build-your-first-workflow.md">build-your-first-workflow.md</a></td>
-    </tr>
-  </tbody>
-</table>
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>🧠 <strong>Key Concepts</strong></td><td>Understand agents, skills, workflows, and runners in depth.</td><td><a href="/broken/pages/NTG9K8RkGRICSNDTJpqN">Broken link</a></td></tr><tr><td>🤖 <strong>Build Your First Agent</strong></td><td>A deeper guide to system prompts, tools, and agent design.</td><td><a href="/broken/pages/Z4nwOkbhpuz9xKs806RE">Broken link</a></td></tr><tr><td>⚙️ <strong>Build Your First Workflow</strong></td><td>Chain multiple steps, pass data between them, and schedule runs.</td><td><a href="/broken/pages/rLfM8h3XRBsPDW5iRAIc">Broken link</a></td></tr></tbody></table>
