@@ -1,25 +1,57 @@
-# Customer Success
+# 🎯 Customer Success
 
-Automate ticket triage, churn signal detection, renewal workflows, and health scoring — so your CS team focuses on relationships, not repetitive tasks.
+Support triage, churn alerts, onboarding automation, and health scoring for CS teams.
 
-***
+{% hint style="success" %}
+**All of these are built through conversation.** Copy any prompt below, paste it into WorkflowFiesta, and the platform will guide you through the setup.
+{% endhint %}
 
-## What you can automate
+## Automations
 
-<table data-view="cards">
-  <thead><tr><th></th><th></th></tr></thead>
-  <tbody>
-    <tr><td>🎧 <strong>Ticket Triage Agent</strong></td><td>Classify, prioritize, and route incoming support tickets automatically.</td></tr>
-    <tr><td>⚠️ <strong>Churn Signal Monitor</strong></td><td>Detect usage drops and engagement signals that predict churn before it happens.</td></tr>
-    <tr><td>🔄 <strong>Renewal Workflow</strong></td><td>Trigger renewal outreach sequences 90, 60, and 30 days before contract end.</td></tr>
-    <tr><td>💚 <strong>Health Score Report</strong></td><td>Pull product usage data and generate weekly customer health scores.</td></tr>
-    <tr><td>📧 <strong>QBR Prep</strong></td><td>Auto-generate quarterly business review decks from customer data.</td></tr>
-    <tr><td>📊 <strong>NPS Analysis</strong></td><td>Analyze NPS responses and surface themes and action items automatically.</td></tr>
-  </tbody>
-</table>
+### Support Triage Agent
 
-***
+Reads incoming support tickets, categorizes them by issue type and urgency, drafts a first response, and routes to the right team member.
 
-## Coming Soon
+**Start with this prompt:**
 
-Full step-by-step guides coming soon. [Join the Discord](https://discord.gg/XEKxARDkNQ) to get notified.
+> "Create a support triage agent that reads incoming support tickets, categorizes them by issue type (billing, technical, feature request, bug), assigns urgency (critical/high/medium/low), drafts a first response, and routes to the right team member."
+
+**What the platform will ask:**
+- Which tools to connect (it will open secure forms for any credentials needed)
+- Specific configuration details (which channel, which project, what format)
+- Schedule or trigger preferences
+
+**What you'll have when done:**
+A working support triage agent that runs automatically.
+
+### Churn Risk Monitor
+
+Monitors user activity in Intercom, flags accounts showing churn signals (low login frequency, support tickets, feature non-adoption), and alerts the CS team.
+
+**Start with this prompt:**
+
+> "Create a workflow that runs daily, pulls user activity data from Intercom, identifies accounts with churn signals (no login in 14 days, 2+ support tickets this week, never used key features), and sends an alert to the CS team with recommended actions."
+
+**What the platform will ask:**
+- Which tools to connect (it will open secure forms for any credentials needed)
+- Specific configuration details (which channel, which project, what format)
+- Schedule or trigger preferences
+
+**What you'll have when done:**
+A working churn risk monitor that runs automatically.
+
+### Customer Health Score
+
+Calculates a health score for each account based on usage, support history, and engagement — and sends a weekly digest to the CS team.
+
+**Start with this prompt:**
+
+> "Create a weekly workflow that calculates a health score for each customer account based on login frequency, feature adoption, support ticket volume, and NPS score, then sends a ranked list to the CS team highlighting accounts that need attention."
+
+**What the platform will ask:**
+- Which tools to connect (it will open secure forms for any credentials needed)
+- Specific configuration details (which channel, which project, what format)
+- Schedule or trigger preferences
+
+**What you'll have when done:**
+A working customer health score that runs automatically.

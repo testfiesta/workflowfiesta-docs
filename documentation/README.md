@@ -1,32 +1,67 @@
----
-icon: book-open
----
+# WorkflowFiesta Documentation
 
-# Overview
-
-WorkflowFiesta is an AI orchestration platform for business teams. Build agents that think, workflows that run automatically, and connect everything to the tools you already use.
+WorkflowFiesta is a conversational AI automation platform. You build agents, skills, workflows, and integrations by talking — no code, no forms, no configuration files.
 
 {% hint style="success" %}
-**New here?** Start with the [Quickstart](getting-started/quickstart.md) — your first agent is running in five minutes.
+**Everything is created through conversation.** Tell WorkflowFiesta what you want to build. It asks the right questions, collects what it needs, and builds it for you.
 {% endhint %}
 
-***
+## Where do you want to start?
 
-## Get Started
+<table data-view="cards">
+  <thead><tr><th></th><th></th></tr></thead>
+  <tbody>
+    <tr><td><strong>🚀 Quickstart</strong></td><td>Get your first agent running in 5 minutes</td></tr>
+    <tr><td><strong>🧠 What is WorkflowFiesta?</strong></td><td>Understand the platform before you build</td></tr>
+    <tr><td><strong>⚙️ Agents</strong></td><td>The specialists that do your work</td></tr>
+    <tr><td><strong>🔧 Skills</strong></td><td>Capabilities you add to any agent</td></tr>
+    <tr><td><strong>🔁 Workflows</strong></td><td>Multi-step automation that runs on a schedule</td></tr>
+    <tr><td><strong>🖥️ Runner</strong></td><td>Connect your local machine to the platform</td></tr>
+  </tbody>
+</table>
 
-<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>🗺️ <strong>Overview</strong></td><td>Understand what WorkflowFiesta is and how it works</td><td><a href="getting-started/what-is-workflowfiesta.md">what-is-workflowfiesta.md</a></td></tr><tr><td>⚡ <strong>Quickstart</strong></td><td>Build your first agent and workflow in 5 minutes</td><td><a href="getting-started/quickstart.md">quickstart.md</a></td></tr><tr><td>🤖 <strong>Agents</strong></td><td>Create AI specialists that do specific jobs</td><td><a href="workflowfiesta/agents.md">agents.md</a></td></tr><tr><td>⚙️ <strong>Workflows</strong></td><td>Automate multi-step pipelines that run on a schedule</td><td><a href="workflowfiesta/workflows.md">workflows.md</a></td></tr><tr><td>🧠 <strong>Skills</strong></td><td>Extend agents with new tools and capabilities</td><td><a href="workflowfiesta/skills.md">skills.md</a></td></tr><tr><td>🖥️ <strong>Runner</strong></td><td>Connect WorkflowFiesta to your local machine</td><td><a href="workflowfiesta/runner.md">runner.md</a></td></tr></tbody></table>
+## How WorkflowFiesta works
 
-***
+WorkflowFiesta is built around one idea: **you describe what you want, and the platform builds it.**
 
-## WorkflowFiesta
+Every agent, workflow, skill, and integration is created through a conversation. You don't fill out configuration forms. You don't write YAML by hand. You don't read API docs. You just tell WorkflowFiesta what you need.
 
-| Topic                                                | Description                               |
-| ---------------------------------------------------- | ----------------------------------------- |
-| [Agents](workflowfiesta/agents.md)                   | Build, configure, and deploy AI agents    |
-| [Skills](workflowfiesta/skills.md)                   | Add capabilities to any agent in your org |
-| [Workflows](workflowfiesta/workflows.md)             | Automate multi-step pipelines             |
-| [Environments](workflowfiesta/environments.md)       | Configure containers and runners          |
-| [Credentials](workflowfiesta/credentials.md)         | Store and manage API keys securely        |
-| [Custom Commands](workflowfiesta/custom-commands.md) | Create slash commands for your team       |
-| [Models & Providers](workflowfiesta/models.md)       | Connect any AI model — never locked in    |
-| [Runner](workflowfiesta/runner.md)                   | Run agents on your own machine            |
+{% tabs %}
+{% tab title="Creating an agent" %}
+**You say:** "Create a customer support agent that handles refund requests and escalates anything over $500."
+
+**WorkflowFiesta:** Asks about your tone, escalation rules, and what tools it needs. Then creates the agent.
+{% endtab %}
+{% tab title="Building a workflow" %}
+**You say:** "Every Monday morning, pull last week's sales data from HubSpot and email me a summary."
+
+**WorkflowFiesta:** Asks which HubSpot fields you want, what format the summary should be, and who to send it to. Then builds and schedules the workflow.
+{% endtab %}
+{% tab title="Connecting a tool" %}
+**You say:** "Connect to Intercom."
+
+**WorkflowFiesta:** "I'll need an API key. Go to Intercom → Settings → Developers → Access Token. When you have it, I'll open a secure form — paste it there and it's saved encrypted. Ready?"
+{% endtab %}
+{% tab title="Adding a skill" %}
+**You say:** "Give my marketing agent the ability to read and send Gmail."
+
+**WorkflowFiesta:** Adds the Gmail skill to your agent. If credentials aren't stored yet, it walks you through connecting them securely.
+{% endtab %}
+{% endtabs %}
+
+## The building blocks
+
+| Block | What it is | Created by |
+|---|---|---|
+| **Agent** | An AI specialist with a name, purpose, and instructions | Conversation |
+| **Skill** | A capability added to an agent (Gmail, Jira, analytics, etc.) | Conversation |
+| **Workflow** | A multi-step automation triggered by schedule, webhook, or event | Conversation |
+| **Credential** | An encrypted API key or password stored securely | Secure form |
+| **Runner** | Your local machine connected to the platform | Download + register |
+| **Environment** | The container or machine a workflow step runs in | Conversation |
+
+## Need help?
+
+- 💬 Ask in the chat — WorkflowFiesta can answer questions about itself
+- 🔍 Search these docs using the search bar above
+- 👥 Join the [Discord community](https://discord.gg/XEKxARDkNQ) for help from the team and other users

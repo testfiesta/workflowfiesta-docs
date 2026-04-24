@@ -1,19 +1,57 @@
----
-icon: medal
----
+# 🧪 QA & Testing
 
-# QA & Testing
+Test case generation, bug triage, coverage reports, and regression monitoring for QA teams.
 
-Build agents that write test cases, triage incoming bugs, generate test reports, and keep your quality bar high — without the manual overhead.
+{% hint style="success" %}
+**All of these are built through conversation.** Copy any prompt below, paste it into WorkflowFiesta, and the platform will guide you through the setup.
+{% endhint %}
 
-***
+## Automations
 
-## What you can automate
+### Bug Triage Agent
 
-<table data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>🧪 <strong>Test Case Generator</strong></td><td>Feed a feature spec to an agent. Get a full test suite back in seconds.</td></tr><tr><td>🐛 <strong>Bug Triage Agent</strong></td><td>Classify incoming bug reports by severity, assign to the right team, draft a response.</td></tr><tr><td>📋 <strong>Test Report Builder</strong></td><td>Pull test run results and generate a formatted QA report for stakeholders.</td></tr><tr><td>🔁 <strong>Regression Checker</strong></td><td>On every PR, run an agent that checks for regression risk based on changed files.</td></tr><tr><td>📝 <strong>Release Notes Writer</strong></td><td>Summarize merged PRs into clean, human-readable release notes automatically.</td></tr><tr><td>📊 <strong>Coverage Dashboard</strong></td><td>Track test coverage trends over time and alert when it drops below threshold.</td></tr></tbody></table>
+Reads incoming bug reports, categorizes them by severity and component, assigns them to the right team member, and creates structured Jira tickets.
 
-***
+**Start with this prompt:**
 
-## Coming Soon
+> "Create a bug triage agent that reads bug reports, categorizes them by severity (critical/high/medium/low) and component, and creates Jira tickets with structured descriptions and acceptance criteria."
 
-Full step-by-step guides coming soon. [Join the Discord](https://discord.gg/XEKxARDkNQ) to get notified.
+**What the platform will ask:**
+- Which tools to connect (it will open secure forms for any credentials needed)
+- Specific configuration details (which channel, which project, what format)
+- Schedule or trigger preferences
+
+**What you'll have when done:**
+A working bug triage agent that runs automatically.
+
+### Test Case Generator
+
+Takes a feature description or user story and generates comprehensive test cases covering happy paths, edge cases, and error conditions.
+
+**Start with this prompt:**
+
+> "Create an agent that generates test cases from feature descriptions. It should cover happy paths, edge cases, boundary conditions, and error states. Output in a format compatible with our test management tool."
+
+**What the platform will ask:**
+- Which tools to connect (it will open secure forms for any credentials needed)
+- Specific configuration details (which channel, which project, what format)
+- Schedule or trigger preferences
+
+**What you'll have when done:**
+A working test case generator that runs automatically.
+
+### Coverage Report
+
+Pulls test run data from Jira, calculates coverage by feature area, and generates a weekly coverage report.
+
+**Start with this prompt:**
+
+> "Create a workflow that runs every Friday, pulls test execution data from Jira, calculates coverage by epic and component, and sends a coverage report to the QA team."
+
+**What the platform will ask:**
+- Which tools to connect (it will open secure forms for any credentials needed)
+- Specific configuration details (which channel, which project, what format)
+- Schedule or trigger preferences
+
+**What you'll have when done:**
+A working coverage report that runs automatically.

@@ -1,25 +1,57 @@
-# DevOps
+# 🚀 DevOps
 
-Automate deploy pipelines, monitoring alerts, runbook execution, and infrastructure reporting — so your DevOps team moves faster with fewer manual steps.
+CI/CD automation, infrastructure monitoring, deployment workflows, and incident response for DevOps teams.
 
-***
+{% hint style="success" %}
+**All of these are built through conversation.** Copy any prompt below, paste it into WorkflowFiesta, and the platform will guide you through the setup.
+{% endhint %}
 
-## What you can automate
+## Automations
 
-<table data-view="cards">
-  <thead><tr><th></th><th></th></tr></thead>
-  <tbody>
-    <tr><td>🚀 <strong>Deploy Pipeline</strong></td><td>Trigger, monitor, and report on deployments with automated rollback on failure.</td></tr>
-    <tr><td>🔔 <strong>Monitoring Alerts</strong></td><td>Route alerts from PagerDuty or Datadog through an agent that adds context.</td></tr>
-    <tr><td>📋 <strong>Runbook Executor</strong></td><td>Run standard runbooks automatically when specific alert conditions are met.</td></tr>
-    <tr><td>🔍 <strong>Log Analyzer</strong></td><td>Feed error logs to an agent that identifies root cause and suggests fixes.</td></tr>
-    <tr><td>🛡️ <strong>Security Audit</strong></td><td>Run automated security scans on new infrastructure changes before they go live.</td></tr>
-    <tr><td>📊 <strong>Infrastructure Report</strong></td><td>Generate weekly infra cost and performance reports from cloud provider data.</td></tr>
-  </tbody>
-</table>
+### Deployment Monitor
 
-***
+Watches your CI/CD pipeline, notifies the team on deployment start/success/failure, and triggers rollback procedures if health checks fail.
 
-## Coming Soon
+**Start with this prompt:**
 
-Full step-by-step guides coming soon. [Join the Discord](https://discord.gg/XEKxARDkNQ) to get notified.
+> "Create a deployment monitor workflow that triggers on a webhook from our CI/CD system. It should notify the team on Slack when a deployment starts, report success or failure, and if health checks fail after deploy, alert the on-call engineer and open an incident."
+
+**What the platform will ask:**
+- Which tools to connect (it will open secure forms for any credentials needed)
+- Specific configuration details (which channel, which project, what format)
+- Schedule or trigger preferences
+
+**What you'll have when done:**
+A working deployment monitor that runs automatically.
+
+### Infrastructure Alert Responder
+
+Receives alerts from your monitoring system, triages severity, drafts a first response, and pages the right on-call engineer.
+
+**Start with this prompt:**
+
+> "Create an agent that handles infrastructure alerts. When it receives an alert, it should triage severity, check if it's a known issue, draft a status update, and page the on-call engineer if it's SEV-1 or SEV-2."
+
+**What the platform will ask:**
+- Which tools to connect (it will open secure forms for any credentials needed)
+- Specific configuration details (which channel, which project, what format)
+- Schedule or trigger preferences
+
+**What you'll have when done:**
+A working infrastructure alert responder that runs automatically.
+
+### Weekly Infrastructure Report
+
+Pulls metrics from your monitoring tools and generates a weekly infrastructure health report — uptime, error rates, cost, and capacity.
+
+**Start with this prompt:**
+
+> "Create a workflow that runs every Monday, pulls last week's infrastructure metrics (uptime, p99 latency, error rate, cost), generates a health report, and emails it to the engineering team."
+
+**What the platform will ask:**
+- Which tools to connect (it will open secure forms for any credentials needed)
+- Specific configuration details (which channel, which project, what format)
+- Schedule or trigger preferences
+
+**What you'll have when done:**
+A working weekly infrastructure report that runs automatically.
