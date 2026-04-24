@@ -1,3 +1,0 @@
-# Authentication
-
-Placeholder — content coming.
