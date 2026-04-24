@@ -1,83 +1,151 @@
 # What is WorkflowFiesta?
 
-WorkflowFiesta is an AI workflow automation platform that lets business and operations teams build, run, and manage AI agents — without writing code.
+WorkflowFiesta is an AI orchestration platform. It connects AI agents, automated workflows, and your existing business tools into a single system that runs without constant human intervention.
 
-{% hint style="info" %}
-If you just want to get something running, start with the [Quickstart](quickstart.md). Come back here when you want to understand how the pieces fit together.
-{% endhint %}
+***
 
 ## The problem it solves
 
-Most AI tools give you a chat window. You ask a question, you get an answer, you copy it somewhere else and do the next step yourself.
+Most AI tools give you a chat window. You ask a question, you get an answer, and then you manually do something with that answer. Every time.
 
-WorkflowFiesta is different. It connects the steps. An agent can read your data, reason about it, take an action, hand off to another agent, and deliver a finished result — all without you in the loop.
+WorkflowFiesta connects the steps. An agent doesn't just answer a question — it can send the answer as an email, create a Jira ticket, update a spreadsheet, or trigger the next agent in a pipeline. Automatically.
 
-The people who get the most out of WorkflowFiesta are the ones who have a repeating process that currently requires a human to sit in the middle of it.
+> "AI that actually does things, not just says things."
+
+***
 
 ## The three layers
 
-WorkflowFiesta is built in three layers. You don't need to think about all three at once, but understanding them helps you know what to reach for.
+WorkflowFiesta is built in three layers that work together:
 
-### Layer 1 — Agents
+{% tabs %}
+{% tab title="Layer 1 — Agents" %}
+### Agents
 
-An agent is an AI assistant with a specific job. You give it a name, a system prompt that defines its role and behavior, and optionally a set of skills. That's it.
+An agent is an AI assistant with a specific job. You define its job in plain English via a **system prompt**. The agent uses that prompt to respond to every message it receives.
 
-Agents are conversational by default — you can talk to any agent directly in the chat interface. But they're also callable from workflows, from other agents, and from external systems via webhook.
+**Example:** A `Support Triage Agent` with the prompt:
+> *"Classify incoming support messages as Bug, Feature Request, or Billing Question. Write a one-sentence suggested reply for each."*
 
-**Example:** A "Support Triage" agent that reads incoming tickets, classifies them by urgency, and drafts a first response.
+Agents can be:
+- Conversational (chat-based, interactive)
+- Automated (invoked by a workflow step, no human in the loop)
+- Specialist (one narrow job, called by a director agent)
+- Director (orchestrates other agents, delegates sub-tasks)
+{% endtab %}
 
-### Layer 2 — Skills
+{% tab title="Layer 2 — Skills" %}
+### Skills
 
-Skills extend what an agent knows and can do. A skill is a block of instructions — or a script — that gets injected into the agent's context.
+A skill extends what an agent can do. Skills are org-wide — add a skill once and every agent in your organization can use it.
 
-Skills are org-wide. Every agent in your organization can use every skill. You don't configure skills per-agent; you attach them at the org level and they're available everywhere.
+There are two types:
 
-**Example:** A "Jira" skill that gives any agent the ability to create, update, and query Jira issues via the REST API.
+| Type | What it does |
+|---|---|
+| **LLM Prompt** | Injects additional instructions into the agent's system prompt — teaches the agent new knowledge or behavior |
+| **Script** | Executes code in a sandboxed container — lets the agent call APIs, read files, send emails, query databases |
 
-### Layer 3 — Workflows
+**Example skills:** Gmail SMTP, Jira, Google Analytics, Slack, GitHub, HubSpot
+{% endtab %}
 
-Workflows are multi-step automation pipelines. They chain together agents, scripts, and HTTP calls into a sequence that runs automatically — on a schedule, on a webhook trigger, or on demand.
+{% tab title="Layer 3 — Workflows" %}
+### Workflows
 
-A workflow is where you turn a one-off agent conversation into a repeating, reliable process.
+A workflow is an automated pipeline. It has a **trigger** (what starts it) and **steps** (what it does). Steps can invoke agents, run scripts, or make HTTP calls. Each step can pass its output to the next.
 
-**Example:** Every Monday at 7am, pull data from four sources, generate a CMO report, run it through a design review agent, and email it to the leadership team.
+**Example workflow:**
+1. **Trigger:** Every Monday at 8am
+2. **Step 1:** Agent pulls last week's analytics data
+3. **Step 2:** Agent writes an executive summary
+4. **Step 3:** Script sends the summary as an HTML email
+
+No human involvement after setup.
+{% endtab %}
+{% endtabs %}
+
+***
 
 ## How the pieces connect
 
 ```
-Trigger (schedule / webhook / manual)
-    ↓
-Workflow step 1 — Agent reads data
-    ↓
-Workflow step 2 — Agent generates output
-    ↓
-Workflow step 3 — Script sends email / posts to Slack / creates Jira ticket
-    ↓
-Done. No human in the loop.
+TRIGGER
+   │
+   ▼
+WORKFLOW STEP 1 ──► Agent (reads data, reasons, writes output)
+   │
+   ▼
+WORKFLOW STEP 2 ──► Script (sends email, updates database, calls API)
+   │
+   ▼
+WORKFLOW STEP 3 ──► Agent (reviews output, flags issues, notifies team)
+   │
+   ▼
+DONE ✓
 ```
 
-Each step passes its output to the next. Agents can call other agents. Scripts can call external APIs. The whole thing runs in the cloud — or on your own machine if you install the Runner.
+Data flows from step to step using template syntax: `{{ steps.step1.output }}`. No manual copy-paste between tools.
 
-## The Runner
+***
 
-The Runner is a lightweight binary you install on your own computer or server. Once connected, agents can read local files, access network drives, run local tools, and interact with systems that aren't exposed to the internet.
+## The Runner — connecting to your world
 
-It's optional. Most workflows run fine without it. But if your data lives on a local machine or internal network, the Runner is how you bring it in.
+{% hint style="info" %}
+The Runner is optional. Most workflows run entirely in the cloud. You only need the Runner if you want to access files or systems on your own machine or private network.
+{% endhint %}
+
+The WorkflowFiesta Runner is a lightweight binary you install on your own computer or server. Once connected:
+
+- Agents can **read and write local files** — documents, spreadsheets, code repositories
+- Agents can **query internal databases** that aren't exposed to the internet
+- Agents can **run scripts on your hardware** with full OS access
+- Agents can **access tools behind your firewall** — internal APIs, VPN-protected services
+
+The Runner connects outbound to WorkflowFiesta's servers. No inbound ports required. No firewall changes.
+
+***
 
 ## What WorkflowFiesta is not
 
 {% hint style="warning" %}
-WorkflowFiesta is not a no-code app builder, a CRM, or a customer-facing chatbot platform. It's an internal automation layer for teams who want AI working across their operations.
+**Not a no-code app builder.** WorkflowFiesta automates processes and orchestrates AI — it doesn't build customer-facing web apps or replace tools like Webflow or Bubble.
 {% endhint %}
 
-It's also not locked to one AI model. You can use OpenAI, Anthropic, AWS Bedrock, or any provider you configure. Swap models without rebuilding anything.
+{% hint style="warning" %}
+**Not a CRM or project management tool.** WorkflowFiesta connects to your CRM (HubSpot, Salesforce) and project tools (Jira, Linear) — it doesn't replace them.
+{% endhint %}
 
-## Where to go next
+{% hint style="warning" %}
+**Not locked to one AI model.** WorkflowFiesta supports OpenAI, Anthropic, AWS Bedrock, and more. You choose the model per agent. You can switch at any time.
+{% endhint %}
 
-| If you want to… | Go here |
-|---|---|
-| Build your first agent | [Quickstart](quickstart.md) |
-| Understand agents in depth | [Agents](../agents/overview.md) |
-| Understand workflows in depth | [Workflows](../workflows/overview.md) |
-| Connect your local machine | [Installing the Runner](install-runner.md) |
-| See what others are building | [Discord Community](https://discord.gg/XEKxARDkNQ) |
+***
+
+## What to read next
+
+<table data-view="cards">
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th data-hidden data-card-target data-type="content-ref"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>⚡ <strong>Quickstart</strong></td>
+      <td>Build your first agent in 5 minutes.</td>
+      <td><a href="quickstart.md">quickstart.md</a></td>
+    </tr>
+    <tr>
+      <td>🔑 <strong>Key Concepts</strong></td>
+      <td>The full glossary — every term defined with examples.</td>
+      <td><a href="key-concepts.md">key-concepts.md</a></td>
+    </tr>
+    <tr>
+      <td>🤖 <strong>Agents</strong></td>
+      <td>Deep dive into building, configuring, and chaining agents.</td>
+      <td><a href="../agents/build-your-first-agent.md">build-your-first-agent.md</a></td>
+    </tr>
+  </tbody>
+</table>

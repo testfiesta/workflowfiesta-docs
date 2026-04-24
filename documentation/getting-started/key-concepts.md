@@ -1,205 +1,294 @@
 # Key Concepts
 
-WorkflowFiesta uses a small set of building blocks. Once you understand each one and how they connect, the rest of the platform makes sense immediately.
+A reference guide to every core concept in WorkflowFiesta. Bookmark this page — it's the one you'll return to when something needs clarifying.
 
----
+***
+
+## Platform architecture at a glance
+
+```
+┌─────────────────────────────────────────────────────────┐
+│                    WorkflowFiesta                        │
+│                                                         │
+│  ┌──────────┐    ┌──────────┐    ┌──────────────────┐  │
+│  │  Agents  │◄──►│  Skills  │    │    Workflows     │  │
+│  └──────────┘    └──────────┘    │  ┌────────────┐  │  │
+│       │                          │  │  Trigger   │  │  │
+│       │                          │  └─────┬──────┘  │  │
+│  ┌────▼─────┐    ┌──────────┐    │        │         │  │
+│  │  Guards  │    │ Credentials│  │  ┌─────▼──────┐  │  │
+│  └──────────┘    └──────────┘    │  │   Steps    │  │  │
+│                                  │  └────────────┘  │  │
+│  ┌──────────┐    ┌──────────┐    └──────────────────┘  │
+│  │ Runners  │◄──►│Environments│                        │
+│  └──────────┘    └──────────┘                          │
+└─────────────────────────────────────────────────────────┘
+```
+
+***
 
 ## Agent
 
-An agent is an AI assistant you configure for a specific job.
+An agent is an AI assistant with a specific job. It has a name, a **system prompt** (plain English instructions), and a model configuration.
 
-Every agent has:
-- A **name** — how you and your team refer to it
-- A **system prompt** — instructions that define its role, tone, and behavior
-- A **model** — the AI model it runs on (Claude, GPT-4, and others)
+**System prompt** — the instructions that define what the agent does, how it responds, and what it knows. Written in plain English. No code required.
 
-Agents respond to messages in chat, get invoked by workflows, or call other agents as sub-agents in a pipeline.
+**Model** — the AI model powering the agent (GPT-4o, Claude Sonnet, etc.). You choose per agent. You can switch at any time.
 
 {% hint style="info" %}
-Think of an agent as a specialist on your team. One agent handles customer support. Another writes blog posts. Another pulls analytics. Each one is configured for its job and nothing else.
+Agents can be conversational (you chat with them) or automated (a workflow invokes them with a prompt and uses their output). The same agent can do both.
 {% endhint %}
 
-**Where to go next:** [Build Your First Agent](../agents/build-your-first-agent.md)
+<details>
 
----
+<summary>Example: a support triage agent</summary>
+
+**Name:** Support Triage
+
+**System prompt:**
+```
+You are a support triage assistant. When given a customer message:
+1. Classify it as: Bug, Feature Request, or Billing Question
+2. Assign a priority: High, Medium, or Low
+3. Write a one-sentence suggested reply
+
+Respond in JSON format.
+```
+
+**Used in:** A webhook workflow that fires when a new Intercom message arrives.
+
+</details>
+
+***
 
 ## Skill
 
-A skill extends what an agent knows or can do.
+A skill extends what an agent can do. Skills are **org-wide** — add a skill once and every agent in your organization can use it.
 
-Skills are **org-wide** — once a skill exists, any agent in your organization can use it. There are two types:
+| Type | What it does | Example |
+|---|---|---|
+| **LLM Prompt** | Injects instructions into the agent's system prompt | Jira knowledge, brand voice guidelines, API documentation |
+| **Script** | Executes code in a sandboxed container | Send email via Gmail, create a Jira ticket, query a database |
 
-| Type | What it does |
-|------|-------------|
-| **LLM Prompt** | Injects additional instructions into the agent's system prompt at runtime |
-| **Script** | Executes code in a sandboxed container as a workflow step |
-
-Examples of LLM prompt skills: writing style guidelines, brand voice rules, a library of SQL patterns, a security checklist.
-
-Examples of script skills: send an email via Gmail SMTP, pull data from a Jira board, run a Python analysis script.
-
-{% hint style="info" %}
-Skills are additive. An agent's effective capability is its system prompt plus every skill attached to it. You can mix and match without touching the agent's core configuration.
+{% hint style="success" %}
+Skills are additive. An agent with the Gmail skill + the Jira skill can send emails **and** create tickets. Stack as many as you need.
 {% endhint %}
 
----
+***
 
 ## Workflow
 
-A workflow is a multi-step automation pipeline.
-
-Each workflow has:
-- A **trigger** — what starts it (a schedule, a webhook, a chat message, or an API call)
-- One or more **steps** — agent calls, scripts, or HTTP requests executed in sequence
-- **Data passing** — outputs from one step flow into the next via template variables
+A workflow is an automated pipeline. It has a **trigger** that starts it and **steps** that run in sequence. Each step can pass its output to the next using template syntax.
 
 ```yaml
-# Example: a simple two-step workflow
+name: Weekly Report
 steps:
-  - id: analyze
+  - id: pull_data
     type: agent
     agent: Analytics Agent
-    prompt: "Summarize last week's signups from Intercom"
+    prompt: "Pull last week's key metrics"
 
-  - id: send
+  - id: write_summary
+    type: agent
+    agent: Report Writer
+    prompt: "Write an executive summary from: {{ steps.pull_data.output }}"
+
+  - id: send_email
     type: script
     script: |
-      # send the summary by email
+      # sends the summary via Gmail SMTP
 ```
 
-{% hint style="success" %}
-Workflows are how you turn a one-off agent conversation into something that runs automatically — every day, every Monday at 9am, or every time a webhook fires.
+{% hint style="info" %}
+Workflows are defined in YAML but you don't need to write YAML by hand. The Workflow Builder agent can generate and iterate on YAML from a plain English description.
 {% endhint %}
 
-**Where to go next:** [Build Your First Workflow](../workflows/build-your-first-workflow.md)
-
----
+***
 
 ## Trigger
 
-A trigger is what starts a workflow.
+A trigger defines what starts a workflow. There are four types:
 
-| Trigger type | When it fires |
-|---|---|
-| **Manual** | You click "Run" in the UI or call the API |
-| **Schedule** | A cron expression — e.g. every Monday at 9am |
-| **Webhook** | An inbound HTTP POST from an external service |
-| **Chat** | A user message in a conversation invokes the workflow |
+<table data-card-size="small" data-view="cards">
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>🖱️ <strong>Manual</strong></td>
+      <td>You click Run in the UI, or call the API. Good for testing and on-demand tasks.</td>
+    </tr>
+    <tr>
+      <td>🕐 <strong>Schedule</strong></td>
+      <td>Runs automatically on a cron schedule. Good for daily reports and recurring syncs.</td>
+    </tr>
+    <tr>
+      <td>🔗 <strong>Webhook</strong></td>
+      <td>Fires when an external service sends an HTTP request to your workflow's URL.</td>
+    </tr>
+    <tr>
+      <td>💬 <strong>Chat</strong></td>
+      <td>Triggered by a message in a chat conversation. Good for interactive agent pipelines.</td>
+    </tr>
+  </tbody>
+</table>
 
-Trigger inputs (the payload that comes in) are available in workflow steps as `{{ trigger.input.field_name }}`.
-
----
+***
 
 ## Step
 
-A step is one unit of work inside a workflow.
+A step is a single unit of work inside a workflow. Steps run in sequence. There are three types:
 
-There are three step types:
+{% tabs %}
+{% tab title="Agent Step" %}
+Invokes an agent with a prompt. The agent's response becomes the step's output.
 
-| Type | What it does |
-|---|---|
-| **agent** | Invokes an agent with a prompt and captures its response |
-| **script** | Runs a shell or Python script in a container or on your Runner |
-| **http** | Makes an outbound HTTP request to any URL |
+```yaml
+- id: write_summary
+  type: agent
+  agent: Report Writer
+  prompt: "Summarize this data: {{ steps.pull_data.output }}"
+```
+{% endtab %}
 
-Steps run in sequence by default. The output of each step is available to every step that follows it via `{{ steps.step_id.output }}`.
+{% tab title="Script Step" %}
+Runs a shell or Python script in a container (or on your Runner). Good for API calls, file operations, and data transformations.
 
----
+```yaml
+- id: send_email
+  type: script
+  script: |
+    #!/usr/bin/env python3
+    import smtplib
+    # send the email
+  env:
+    RECIPIENT: "team@company.com"
+```
+{% endtab %}
+
+{% tab title="HTTP Step" %}
+Makes an outbound HTTP request to any URL. Good for calling external APIs or triggering webhooks.
+
+```yaml
+- id: notify_slack
+  type: http
+  url: "https://hooks.slack.com/services/YOUR/WEBHOOK/URL"
+  method: POST
+  body: '{"text": "{{ steps.write_summary.output }}"}'
+```
+{% endtab %}
+{% endtabs %}
+
+***
 
 ## Environment
 
-An environment defines where script steps run.
+An environment defines where and how script steps run. It specifies:
 
-Each environment specifies:
-- A **Docker image** — the container image used to execute scripts (e.g. `python:3.11-slim`, `debian:latest`)
-- **Environment variables** — values injected into every script that runs in this environment
-- A **runner** — optionally, a self-hosted runner attached to this environment
-
-If no environment is specified, script steps run in the default platform container.
+- **Docker image** — the container image (e.g. `python:3.11-slim`, `node:20`, `debian:latest`)
+- **Environment variables** — values injected into every script in this environment
+- **Runner** — optionally attach a self-hosted Runner so scripts run on your own machine
 
 {% hint style="info" %}
-Environments let you control exactly what's available when a script runs — the OS, installed packages, environment variables, and whether it runs in the cloud or on your own machine.
+If you don't specify an environment, script steps run in the default platform container with Python, Node.js, curl, and common tools pre-installed.
 {% endhint %}
 
----
+***
 
 ## Runner
 
-A runner is a lightweight agent you install on your own computer or server.
+The Runner is a lightweight binary you install on your own computer or server. Once connected, agents and workflow steps can run commands natively on that machine.
 
-Once a runner is connected, any workflow step or bash command can run **natively on that machine** — with full access to its local filesystem, network drives, databases, and installed tools.
+**When you need it:**
+- Reading files from your local drive or network share
+- Querying internal databases not exposed to the internet
+- Running scripts that require local tools or VPN access
+- Accessing systems behind your firewall
 
-Runners are optional. You only need one if your workflows need to:
-- Read or write local files
-- Access systems that aren't on the public internet
-- Use tools installed on a specific machine
+**When you don't need it:**
+- Most workflows that call external APIs
+- Agents that work with data passed directly in prompts
+- Anything that runs entirely in the cloud
 
-{% hint style="success" %}
-The runner is a single binary. It takes about two minutes to install and connects immediately. No firewall changes required — it opens an outbound connection to the platform.
-{% endhint %}
+{% tabs %}
+{% tab title="macOS / Linux" %}
+```bash
+curl -L https://github.com/ss-libs/workflowfiesta-runner/releases/latest/download/workflowfiesta-runner-linux-amd64 -o wff-runner
+chmod +x wff-runner
+./wff-runner --code YOUR_REGISTRATION_CODE
+```
+{% endtab %}
 
-**Where to go next:** [Install the Runner](../runner/install.md)
+{% tab title="Windows" %}
+Download the GUI app from the [releases page](https://github.com/ss-libs/workflowfiesta-runner/releases/latest) and paste your registration code from **Settings → Runners → Add Runner**.
+{% endtab %}
+{% endtabs %}
 
----
+***
 
 ## Credential
 
-A credential is a securely stored secret — an API key, password, token, or OAuth connection.
-
-Credentials are stored encrypted at the org level. Workflow steps reference them by name; the actual values are never exposed in logs, YAML, or chat.
-
-```yaml
-# Reference a credential in a workflow step
-steps:
-  - id: send_email
-    type: script
-    credentials:
-      - gmail_smtp
-    script: |
-      # GMAIL_USER and GMAIL_PASS are injected automatically
-```
+A credential is an encrypted secret stored in WorkflowFiesta's credential vault. Credentials are never exposed in logs or UI — they're injected into workflow steps at runtime.
 
 {% hint style="danger" %}
-Never paste credentials directly into a system prompt, workflow YAML, or chat message. Always store them in Settings → Credentials and reference them by name.
+Never paste API keys, passwords, or tokens directly into a system prompt or workflow YAML. Always store them as credentials and reference them via the credentials block.
 {% endhint %}
 
----
+**In a workflow step:**
+```yaml
+- id: send_email
+  type: script
+  credentials:
+    - service: gmail_smtp
+      env:
+        GMAIL_USER: username
+        GMAIL_PASS: app_password
+  script: |
+    # GMAIL_USER and GMAIL_PASS are now available as env vars
+```
+
+***
 
 ## Guard
 
-A guard is a safety policy that runs on agent inputs or outputs.
+A guard is a safety policy applied to agent inputs or outputs. Guards can:
 
-Guards can:
-- Block messages that match a pattern (e.g. requests to reveal the system prompt)
-- Redact sensitive data before it reaches the agent or leaves in a response
-- Enforce topic restrictions for customer-facing agents
+- **Block** messages that match a pattern (e.g. prompt injection attempts)
+- **Redact** sensitive data before it reaches the model
+- **Flag** outputs that contain disallowed content
 
-Guards are configured at the org level and applied per agent.
+Guards are configured at the org level and apply to all agents.
 
----
-
-## How the pieces connect
-
-```
-Trigger
-  └── Workflow
-        ├── Step 1: Agent (uses Skills)
-        │     └── runs in Environment (on Runner if local)
-        ├── Step 2: Script
-        │     └── uses Credentials
-        └── Step 3: HTTP
-```
-
-Every automation on WorkflowFiesta is some combination of these eight concepts. You don't need all of them for every use case — most workflows use three or four.
-
----
+***
 
 ## What to read next
 
-| If you want to... | Go here |
-|---|---|
-| Build your first agent | [Build Your First Agent](../agents/build-your-first-agent.md) |
-| Automate something on a schedule | [Build Your First Workflow](../workflows/build-your-first-workflow.md) |
-| Access local files and systems | [Install the Runner](../runner/install.md) |
-| Understand the platform architecture | [What is WorkflowFiesta?](what-is-workflowfiesta.md) |
-| Get unstuck | [Discord Community](https://discord.gg/XEKxARDkNQ) |
+<table data-view="cards">
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th data-hidden data-card-target data-type="content-ref"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>🤖 <strong>Build Your First Agent</strong></td>
+      <td>Put these concepts into practice — build a real agent step by step.</td>
+      <td><a href="../agents/build-your-first-agent.md">build-your-first-agent.md</a></td>
+    </tr>
+    <tr>
+      <td>⚙️ <strong>Build Your First Workflow</strong></td>
+      <td>Chain steps, pass data, and schedule your first automated pipeline.</td>
+      <td><a href="../workflows/build-your-first-workflow.md">build-your-first-workflow.md</a></td>
+    </tr>
+    <tr>
+      <td>🔌 <strong>Install the Runner</strong></td>
+      <td>Connect your local machine so agents can access your files and systems.</td>
+      <td><a href="../runner/install-the-runner.md">install-the-runner.md</a></td>
+    </tr>
+  </tbody>
+</table>

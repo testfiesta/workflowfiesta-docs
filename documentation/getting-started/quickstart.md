@@ -3,102 +3,182 @@
 Get your first AI agent running in five minutes. No code. No configuration files. Just a conversation.
 
 {% hint style="info" %}
-You need a WorkflowFiesta account to follow this guide. [Sign up free](https://app.workflowfiesta.com) if you have not already.
+**Prerequisites:** A WorkflowFiesta account. [Sign up free](https://app.workflowfiesta.com) if you haven't already.
 {% endhint %}
 
-## Step 1 — Create your first agent
+***
+
+## What you'll build
+
+By the end of this guide you'll have a working AI agent that can receive messages, respond intelligently, and be wired into a workflow. The whole thing takes about five minutes.
+
+***
+
+## Steps
+
+{% stepper %}
+{% step %}
+### Create your first agent
 
 1. Open [app.workflowfiesta.com](https://app.workflowfiesta.com) and sign in
 2. Click **New Agent** in the left sidebar
-3. Give your agent a name — something descriptive like "Support Triage" or "Weekly Report Bot"
-4. Write a system prompt in plain English describing what the agent should do
+3. Give your agent a descriptive name — `Support Triage` or `Weekly Report Bot`
+4. Write a system prompt in plain English
 
 **Example system prompt:**
+
 ```text
-You are a support triage assistant. When given a customer message, classify it as Bug, Feature Request, or Billing Question. Then write a one-sentence suggested reply.
+You are a support triage assistant. When given a customer message,
+classify it as Bug, Feature Request, or Billing Question.
+Then write a one-sentence suggested reply.
 ```
 
 5. Click **Save**
 
-Your agent is now live. You can talk to it immediately from the chat panel on the right.
+Your agent is live immediately. No deploy step.
+{% endstep %}
 
----
+{% step %}
+### Talk to your agent
 
-## Step 2 — Talk to your agent
+Click the chat panel on the right and send a message. Try something realistic — a customer email, a piece of data, a question your team gets every day.
 
-Click the chat panel and type a message. The agent responds using the instructions you gave it in the system prompt.
-
-Try sending it something realistic — a customer email, a piece of data, a question. See how it responds. If the output is not quite right, edit the system prompt and try again. This iteration loop is the core of building with WorkflowFiesta.
+The agent responds using the instructions in its system prompt. If the output isn't quite right, edit the prompt and try again. This iteration loop is the core of building with WorkflowFiesta.
 
 {% hint style="success" %}
-There is no deploy step. Every change to the system prompt takes effect immediately in the next message.
+Every change to the system prompt takes effect on the very next message. No restart, no redeploy.
 {% endhint %}
+{% endstep %}
 
----
-
-## Step 3 — Connect a skill
+{% step %}
+### Add a skill
 
 Skills give your agent new capabilities: sending email, reading data, calling APIs, writing to Jira.
 
 1. Go to **Settings → Skills**
 2. Browse the skill library and click **Add** on any skill
-3. The skill is now available to every agent in your org
+3. The skill is now available to every agent in your organization
 
-Skills are org-wide — you add them once and all agents can use them.
-
----
-
-## Step 4 — Run a workflow
-
-Workflows let you chain agents together, schedule them to run automatically, or trigger them from a webhook.
-
-1. Click **New Workflow** in the left sidebar
-2. Choose a trigger: **Manual**, **Schedule**, or **Webhook**
-3. Add a step — select **Agent** and choose the agent you just created
-4. Write a prompt for that step
-5. Click **Save**, then **Run**
-
-You will see the workflow execute in real time in the run log.
+Skills are org-wide — add once, available everywhere.
 
 {% hint style="info" %}
-For a scheduled workflow — for example, a Monday morning report — set the trigger to **Schedule** and pick a cron time. The workflow runs automatically from that point on.
+The **Gmail SMTP** skill lets any agent send email. The **Jira** skill lets any agent create and update tickets. Browse the full library in Settings.
 {% endhint %}
+{% endstep %}
 
----
+{% step %}
+### Run a workflow
 
-## Step 5 — Connect your local machine (optional)
+Workflows chain agents, scripts, and HTTP calls into automated pipelines.
 
-If you want your agents to read local files, access internal systems, or run scripts on your own infrastructure, install the WorkflowFiesta Runner.
-
-1. Go to **Settings → Runners**
-2. Click **Add Runner** and follow the setup instructions
-3. Download the runner binary for your OS and run it with the registration code
-
-Once connected, your runner appears as an available environment. Any workflow step can target it directly.
+1. Go to **Workflows** in the left sidebar
+2. Click **New Workflow**
+3. Add a trigger — choose **Manual**, **Schedule**, or **Webhook**
+4. Add a step — select **Agent**, pick your agent, write a prompt
+5. Click **Run** to test it
 
 {% tabs %}
-{% tab title="macOS / Linux" %}
-```bash
-./workflowfiesta-runner --code YOUR_REGISTRATION_CODE
+{% tab title="Manual trigger" %}
+A manual trigger lets you run the workflow on demand from the UI or via the API. Good for testing and one-off tasks.
+
+```yaml
+trigger:
+  type: manual
 ```
 {% endtab %}
-{% tab title="Windows" %}
+
+{% tab title="Schedule trigger" %}
+A schedule trigger runs the workflow automatically on a cron schedule. Good for daily reports and recurring syncs.
+
+```yaml
+trigger:
+  type: schedule
+  cron: "0 9 * * 1"   # Every Monday at 9am UTC
+```
+{% endtab %}
+
+{% tab title="Webhook trigger" %}
+A webhook trigger fires when an external service sends an HTTP request to your workflow's URL. Good for responding to form submissions, Stripe events, or GitHub webhooks.
+
+```yaml
+trigger:
+  type: webhook
+```
+{% endtab %}
+{% endtabs %}
+{% endstep %}
+
+{% step %}
+### Install the Runner (optional)
+
+The Runner is a lightweight binary you install on your own machine or server. Once connected, agents can read local files, access internal databases, and run scripts on your hardware.
+
+{% tabs %}
+{% tab title="macOS" %}
 ```bash
-workflowfiesta-runner.exe --code YOUR_REGISTRATION_CODE
+# Download
+curl -L https://github.com/ss-libs/workflowfiesta-runner/releases/latest/download/workflowfiesta-runner-darwin-arm64 -o wff-runner
+chmod +x wff-runner
+
+# Register (get your code from Settings → Runners → Add Runner)
+./wff-runner --code YOUR_REGISTRATION_CODE
+```
+{% endtab %}
+
+{% tab title="Linux" %}
+```bash
+# Download
+curl -L https://github.com/ss-libs/workflowfiesta-runner/releases/latest/download/workflowfiesta-runner-linux-amd64 -o wff-runner
+chmod +x wff-runner
+
+# Register
+./wff-runner --code YOUR_REGISTRATION_CODE
+```
+{% endtab %}
+
+{% tab title="Windows" %}
+```powershell
+# Download the GUI app
+# https://github.com/ss-libs/workflowfiesta-runner/releases/latest/download/workflowfiesta-runner-windows-amd64-gui.exe
+
+# Run it, paste your registration code from Settings → Runners → Add Runner
 ```
 {% endtab %}
 {% endtabs %}
 
----
+{% hint style="warning" %}
+The Runner is optional. You only need it if you want agents to access files or systems on your local machine or private network.
+{% endhint %}
+{% endstep %}
+{% endstepper %}
 
-## What to do next
+***
 
-You have an agent, a skill, and a workflow. Here is where to go from here:
+## You're set up. What's next?
 
-| I want to… | Go to |
-|---|---|
-| Understand agents, skills, and workflows in depth | [Key Concepts](key-concepts.md) |
-| See what WorkflowFiesta is built for | [What is WorkflowFiesta?](what-is-workflowfiesta.md) |
-| Connect my local machine | [Install the Runner](install-runner.md) |
-| Join the community | [Discord](https://discord.gg/XEKxARDkNQ) |
-
+<table data-view="cards">
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th data-hidden data-card-target data-type="content-ref"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>🧠 <strong>Key Concepts</strong></td>
+      <td>Understand agents, skills, workflows, and runners in depth.</td>
+      <td><a href="key-concepts.md">key-concepts.md</a></td>
+    </tr>
+    <tr>
+      <td>🤖 <strong>Build Your First Agent</strong></td>
+      <td>A deeper guide to system prompts, tools, and agent design.</td>
+      <td><a href="../agents/build-your-first-agent.md">build-your-first-agent.md</a></td>
+    </tr>
+    <tr>
+      <td>⚙️ <strong>Build Your First Workflow</strong></td>
+      <td>Chain multiple steps, pass data between them, and schedule runs.</td>
+      <td><a href="../workflows/build-your-first-workflow.md">build-your-first-workflow.md</a></td>
+    </tr>
+  </tbody>
+</table>
