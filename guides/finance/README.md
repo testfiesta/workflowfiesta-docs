@@ -1,57 +1,63 @@
-# 💰 Finance
+# Finance
 
-Invoice processing, spend tracking, budget reports, and financial automation for finance teams.
+Finance teams deal with high-volume, high-accuracy work. WorkflowFiesta automates the data collection, reconciliation, and reporting so your team spends time on analysis — not data entry.
 
-{% hint style="success" %}
-**All of these are built through conversation.** Copy any prompt below, paste it into WorkflowFiesta, and the platform will guide you through the setup.
+## What finance teams automate with WorkflowFiesta
+
+{% tabs %}
+{% tab title="Reporting" %}
+**Automated financial reports on a schedule.**
+
+- Pull revenue data from Stripe, billing systems, or your ERP
+- Generate MRR, ARR, churn, and growth metrics automatically
+- Produce weekly or monthly P&L summaries
+- Email reports to leadership before they ask for them
+
+> *"Every Monday, pull last week's Stripe revenue, calculate MRR and churn, and email me a summary with a chart."*
+{% endtab %}
+
+{% tab title="Reconciliation" %}
+**Catch discrepancies before they become problems.**
+
+- Compare invoices against payments automatically
+- Flag mismatches between your CRM and billing system
+- Reconcile expense reports against approved budgets
+- Generate audit-ready logs
+
+> *"Every night, compare our Stripe charges against our HubSpot deals and flag any gaps over $100."*
+{% endtab %}
+
+{% tab title="Budgeting" %}
+**Track spend against budget in real time.**
+
+- Monitor team budgets across departments
+- Alert budget owners when they hit 80% of their limit
+- Generate monthly variance reports
+- Forecast end-of-quarter spend based on current run rate
+
+> *"Track our marketing budget in real time and alert me when any category hits 75% of its monthly limit."*
+{% endtab %}
+
+{% tab title="Invoicing" %}
+**Automate invoice generation and follow-up.**
+
+- Generate invoices from deal records in your CRM
+- Send payment reminders at 7, 14, and 30 days overdue
+- Update payment status automatically when payment is received
+- Escalate overdue invoices to the account owner
+
+> *"When a deal closes in HubSpot, generate an invoice and send it to the client. Follow up automatically if unpaid after 7 days."*
+{% endtab %}
+{% endtabs %}
+
+## Getting started
+
+Tell WorkflowFiesta what financial process you want to automate. It will ask about your billing system, reporting cadence, and distribution list — then build the workflow.
+
+{% hint style="info" %}
+**Common credentials needed:** Stripe, QuickBooks, Xero, or your ERP system. WorkflowFiesta will guide you through connecting them securely.
 {% endhint %}
 
-## Automations
-
-### Monthly Spend Report
-
-Pulls transaction data, categorizes spend by department, compares to budget, and generates a monthly report with variance analysis.
-
-**Start with this prompt:**
-
-> "Create a workflow that runs on the first of each month, pulls last month's transaction data, categorizes spend by department, compares to budget, flags variances over 10%, and emails the report to the finance team."
-
-**What the platform will ask:**
-- Which tools to connect (it will open secure forms for any credentials needed)
-- Specific configuration details (which channel, which project, what format)
-- Schedule or trigger preferences
-
-**What you'll have when done:**
-A working monthly spend report that runs automatically.
-
-### Invoice Processor
-
-Reads incoming invoice emails, extracts key fields (vendor, amount, due date, PO number), and creates entries in your accounting system.
-
-**Start with this prompt:**
-
-> "Create an agent that processes invoice emails. It should extract the vendor name, invoice number, amount, due date, and line items, then create a structured record and flag any invoices over $10,000 for approval."
-
-**What the platform will ask:**
-- Which tools to connect (it will open secure forms for any credentials needed)
-- Specific configuration details (which channel, which project, what format)
-- Schedule or trigger preferences
-
-**What you'll have when done:**
-A working invoice processor that runs automatically.
-
-### Budget Q&A Agent
-
-Answers questions about budget status, spend by category, and remaining budget — without requiring anyone to open a spreadsheet.
-
-**Start with this prompt:**
-
-> "Create a budget Q&A agent that can answer questions like 'How much have we spent on software this month?' and 'What's our remaining marketing budget?' Connect it to our finance data."
-
-**What the platform will ask:**
-- Which tools to connect (it will open secure forms for any credentials needed)
-- Specific configuration details (which channel, which project, what format)
-- Schedule or trigger preferences
-
-**What you'll have when done:**
-A working budget q&a agent that runs automatically.
+{% content-ref url="../README.md" %}
+[Back to Guides](../README.md)
+{% endcontent-ref %}
