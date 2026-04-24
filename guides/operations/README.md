@@ -1,57 +1,59 @@
-# ⚙️ Operations
+# Operations
 
-Cross-tool automations, status digests, data syncs, and process automations for operations teams.
+Operations teams run on repetitive, high-stakes processes. WorkflowFiesta automates the routine so your team can focus on decisions that actually require human judgment.
 
-{% hint style="success" %}
-**All of these are built through conversation.** Copy any prompt below, paste it into WorkflowFiesta, and the platform will guide you through the setup.
-{% endhint %}
+## What operations teams automate with WorkflowFiesta
 
-## Automations
+{% tabs %}
+{% tab title="Reporting" %}
+**Automated status reports across every system.**
 
-### Daily Status Digest
+- Pull data from Jira, Notion, Asana, or any project tool
+- Consolidate team updates into a single weekly digest
+- Flag blockers, overdue tasks, and capacity issues
+- Distribute to stakeholders on a schedule
 
-Pulls open items from Jira, unread Slack messages, and pending emails every morning and sends a prioritized digest.
+> *"Every Friday at 4pm, pull all open tasks across our projects, flag anything overdue, and email a summary to the leadership team."*
+{% endtab %}
 
-**Start with this prompt:**
+{% tab title="Approvals" %}
+**Route requests and approvals without manual chasing.**
 
-> "Create a workflow that runs every morning at 8am, pulls my top 5 open Jira tickets, any unread messages flagged as important, and sends me a prioritized digest of what to focus on today."
+- Receive requests via form, email, or Slack
+- Route to the right approver based on type or value
+- Send reminders for pending approvals
+- Log decisions and update records automatically
 
-**What the platform will ask:**
-- Which tools to connect (it will open secure forms for any credentials needed)
-- Specific configuration details (which channel, which project, what format)
-- Schedule or trigger preferences
+> *"When a purchase request comes in over $500, send it to the finance lead for approval and remind them after 24 hours if they haven't responded."*
+{% endtab %}
 
-**What you'll have when done:**
-A working daily status digest that runs automatically.
+{% tab title="Onboarding" %}
+**Consistent onboarding for every new team member.**
 
-### Cross-Tool Data Sync
+- Create accounts across all required tools
+- Send welcome emails and first-week schedules
+- Assign onboarding tasks in your project tool
+- Check in at Day 7 and Day 30 automatically
 
-Keeps data consistent across tools — syncs new HubSpot contacts to your CRM, updates Jira tickets from Slack messages, or mirrors data between systems.
+> *"When a new hire starts, set up their Jira access, send them the onboarding checklist, and schedule a check-in for their first week."*
+{% endtab %}
 
-**Start with this prompt:**
+{% tab title="Data Sync" %}
+**Keep systems in sync without manual updates.**
 
-> "Create an agent that monitors our Slack #ops channel and creates Jira tickets from any message that contains an action item. It should extract the task, assignee if mentioned, and due date if mentioned."
+- Sync data between your CRM, project tool, and spreadsheets
+- Reconcile records across platforms on a schedule
+- Alert the team when data is inconsistent
+- Generate audit logs automatically
 
-**What the platform will ask:**
-- Which tools to connect (it will open secure forms for any credentials needed)
-- Specific configuration details (which channel, which project, what format)
-- Schedule or trigger preferences
+> *"Every night, sync our HubSpot contacts with our internal database and flag any discrepancies."*
+{% endtab %}
+{% endtabs %}
 
-**What you'll have when done:**
-A working cross-tool data sync that runs automatically.
+## Getting started
 
-### Process Documentation Agent
+Describe the process you want to automate. WorkflowFiesta will ask about your tools, your team, and your approval structure — then build the workflow.
 
-Watches how your team works and drafts process documentation from Slack conversations, meeting notes, and Jira tickets.
-
-**Start with this prompt:**
-
-> "Create an agent that helps document our processes. I'll paste in meeting notes or Slack threads and it should extract the process steps, decision points, and owners, then format it as a clear SOP."
-
-**What the platform will ask:**
-- Which tools to connect (it will open secure forms for any credentials needed)
-- Specific configuration details (which channel, which project, what format)
-- Schedule or trigger preferences
-
-**What you'll have when done:**
-A working process documentation agent that runs automatically.
+{% content-ref url="../README.md" %}
+[Back to Guides](../README.md)
+{% endcontent-ref %}
