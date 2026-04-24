@@ -24,66 +24,60 @@ By the end of this guide you'll have a working AI agent that can receive message
 {% step %}
 #### Create your first agent
 
-1. Open [app.workflowfiesta.com](https://app.workflowfiesta.com) and sign in
-2. Click **New Agent** in the left sidebar
-3. Give your agent a descriptive name — `Support Triage` or `Weekly Report Bot`
-4. Write a system prompt in plain English
+Open [app.workflowfiesta.com](https://app.workflowfiesta.com) and sign in. Then just tell WorkflowFiesta what you want to build:
 
-**Example system prompt:**
+> "Create a support triage agent. When given a customer message, classify it as Bug, Feature Request, or Billing Question, then write a one-sentence suggested reply."
 
-```
-You are a support triage assistant. When given a customer message,
-classify it as Bug, Feature Request, or Billing Question.
-Then write a one-sentence suggested reply.
-```
+WorkflowFiesta will ask a few clarifying questions — tone, escalation rules, any specific constraints — then create the agent. It's live immediately. No deploy step.
 
-5. Click **Save**
-
-Your agent is live immediately. No deploy step.
+{% hint style="success" %}
+You can also create agents from **Settings → Agents → New Agent** if you prefer to fill in the details yourself.
+{% endhint %}
 {% endstep %}
 
 {% step %}
 #### Talk to your agent
 
-Click the chat panel on the right and send a message. Try something realistic — a customer email, a piece of data, a question your team gets every day.
+Click the chat panel and send a message. Try something realistic — a customer email, a piece of data, a question your team gets every day.
 
-The agent responds using the instructions in its system prompt. If the output isn't quite right, edit the prompt and try again. This iteration loop is the core of building with WorkflowFiesta.
+The agent responds using the instructions in its system prompt. If the output isn't quite right, just tell it:
 
-{% hint style="success" %}
-Every change to the system prompt takes effect on the very next message. No restart, no redeploy.
-{% endhint %}
+> "Be more concise. Keep replies under two sentences."
+
+Every change takes effect on the very next message. No restart, no redeploy. This iteration loop is the core of building with WorkflowFiesta.
 {% endstep %}
 
 {% step %}
-#### Add a skill
+#### Add a skill (optional)
 
-Skills give your agent new capabilities: sending email, reading data, calling APIs, writing to Jira.
+Skills are reusable building blocks that make agent behavior consistent across your organization. There are two types:
 
-1. Go to **Settings → Skills**
-2. Browse the skill library and click **Add** on any skill
-3. The skill is now available to every agent in your organization
+- **Prompt skills** inject domain expertise or style rules into the agent's system prompt
+- **Script skills** package a specific script the agent can execute
 
-Skills are org-wide — add once, available everywhere.
+> "Add the Jira skill to this agent so it follows our ticket format every time."
+
+> "Give this agent the Marketing Copy skill so it always writes in our brand voice."
+
+Skills are org-wide — once created, any agent can use them. Browse what's available in **Settings → Skills**.
 
 {% hint style="info" %}
-The **Gmail SMTP** skill lets any agent send email. The **Jira** skill lets any agent create and update tickets. Browse the full library in Settings.
+Skills don't unlock capabilities an agent doesn't otherwise have. An agent's ability to take action comes from its platform access level and tools. Skills make behavior consistent and reusable.
 {% endhint %}
 {% endstep %}
 
 {% step %}
 #### Run a workflow
 
-Workflows chain agents, scripts, and HTTP calls into automated pipelines.
+Workflows chain agents, scripts, and HTTP calls into automated pipelines that run on a schedule or trigger.
 
-1. Go to **Workflows** in the left sidebar
-2. Click **New Workflow**
-3. Add a trigger — choose **Manual**, **Schedule**, or **Webhook**
-4. Add a step — select **Agent**, pick your agent, write a prompt
-5. Click **Run** to test it
+> "Create a workflow that runs every Monday at 9am, uses this agent to summarize last week's support tickets, and emails the summary to our team."
+
+WorkflowFiesta asks what data you need, what format, and who to send it to — then builds and schedules it automatically.
 
 {% tabs %}
 {% tab title="Manual trigger" %}
-A manual trigger lets you run the workflow on demand from the UI or via the API. Good for testing and one-off tasks.
+Run on demand from the UI or via the API. Good for testing and one-off tasks.
 
 ```yaml
 trigger:
@@ -92,7 +86,7 @@ trigger:
 {% endtab %}
 
 {% tab title="Schedule trigger" %}
-A schedule trigger runs the workflow automatically on a cron schedule. Good for daily reports and recurring syncs.
+Run automatically on a cron schedule. Good for daily reports and recurring syncs.
 
 ```yaml
 trigger:
@@ -102,7 +96,7 @@ trigger:
 {% endtab %}
 
 {% tab title="Webhook trigger" %}
-A webhook trigger fires when an external service sends an HTTP request to your workflow's URL. Good for responding to form submissions, Stripe events, or GitHub webhooks.
+Fire when an external service sends an HTTP request to your workflow's URL.
 
 ```yaml
 trigger:
@@ -160,4 +154,10 @@ The Runner is optional. You only need it if you want agents to access files or s
 
 ## You're set up. What's next?
 
-<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>🧠 <strong>Key Concepts</strong></td><td>Understand agents, skills, workflows, and runners in depth.</td><td><a href="/broken/pages/NTG9K8RkGRICSNDTJpqN">Broken link</a></td></tr><tr><td>🤖 <strong>Build Your First Agent</strong></td><td>A deeper guide to system prompts, tools, and agent design.</td><td><a href="/broken/pages/Z4nwOkbhpuz9xKs806RE">Broken link</a></td></tr><tr><td>⚙️ <strong>Build Your First Workflow</strong></td><td>Chain multiple steps, pass data between them, and schedule runs.</td><td><a href="/broken/pages/rLfM8h3XRBsPDW5iRAIc">Broken link</a></td></tr></tbody></table>
+| | |
+|---|---|
+| [🧠 What is WorkflowFiesta?](what-is-workflowfiesta.md) | Understand the platform before you build deeper |
+| [⚙️ Agents](../workflowfiesta/agents.md) | Deep dive into system prompts, tools, and agent design |
+| [🔁 Workflows](../workflowfiesta/workflows.md) | Chain steps, pass data, and schedule runs |
+| [🔧 Skills](../workflowfiesta/skills.md) | What skills are and how to use them |
+| [👥 Discord](https://discord.gg/XEKxARDkNQ) | Ask the community |
