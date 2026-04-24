@@ -1,63 +1,57 @@
 # Finance
 
-Finance teams deal with high-volume, high-accuracy work. WorkflowFiesta automates the data collection, reconciliation, and reporting so your team spends time on analysis — not data entry.
+Finance teams spend hours every week pulling numbers from multiple systems, formatting reports, and distributing them to stakeholders. WorkflowFiesta automates the data layer — so your finance team spends time on analysis, not assembly.
 
-## What finance teams automate with WorkflowFiesta
+{% hint style="success" %}
+Finance teams most commonly start with one workflow: automating the weekly or monthly report that currently takes 2–3 hours to pull together manually.
+{% endhint %}
+
+## What finance teams automate
 
 {% tabs %}
 {% tab title="Reporting" %}
-**Automated financial reports on a schedule.**
+**Automated financial reports**
 
-- Pull revenue data from Stripe, billing systems, or your ERP
-- Generate MRR, ARR, churn, and growth metrics automatically
-- Produce weekly or monthly P&L summaries
-- Email reports to leadership before they ask for them
+Tell WorkflowFiesta: *"Every month, pull our revenue data from Stripe, expenses from our accounting tool, and summarize the P&L with key variances. Email it to the CFO and department heads."*
 
-> *"Every Monday, pull last week's Stripe revenue, calculate MRR and churn, and email me a summary with a chart."*
+WorkflowFiesta connects to your data sources, formats the report, and delivers it on schedule — every time.
 {% endtab %}
+{% tab title="Spend tracking" %}
+**Budget and spend summaries**
 
-{% tab title="Reconciliation" %}
-**Catch discrepancies before they become problems.**
+Tell WorkflowFiesta: *"Every Friday, summarize this week's spend by department and flag anything over budget."*
 
-- Compare invoices against payments automatically
-- Flag mismatches between your CRM and billing system
-- Reconcile expense reports against approved budgets
-- Generate audit-ready logs
-
-> *"Every night, compare our Stripe charges against our HubSpot deals and flag any gaps over $100."*
+WorkflowFiesta pulls the data, runs the comparison, and delivers a clean summary — with flags already highlighted.
 {% endtab %}
-
-{% tab title="Budgeting" %}
-**Track spend against budget in real time.**
-
-- Monitor team budgets across departments
-- Alert budget owners when they hit 80% of their limit
-- Generate monthly variance reports
-- Forecast end-of-quarter spend based on current run rate
-
-> *"Track our marketing budget in real time and alert me when any category hits 75% of its monthly limit."*
-{% endtab %}
-
 {% tab title="Invoicing" %}
-**Automate invoice generation and follow-up.**
+**Invoice and billing workflows**
 
-- Generate invoices from deal records in your CRM
-- Send payment reminders at 7, 14, and 30 days overdue
-- Update payment status automatically when payment is received
-- Escalate overdue invoices to the account owner
+Tell WorkflowFiesta: *"When a new invoice is created in Stripe, log it in our accounting system and notify the relevant account manager."*
 
-> *"When a deal closes in HubSpot, generate an invoice and send it to the client. Follow up automatically if unpaid after 7 days."*
+WorkflowFiesta handles the cross-tool coordination automatically.
+{% endtab %}
+{% tab title="Forecasting" %}
+**Revenue and pipeline forecasting**
+
+Tell WorkflowFiesta: *"Pull our current pipeline from HubSpot and our MRR from Stripe, and give me a 90-day revenue forecast based on current close rates."*
+
+WorkflowFiesta combines your CRM and billing data to produce a grounded, data-backed forecast.
 {% endtab %}
 {% endtabs %}
 
+## Popular finance workflows
+
+| Workflow | What it does | Trigger |
+|----------|-------------|---------|
+| **Monthly P&L summary** | Pulls revenue and expense data, formats P&L, emails to leadership | Schedule |
+| **Weekly spend digest** | Summarizes spend by department, flags variances | Schedule |
+| **Invoice logger** | New invoice in Stripe → logged in accounting system | Event |
+| **Budget vs. actual** | Compares actual spend to budget, highlights overages | Schedule |
+| **Revenue forecast** | Combines pipeline and billing data into a 90-day forecast | Manual |
+
 ## Getting started
 
-Tell WorkflowFiesta what financial process you want to automate. It will ask about your billing system, reporting cadence, and distribution list — then build the workflow.
+> *"I want to automate our monthly financial report. Pull revenue from Stripe, summarize the key numbers, and email it to the leadership team on the first of every month."*
 
-{% hint style="info" %}
-**Common credentials needed:** Stripe, QuickBooks, Xero, or your ERP system. WorkflowFiesta will guide you through connecting them securely.
-{% endhint %}
+WorkflowFiesta will ask which tools to connect and what format you want — then build the workflow.
 
-{% content-ref url="../README.md" %}
-[Back to Guides](../README.md)
-{% endcontent-ref %}
