@@ -28,7 +28,7 @@ Each agent is configured with:
 | **System Prompt** | The agent's instructions, personality, constraints, and expertise |
 | **Model** | Which AI model powers the agent (Claude, GPT-4, etc.) |
 | **Temperature** | How creative vs. precise the agent's responses are (0–2) |
-| **Skills** | Capabilities the agent can use |
+| **Platform Access** | What tools and actions the agent can take |
 
 ## Creating an Agent
 
@@ -61,20 +61,23 @@ WorkflowFiesta will show you a preview of the change and ask for confirmation be
 
 ## Agent Skills
 
-Skills extend what an agent can do. Without skills, an agent can only reason and write. With skills, it can:
+Skills extend agent behavior — making it consistent, efficient, and reusable across your organization. There are two types:
 
-- Search the web for current information
-- Send emails via Gmail or Outlook
-- Create and update Jira tickets
-- Query Google Analytics
-- Read files from your local machine (with the Runner installed)
-- Call any external API
+**Prompt skills** inject additional instructions into the agent's system prompt. They encode domain expertise, style rules, or institutional knowledge so the agent behaves correctly every time without re-prompting.
+
+**Script skills** package a specific script the agent can execute — for repeatable tasks like querying an API, processing data, or reading files.
+
+{% hint style="info" %}
+Skills don't unlock capabilities an agent doesn't otherwise have. An agent's ability to take action — run code, call APIs, send emails, create tickets — comes from its platform access level and available tools. Skills make behavior consistent and reusable.
+{% endhint %}
 
 To add a skill to an agent:
 
-> "Add web search to the Sales Agent so it can research prospects before drafting outreach."
+> "Add the Marketing Copy skill to the Content Agent so it always follows our brand voice."
 
-See [Skills](skills.md) for the full list of available capabilities.
+> "Give the Support Agent the Jira skill so it can create tickets from conversations."
+
+See [Skills](skills.md) for the full reference.
 
 ## Slash Commands
 
@@ -103,7 +106,7 @@ All agents in your organization are listed in the **Agents** section of the plat
 
 {% tabs %}
 {% tab title="Specialist agents" %}
-A specialist agent has a narrow, well-defined job. It's better at that job than a general agent because its system prompt is focused, its skills are targeted, and it doesn't get confused by unrelated requests.
+A specialist agent has a narrow, well-defined job. It's better at that job than a general agent because its system prompt is focused and its instructions are targeted.
 
 **Examples:**
 - SEO Copywriter — writes blog posts following SEO best practices
