@@ -1,10 +1,8 @@
 # Table of contents
 
-* [Home](README.md)
-
 ## Documentation
 
-* [Overview](documentation/README.md)
+* [Overview](README.md)
 * [What is WorkflowFiesta?](documentation/getting-started/what-is-workflowfiesta.md)
 * [Quickstart](documentation/getting-started/quickstart.md)
 

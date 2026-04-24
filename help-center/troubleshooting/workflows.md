@@ -1,3 +1,7 @@
+---
+icon: square-question
+---
+
 # Troubleshooting Workflows
 
 Having trouble with a workflow? Here are the most common issues and how to fix them.
@@ -15,7 +19,8 @@ To check: open the workflow in the **Workflows** tab and confirm the status show
 **Check the timezone.** Schedules run in UTC by default. If you set a workflow to run at "9am" and it's running at the wrong time, confirm whether the schedule was set in your local timezone or UTC.
 
 **Ask WorkflowFiesta to check it:**
-> *"Why didn't my weekly report workflow run this morning?"*
+
+> _"Why didn't my weekly report workflow run this morning?"_
 
 </details>
 
@@ -49,9 +54,9 @@ If the agent's output looks wrong, the issue is usually in the prompt or the inp
 
 Some integrations (email sends, Slack messages, Jira ticket creation) succeed from the workflow's perspective even if the downstream action had an issue. Check:
 
-- **Email:** Check your sent folder and spam. Verify the recipient address is correct.
-- **Jira:** Check that the credential used has permission to create issues in the target project.
-- **Slack:** Confirm the bot has been invited to the channel it's posting to.
+* **Email:** Check your sent folder and spam. Verify the recipient address is correct.
+* **Jira:** Check that the credential used has permission to create issues in the target project.
+* **Slack:** Confirm the bot has been invited to the channel it's posting to.
 
 </details>
 
@@ -64,9 +69,10 @@ Some integrations (email sends, Slack messages, Jira ticket creation) succeed fr
 Open the **Workflows** tab, find the failed run, and click into it. Each step shows its status, and failed steps show the error message. The error message usually tells you exactly what went wrong.
 
 Common errors:
-- **Credential expired or invalid** — the API key for a connected service has been rotated or revoked. Re-add the credential.
-- **Rate limit exceeded** — the external service rejected the request because too many calls were made. The workflow will succeed if you run it again after a short wait.
-- **Timeout** — a step took too long to complete. This can happen with large data pulls. Ask WorkflowFiesta to break the step into smaller chunks.
+
+* **Credential expired or invalid** — the API key for a connected service has been rotated or revoked. Re-add the credential.
+* **Rate limit exceeded** — the external service rejected the request because too many calls were made. The workflow will succeed if you run it again after a short wait.
+* **Timeout** — a step took too long to complete. This can happen with large data pulls. Ask WorkflowFiesta to break the step into smaller chunks.
 
 </details>
 

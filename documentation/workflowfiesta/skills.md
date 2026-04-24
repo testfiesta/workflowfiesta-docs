@@ -20,30 +20,32 @@ There are two types:
 
 {% tabs %}
 {% tab title="Prompt Skills" %}
-### Prompt Skills
+#### Prompt Skills
 
 A prompt skill injects additional instructions into an agent's system prompt. It encodes domain expertise, style rules, API patterns, or institutional knowledge — so the agent behaves consistently and correctly every time, without you re-prompting each conversation.
 
 **Examples:**
-- **Marketing Copy** — teaches the agent your brand voice, tone rules, and what phrases to avoid
-- **Code Review** — encodes a specific review checklist (security, performance, maintainability)
-- **Natural Writing** — injects rules to avoid AI-sounding patterns and write like a human
-- **Jira** — teaches the agent your project's issue types, field formats, and RACI ownership
 
-The agent could often reason through these domains on its own. A prompt skill locks in the *specific behavior you want every time* — no drift, no inconsistency.
+* **Marketing Copy** — teaches the agent your brand voice, tone rules, and what phrases to avoid
+* **Code Review** — encodes a specific review checklist (security, performance, maintainability)
+* **Natural Writing** — injects rules to avoid AI-sounding patterns and write like a human
+* **Jira** — teaches the agent your project's issue types, field formats, and RACI ownership
+
+The agent could often reason through these domains on its own. A prompt skill locks in the _specific behavior you want every time_ — no drift, no inconsistency.
 {% endtab %}
 
 {% tab title="Script Skills" %}
-### Script Skills
+#### Script Skills
 
 A script skill packages a specific script (Python, bash, etc.) that an agent can execute. They're used for repeatable tasks that require real execution — querying an API, processing data, reading local files.
 
 The script lives in the skill so agents don't need to regenerate it each time. It runs in a container or on your local machine via the Runner.
 
 **Examples:**
-- **Analytics Pull** — queries Intercom, Google Analytics, and Google Ads and returns a formatted report
-- **Keyword Analyzer** — calls the Google Ads Keyword Planner API and categorizes results by tier
-- **Cohort Retention** — queries Intercom user data and outputs a retention matrix
+
+* **Analytics Pull** — queries Intercom, Google Analytics, and Google Ads and returns a formatted report
+* **Keyword Analyzer** — calls the Google Ads Keyword Planner API and categorizes results by tier
+* **Cohort Retention** — queries Intercom user data and outputs a retention matrix
 
 {% hint style="info" %}
 Script skills require credentials for any external services they connect to. WorkflowFiesta will walk you through connecting them securely when you add the skill.
@@ -80,27 +82,29 @@ Skills are org-wide — once created, they're available to every agent. Adding a
 ## Browsing Available Skills
 
 All skills in your organization are listed in **Settings → Skills**. From there you can:
-- See all prompt and script skills
-- View what each skill does
-- Add a skill to an agent
-- Create a new skill
+
+* See all prompt and script skills
+* View what each skill does
+* Add a skill to an agent
+* Create a new skill
 
 ## Skills vs. Credentials
 
-| | Skills | Credentials |
-|---|---|---|
-| **What it is** | Reusable instructions or a packaged script | An encrypted secret (API key, password, token) |
-| **Example** | Jira prompt skill (teaches Jira API patterns) | Jira API token (authenticates the request) |
-| **Stored as** | Instructions or code | Encrypted key-value pairs |
-| **Scope** | Org-wide — any agent can use it | Org-wide — injected at runtime, never exposed |
+|                | Skills                                        | Credentials                                    |
+| -------------- | --------------------------------------------- | ---------------------------------------------- |
+| **What it is** | Reusable instructions or a packaged script    | An encrypted secret (API key, password, token) |
+| **Example**    | Jira prompt skill (teaches Jira API patterns) | Jira API token (authenticates the request)     |
+| **Stored as**  | Instructions or code                          | Encrypted key-value pairs                      |
+| **Scope**      | Org-wide — any agent can use it               | Org-wide — injected at runtime, never exposed  |
 
-A skill defines *how* to interact with a service. A credential provides the *authentication* to actually do it. Most script skills that connect to external services require a matching credential.
+A skill defines _how_ to interact with a service. A credential provides the _authentication_ to actually do it. Most script skills that connect to external services require a matching credential.
 
 See [Credentials](credentials.md) for how to store and manage secrets securely.
 
 ## Frequently Asked Questions
 
 <details>
+
 <summary>Can I edit a skill after creating it?</summary>
 
 Yes. Ask WorkflowFiesta to update it:
@@ -108,16 +112,21 @@ Yes. Ask WorkflowFiesta to update it:
 > "Update the Marketing Copy skill — add a rule that all CTAs should be under 8 words."
 
 Changes take effect immediately for all agents using the skill.
+
 </details>
 
 <details>
+
 <summary>Can I delete a skill?</summary>
 
 Yes. WorkflowFiesta will warn you if any agents are currently using it before deletion.
+
 </details>
 
 <details>
+
 <summary>Do skills affect every conversation or just specific agents?</summary>
 
 Prompt skills are injected into the system prompt of agents they're attached to. They affect every conversation that agent has. Script skills are available to any agent that has them attached and can be invoked when needed.
+
 </details>

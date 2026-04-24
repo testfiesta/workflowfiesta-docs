@@ -1,3 +1,7 @@
+---
+icon: key
+---
+
 # Credentials
 
 Credentials are the API keys, passwords, and tokens that WorkflowFiesta uses to connect to your external tools and services — things like your CRM, email provider, analytics platform, or any third-party API.
@@ -32,9 +36,11 @@ Supported OAuth providers include Google, Microsoft, GitHub, GitLab, Slack, Disc
 {% tab title="Encryption" %}
 All credentials are encrypted at rest using industry-standard encryption. The raw value is never stored in plain text and is never logged.
 {% endtab %}
+
 {% tab title="Access" %}
 Credentials are scoped to your organization. Only agents and workflows within your org can use them — and only when explicitly authorized to do so.
 {% endtab %}
+
 {% tab title="Exposure" %}
 Credential values are never shown in chat, never included in logs, and never visible after the initial save. If a credential needs to be rotated, you save a new value and the old one is replaced.
 {% endtab %}
@@ -44,24 +50,23 @@ Credential values are never shown in chat, never included in logs, and never vis
 
 All saved credentials are listed in **Settings → Credentials**. From there you can:
 
-- See which services are connected
-- Add new credentials
-- Rotate or replace existing ones
-- Delete credentials that are no longer needed
+* See which services are connected
+* Add new credentials
+* Rotate or replace existing ones
+* Delete credentials that are no longer needed
 
-You can also ask WorkflowFiesta directly: *"What credentials do I have saved?"* or *"Connect my SendGrid account"* — and it will handle everything through conversation.
+You can also ask WorkflowFiesta directly: _"What credentials do I have saved?"_ or _"Connect my SendGrid account"_ — and it will handle everything through conversation.
 
 ## Common integrations
 
-| Service | What it enables |
-|---------|----------------|
-| **Google** | Gmail, Google Analytics, Google Ads, Google Drive, Calendar |
-| **GitHub** | Read repos, manage PRs, trigger Actions, push code |
-| **Jira** | Create and update tickets, query sprints, manage boards |
-| **Slack** | Send messages, read channels, post summaries |
-| **HubSpot** | Read and write CRM contacts, deals, and companies |
-| **Intercom** | Pull user data, send messages, read conversations |
-| **Stripe** | Read billing data, subscriptions, and invoices |
-| **SendGrid** | Send transactional and marketing email |
-| **Any API** | If a service has an API and issues keys, WorkflowFiesta can connect to it |
-
+| Service      | What it enables                                                           |
+| ------------ | ------------------------------------------------------------------------- |
+| **Google**   | Gmail, Google Analytics, Google Ads, Google Drive, Calendar               |
+| **GitHub**   | Read repos, manage PRs, trigger Actions, push code                        |
+| **Jira**     | Create and update tickets, query sprints, manage boards                   |
+| **Slack**    | Send messages, read channels, post summaries                              |
+| **HubSpot**  | Read and write CRM contacts, deals, and companies                         |
+| **Intercom** | Pull user data, send messages, read conversations                         |
+| **Stripe**   | Read billing data, subscriptions, and invoices                            |
+| **SendGrid** | Send transactional and marketing email                                    |
+| **Any API**  | If a service has an API and issues keys, WorkflowFiesta can connect to it |

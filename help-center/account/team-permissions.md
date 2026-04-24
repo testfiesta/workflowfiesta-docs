@@ -1,14 +1,18 @@
+---
+icon: screen-users
+---
+
 # Team & Permissions
 
 ## Roles
 
 WorkflowFiesta has three roles. Every member of your organization is assigned one.
 
-| Role | What they can do |
-|------|-----------------|
-| **Admin** | Full access — create, edit, and delete all resources. Manage team members, billing, and org settings. |
-| **Member** | Create and use agents, skills, and workflows. Cannot manage team members or billing. |
-| **Viewer** | Read-only access — can view agents, workflows, and run history but cannot create or modify anything. |
+| Role       | What they can do                                                                                      |
+| ---------- | ----------------------------------------------------------------------------------------------------- |
+| **Admin**  | Full access — create, edit, and delete all resources. Manage team members, billing, and org settings. |
+| **Member** | Create and use agents, skills, and workflows. Cannot manage team members or billing.                  |
+| **Viewer** | Read-only access — can view agents, workflows, and run history but cannot create or modify anything.  |
 
 ## Inviting team members
 
@@ -20,7 +24,8 @@ To invite someone to your organization:
 4. They'll receive an email invitation with a link to join
 
 Or ask WorkflowFiesta:
-> *"Invite sarah@company.com as a Member."*
+
+> _"Invite sarah@company.com as a Member."_
 
 ## Changing a member's role
 
@@ -39,14 +44,16 @@ Removing a member does not delete the agents, workflows, or credentials they cre
 All agents, skills, workflows, and credentials in WorkflowFiesta are **org-wide** — they are shared across your entire organization, not owned by individual users. Any Member or Admin can use any agent or workflow.
 
 This means:
-- Skills built by one team member are available to everyone
-- Workflows created by one person can be triggered by anyone with access
-- Credentials are shared — you don't need to re-add the same API key for each user
+
+* Skills built by one team member are available to everyone
+* Workflows created by one person can be triggered by anyone with access
+* Credentials are shared — you don't need to re-add the same API key for each user
 
 ## Spend limits per user
 
 Admins can set AI spend limits for individual users to control costs. To set a limit:
-> *"Set a monthly AI spend limit of $20 for john@company.com."*
+
+> _"Set a monthly AI spend limit of $20 for john@company.com."_
 
 See [Billing & Plans](billing.md) for more on spend limits.
 

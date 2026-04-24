@@ -1,3 +1,7 @@
+---
+icon: question
+---
+
 # Getting Started FAQ
 
 New to WorkflowFiesta? Here are the most common questions from people just getting started.
@@ -32,9 +36,9 @@ If you are technical, you can go deeper — but it's never required.
 
 <summary>What's the difference between an agent, a skill, and a workflow?</summary>
 
-- **Agent** — An AI assistant you design for a specific purpose. It has a name, a role, and a set of instructions. You talk to it directly.
-- **Skill** — A reusable building block that makes an agent's behavior consistent. Skills are shared across your entire organization.
-- **Workflow** — An automated pipeline that runs on a schedule or trigger, without you being present. It can call agents, connect to external services, send emails, and more.
+* **Agent** — An AI assistant you design for a specific purpose. It has a name, a role, and a set of instructions. You talk to it directly.
+* **Skill** — A reusable building block that makes an agent's behavior consistent. Skills are shared across your entire organization.
+* **Workflow** — An automated pipeline that runs on a schedule or trigger, without you being present. It can call agents, connect to external services, send emails, and more.
 
 </details>
 
@@ -44,7 +48,7 @@ If you are technical, you can go deeper — but it's never required.
 
 Just describe what you want the agent to do:
 
-> *"Create an agent that helps me write marketing copy for WorkflowFiesta."*
+> _"Create an agent that helps me write marketing copy for WorkflowFiesta."_
 
 WorkflowFiesta will ask a few questions and create the agent. You can start talking to it immediately.
 
@@ -58,7 +62,7 @@ See the [Quickstart guide](../../documentation/getting-started/quickstart.md) fo
 
 Tell WorkflowFiesta which service you want to connect:
 
-> *"I want to connect Jira."*
+> _"I want to connect Jira."_
 
 It will tell you exactly where to find your API key or token, open a secure form for you to paste it into, and save it encrypted. Your credentials are never exposed after that.
 

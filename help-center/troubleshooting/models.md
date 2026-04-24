@@ -1,3 +1,7 @@
+---
+icon: square-question
+---
+
 # Troubleshooting Models
 
 Issues connecting or using AI model providers? Here's how to fix the most common problems.
@@ -10,8 +14,7 @@ Issues connecting or using AI model providers? Here's how to fix the most common
 
 After adding a model API key, you may need to specify which model you want an agent to use. Tell WorkflowFiesta:
 
-> *"Set my agent to use GPT-4o."*
-> *"Use Claude 3.5 Sonnet for this agent."*
+> _"Set my agent to use GPT-4o."_ _"Use Claude 3.5 Sonnet for this agent."_
 
 If the model still isn't available, verify the API key has the correct permissions in the provider's dashboard.
 
@@ -21,14 +24,14 @@ If the model still isn't available, verify the API key has the correct permissio
 
 <summary>Where do I find my API key for each provider?</summary>
 
-| Provider | Where to find your API key |
-|----------|---------------------------|
-| **OpenAI** | platform.openai.com → API keys |
-| **Anthropic** | console.anthropic.com → API Keys |
-| **AWS Bedrock** | AWS Console → IAM → Access keys |
-| **Google Gemini** | Google AI Studio → Get API key |
-| **Azure OpenAI** | Azure Portal → Your OpenAI resource → Keys and Endpoint |
-| **Ollama** | No key needed — just the local endpoint URL |
+| Provider          | Where to find your API key                              |
+| ----------------- | ------------------------------------------------------- |
+| **OpenAI**        | platform.openai.com → API keys                          |
+| **Anthropic**     | console.anthropic.com → API Keys                        |
+| **AWS Bedrock**   | AWS Console → IAM → Access keys                         |
+| **Google Gemini** | Google AI Studio → Get API key                          |
+| **Azure OpenAI**  | Azure Portal → Your OpenAI resource → Keys and Endpoint |
+| **Ollama**        | No key needed — just the local endpoint URL             |
 
 </details>
 
@@ -53,7 +56,8 @@ Rate limits are set by the model provider, not WorkflowFiesta. Each provider has
 This is usually an agent configuration issue, not a model issue. The model responds to what it's given — if the output is wrong, the instructions or context are likely the cause.
 
 Try:
-1. Ask WorkflowFiesta to review the agent's system prompt: *"Review my agent's instructions and suggest improvements."*
+
+1. Ask WorkflowFiesta to review the agent's system prompt: _"Review my agent's instructions and suggest improvements."_
 2. Test with a different model to see if the issue is model-specific
 3. Add more specific instructions to the agent about the format or style of response you want
 
@@ -66,6 +70,7 @@ Try:
 Ollama runs on your local machine and requires the Runner to be installed and connected. Without the Runner, WorkflowFiesta can't reach your local Ollama instance.
 
 **Steps:**
+
 1. Ensure the Runner is installed and showing as Connected in **Settings → Runners**
 2. Ensure Ollama is running locally (`ollama serve`)
 3. Tell WorkflowFiesta the Ollama endpoint: typically `http://localhost:11434`
@@ -83,8 +88,8 @@ See [Install the Runner](../../documentation/workflowfiesta/runner.md) for Runne
 WorkflowFiesta lets you set spend limits at the org, user, workflow, or agent level. When a limit is reached, runs are paused until the period resets or the limit is raised.
 
 To set a limit, tell WorkflowFiesta:
-> *"Set a monthly spend limit of $50 for my org."*
-> *"Limit the report workflow to $10 per month."*
+
+> _"Set a monthly spend limit of $50 for my org."_ _"Limit the report workflow to $10 per month."_
 
 You can also view a cost breakdown by model, workflow, agent, or user in the platform.
 

@@ -1,149 +1,83 @@
 ---
-icon: house-chimney-window
-layout:
-  cover:
-    visible: false
-  title:
-    visible: false
-  description:
-    visible: false
-  tableOfContents:
-    visible: false
-  outline:
-    visible: false
-  pagination:
-    visible: false
+icon: book-open
 ---
 
-# WorkflowFiesta
+# Overview
+
+Welcome to WorkflowFiesta. This is your complete reference for building AI agents, automating workflows, and connecting your business tools — all through conversation.
 
 {% hint style="success" %}
-**WorkflowFiesta is live.** AI agents and automated workflows for every team — built through conversation, not code. [Start here →](documentation/README.md)
+Everything in WorkflowFiesta is created through conversation. You describe what you want, and WorkflowFiesta builds it with you.
 {% endhint %}
 
----
+## Get Started
 
-<div align="center">
+<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td>Quick Start Guide</td><td><a href="documentation/getting-started/quickstart.md">quickstart.md</a></td><td><a href=".gitbook/assets/Cover Image -YT 2560 x 1450 (1).jpg">Cover Image -YT 2560 x 1450 (1).jpg</a></td></tr><tr><td>Guides By Business Department</td><td></td><td><a href=".gitbook/assets/Cover Image -YT 2560 x 1451 (2).jpg">Cover Image -YT 2560 x 1451 (2).jpg</a></td></tr><tr><td>Help Center</td><td></td><td><a href=".gitbook/assets/Cover Image -YT 2560 x 1452 (1).jpg">Cover Image -YT 2560 x 1452 (1).jpg</a></td></tr></tbody></table>
 
-# AI that works the way your team does.
 
-### Describe what you want to automate. WorkflowFiesta builds it, runs it, and improves it — without a single line of code.
 
-[**Get Started →**](documentation/getting-started/quickstart.md)   ·   [**Explore Guides →**](guides/README.md)   ·   [**Join Discord →**](https://discord.gg/XEKxARDkNQ)
+## Where do you want to start?
 
-</div>
+{% content-ref url="documentation/getting-started/what-is-workflowfiesta.md" %}
+[what-is-workflowfiesta.md](documentation/getting-started/what-is-workflowfiesta.md)
+{% endcontent-ref %}
 
----
+{% content-ref url="documentation/getting-started/quickstart.md" %}
+[quickstart.md](documentation/getting-started/quickstart.md)
+{% endcontent-ref %}
 
-## Everything your team needs. Nothing they don't.
+{% content-ref url="documentation/workflowfiesta/agents.md" %}
+[agents.md](documentation/workflowfiesta/agents.md)
+{% endcontent-ref %}
 
-<table data-view="cards">
-  <thead>
-    <tr>
-      <th></th>
-      <th></th>
-      <th data-hidden data-card-target data-type="content-ref"></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>📚 Documentation</strong></td>
-      <td>Agents, skills, workflows, credentials, and the runner. Everything you need to understand and use the platform.</td>
-      <td><a href="documentation/README.md">documentation</a></td>
-    </tr>
-    <tr>
-      <td><strong>🗺️ Guides</strong></td>
-      <td>Ready-made automation playbooks for marketing, QA, development, sales, finance, and every other team.</td>
-      <td><a href="guides/README.md">guides</a></td>
-    </tr>
-    <tr>
-      <td><strong>🛟 Help Center</strong></td>
-      <td>Troubleshooting, billing, team management, and answers to the most common questions.</td>
-      <td><a href="help-center/README.md">help-center</a></td>
-    </tr>
-  </tbody>
-</table>
+{% content-ref url="documentation/workflowfiesta/skills.md" %}
+[skills.md](documentation/workflowfiesta/skills.md)
+{% endcontent-ref %}
 
----
+{% content-ref url="documentation/workflowfiesta/workflows.md" %}
+[workflows.md](documentation/workflowfiesta/workflows.md)
+{% endcontent-ref %}
 
-## Built different. On purpose.
+{% content-ref url="documentation/workflowfiesta/runner.md" %}
+[runner.md](documentation/workflowfiesta/runner.md)
+{% endcontent-ref %}
+
+## The platform at a glance
 
 {% tabs %}
-{% tab title="Conversation-first" %}
-### You describe it. WorkflowFiesta builds it.
-
-Every agent, workflow, skill, and integration is created through conversation. No forms. No configuration files. No code.
-
-> *"Create an agent that monitors our Jira board and sends me a Slack summary every morning."*
-
-WorkflowFiesta asks the right questions, confirms the design, and builds it. You start using it immediately.
-
-This is how the entire platform works — agents, workflows, credentials, custom commands. If you can describe it, WorkflowFiesta can build it.
+{% tab title="Agents" %}
+Agents are AI assistants you build through conversation. Each agent has a name, a purpose, and a system prompt that defines how it behaves. You can have one general-purpose agent or dozens of specialists — a marketing writer, a Jira manager, a customer support rep — each focused on a specific job.
 {% endtab %}
 
-{% tab title="Any model. Zero lock-in." %}
-### Your AI. Your choice.
-
-WorkflowFiesta works with every major AI provider — and any provider with an API.
-
-- **Anthropic** — Claude Sonnet, Opus, Haiku
-- **OpenAI** — GPT-4o, GPT-4 Turbo, o1
-- **AWS Bedrock** — Any Bedrock model
-- **Google Gemini** — Gemini Pro, Flash
-- **Azure OpenAI** — Enterprise-grade deployment
-- **Ollama** — Local models, fully private
-- **Any provider with an API** — Connect anything
-
-Switch models in seconds. Use different models for different agents. Pay providers directly — WorkflowFiesta never marks up model costs.
+{% tab title="Skills" %}
+Skills are reusable building blocks that extend agent behavior across your organization. A prompt skill injects domain expertise or style rules into an agent. A script skill packages a repeatable task — like pulling analytics or querying an API — so agents can run it consistently without regenerating the logic each time.
 {% endtab %}
 
-{% tab title="Your infrastructure" %}
-### Agents that reach everywhere.
-
-The WorkflowFiesta Runner connects your agents to your world — local files, internal databases, private networks, and your own hardware.
-
-Install it on any machine. Your agents can then read and write files, run scripts, access systems behind your firewall, and work with data that never leaves your infrastructure.
-
-One lightweight app. Unlimited reach.
+{% tab title="Workflows" %}
+Workflows are automated pipelines that run on a schedule, on a trigger, or on demand. They chain agents together in sequence — each one receiving the previous agent's output — so complex, multi-step processes run automatically from start to finish.
 {% endtab %}
 
-{% tab title="Org-wide intelligence" %}
-### Build once. Everyone benefits.
-
-Every agent, skill, workflow, and credential is shared across your entire organization the moment it's created.
-
-Build a Marketing Copy skill — every agent in your org can use it. Create a Jira workflow — every team member can trigger it. Add a credential — no one ever has to re-enter it.
-
-Your organization gets smarter every time anyone builds something new.
+{% tab title="Runner" %}
+The Runner is a lightweight app you install on your own computer or server. Once connected, your agents can read local files, access internal systems, and run tasks directly on your machine — without exposing anything to the internet.
 {% endtab %}
 {% endtabs %}
 
----
+## Who is WorkflowFiesta for?
 
-## What teams are automating
+| Team            | What they use it for                                         |
+| --------------- | ------------------------------------------------------------ |
+| **Operations**  | Automate reporting, approvals, and cross-tool data flows     |
+| **Marketing**   | Run content pipelines, SEO workflows, and campaign reporting |
+| **Sales**       | Automate outreach, CRM updates, and pipeline summaries       |
+| **Development** | Manage issues, PRs, deployments, and documentation           |
+| **Finance**     | Pull reports, track spend, and summarize data across tools   |
+| **Leadership**  | Get weekly briefings and insights without manual assembly    |
 
-| Team | What they build |
-|------|----------------|
-| **Marketing** | Blog pipelines, social content, SEO research, campaign reporting |
-| **QA** | Test case generation, bug triage, coverage reporting, release notes |
-| **Development** | PR reviews, documentation, incident response, deployment summaries |
-| **Sales** | Outreach sequences, lead research, CRM updates, pipeline reports |
-| **Operations** | Status reports, vendor tracking, process documentation, alerts |
-| **Finance** | Spend reports, budget monitoring, invoice processing, cost breakdowns |
-| **HR** | Job descriptions, onboarding checklists, policy drafts, org updates |
-| **Customer Success** | Health monitoring, renewal alerts, QBR prep, churn signals |
-| **DevOps** | Deployment reports, incident runbooks, monitoring alerts, infra docs |
+## How the docs are organized
 
----
-
-{% hint style="info" %}
-**New to WorkflowFiesta?** Start with the [Quickstart guide](documentation/getting-started/quickstart.md) — your first agent is running in under 5 minutes.
-{% endhint %}
-
----
-
-<div align="center">
-
-**Questions?** Join the community on [Discord](https://discord.gg/XEKxARDkNQ) — the team is active and responsive.
-
-</div>
+| Section             | What you will find                                                |
+| ------------------- | ----------------------------------------------------------------- |
+| **Getting Started** | What WorkflowFiesta is, how it works, and your first five minutes |
+| **WorkflowFiesta**  | Reference pages for every part of the platform                    |
+| **Guides**          | Step-by-step playbooks for specific teams and use cases           |
+| **Help Center**     | Troubleshooting, billing, account, and team management            |

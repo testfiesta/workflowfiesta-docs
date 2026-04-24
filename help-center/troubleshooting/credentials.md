@@ -1,3 +1,7 @@
+---
+icon: square-question
+---
+
 # Troubleshooting Credentials
 
 Credential issues are the most common cause of workflow failures. Here's how to diagnose and fix them.
@@ -10,14 +14,15 @@ Credential issues are the most common cause of workflow failures. Here's how to 
 
 Tell WorkflowFiesta which service you're trying to connect and it will give you exact instructions:
 
-> *"Where do I find my Intercom API key?"*
+> _"Where do I find my Intercom API key?"_
 
 For common services:
-- **Intercom** — Settings → Developers → Developer Hub → Authentication → Access Token
-- **Jira** — Account Settings → Security → API tokens → Create API token
-- **GitHub** — Settings → Developer settings → Personal access tokens → Tokens (classic)
-- **Google Analytics** — Google Cloud Console → APIs & Services → Credentials
-- **Slack** — api.slack.com → Your Apps → OAuth & Permissions → Bot Token
+
+* **Intercom** — Settings → Developers → Developer Hub → Authentication → Access Token
+* **Jira** — Account Settings → Security → API tokens → Create API token
+* **GitHub** — Settings → Developer settings → Personal access tokens → Tokens (classic)
+* **Google Analytics** — Google Cloud Console → APIs & Services → Credentials
+* **Slack** — api.slack.com → Your Apps → OAuth & Permissions → Bot Token
 
 </details>
 
@@ -42,10 +47,11 @@ The secure credential form appears in the chat when WorkflowFiesta needs a crede
 This means the stored credential is no longer valid. API keys can expire, be rotated, or be revoked by the external service.
 
 **Fix:**
+
 1. Go to **Settings → Credentials**
 2. Find the credential for the failing service
 3. Delete it
-4. Ask WorkflowFiesta to re-add it: *"I need to reconnect my Jira credential."*
+4. Ask WorkflowFiesta to re-add it: _"I need to reconnect my Jira credential."_
 
 </details>
 
@@ -56,7 +62,8 @@ This means the stored credential is no longer valid. API keys can expire, be rot
 OAuth tokens expire and need to be refreshed. WorkflowFiesta handles token refresh automatically for most OAuth providers, but sometimes the refresh token itself expires (usually after 6 months of inactivity).
 
 **Fix:** Reconnect the OAuth service. Tell WorkflowFiesta:
-> *"My Google connection isn't working — can you reconnect it?"*
+
+> _"My Google connection isn't working — can you reconnect it?"_
 
 It will open the OAuth authorization screen and you'll re-approve access.
 
