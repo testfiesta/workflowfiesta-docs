@@ -22,7 +22,7 @@ By the end of this guide you'll have a working AI agent that can receive message
 
 {% stepper %}
 {% step %}
-#### Create your first agent
+**Create your first agent**
 
 Open [app.workflowfiesta.com](https://app.workflowfiesta.com) and sign in. Then just tell WorkflowFiesta what you want to build:
 
@@ -36,7 +36,7 @@ You can also create agents from **Settings → Agents → New Agent** if you pre
 {% endstep %}
 
 {% step %}
-#### Talk to your agent
+**Talk to your agent**
 
 Click the chat panel and send a message. Try something realistic — a customer email, a piece of data, a question your team gets every day.
 
@@ -48,12 +48,12 @@ Every change takes effect on the very next message. No restart, no redeploy. Thi
 {% endstep %}
 
 {% step %}
-#### Add a skill (optional)
+**Add a skill (optional)**
 
 Skills are reusable building blocks that make agent behavior consistent across your organization. There are two types:
 
-- **Prompt skills** inject domain expertise or style rules into the agent's system prompt
-- **Script skills** package a specific script the agent can execute
+* **Prompt skills** inject domain expertise or style rules into the agent's system prompt
+* **Script skills** package a specific script the agent can execute
 
 > "Add the Jira skill to this agent so it follows our ticket format every time."
 
@@ -67,7 +67,7 @@ Skills don't unlock capabilities an agent doesn't otherwise have. An agent's abi
 {% endstep %}
 
 {% step %}
-#### Run a workflow
+**Run a workflow**
 
 Workflows chain agents, scripts, and HTTP calls into automated pipelines that run on a schedule or trigger.
 
@@ -107,7 +107,7 @@ trigger:
 {% endstep %}
 
 {% step %}
-#### Install the Runner (optional)
+**Install the Runner (optional)**
 
 The Runner is a lightweight binary you install on your own machine or server. Once connected, agents can read local files, access internal databases, and run scripts on your hardware.
 
@@ -154,10 +154,10 @@ The Runner is optional. You only need it if you want agents to access files or s
 
 ## You're set up. What's next?
 
-| | |
-|---|---|
-| [🧠 What is WorkflowFiesta?](what-is-workflowfiesta.md) | Understand the platform before you build deeper |
-| [⚙️ Agents](../workflowfiesta/agents.md) | Deep dive into system prompts, tools, and agent design |
-| [🔁 Workflows](../workflowfiesta/workflows.md) | Chain steps, pass data, and schedule runs |
-| [🔧 Skills](../workflowfiesta/skills.md) | What skills are and how to use them |
-| [👥 Discord](https://discord.gg/XEKxARDkNQ) | Ask the community |
+|                                                         |                                                        |
+| ------------------------------------------------------- | ------------------------------------------------------ |
+| [🧠 What is WorkflowFiesta?](what-is-workflowfiesta.md) | Understand the platform before you build deeper        |
+| [⚙️ Agents](../documentation/agents.md)                 | Deep dive into system prompts, tools, and agent design |
+| [🔁 Workflows](../documentation/workflows.md)           | Chain steps, pass data, and schedule runs              |
+| [🔧 Skills](../documentation/skills.md)                 | What skills are and how to use them                    |
+| [👥 Discord](https://discord.gg/XEKxARDkNQ)             | Ask the community                                      |

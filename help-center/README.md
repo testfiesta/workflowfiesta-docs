@@ -24,7 +24,7 @@ Find answers to common questions, troubleshoot issues, and get your workflows ru
 
 <summary>How do I create my first agent?</summary>
 
-Go to **Agents** in the left sidebar → click **New Agent** → give it a name and a system prompt → click **Save**. Your agent is live immediately. See the [Quickstart](../documentation/getting-started/quickstart.md) for a full walkthrough.
+Go to **Agents** in the left sidebar → click **New Agent** → give it a name and a system prompt → click **Save**. Your agent is live immediately. See the [Quickstart](../get-started/quickstart.md) for a full walkthrough.
 
 </details>
 

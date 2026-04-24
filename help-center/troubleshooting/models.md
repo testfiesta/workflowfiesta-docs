@@ -75,7 +75,7 @@ Ollama runs on your local machine and requires the Runner to be installed and co
 2. Ensure Ollama is running locally (`ollama serve`)
 3. Tell WorkflowFiesta the Ollama endpoint: typically `http://localhost:11434`
 
-See [Install the Runner](../../documentation/workflowfiesta/runner.md) for Runner setup.
+See [Install the Runner](../../documentation/runner.md) for Runner setup.
 
 </details>
 

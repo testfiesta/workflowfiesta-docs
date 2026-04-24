@@ -20,7 +20,7 @@ WorkflowFiesta connects the steps. An agent can read your emails, pull data from
 
 {% tabs %}
 {% tab title="Agents" %}
-#### Agents — your AI specialists
+**Agents — your AI specialists**
 
 An agent is an AI with a specific job. You give it a name, a purpose, and instructions. It uses the AI model you choose and behaves according to the system prompt you define.
 
@@ -38,14 +38,13 @@ WorkflowFiesta asks a few clarifying questions, then creates the agent. You can 
 {% endtab %}
 
 {% tab title="Skills" %}
-#### Skills — consistent, reusable behavior
+**Skills — consistent, reusable behavior**
 
 A skill is a reusable building block that extends agent behavior across your organization. Once a skill exists, any agent can use it.
 
 **Two types:**
 
 * **Prompt skills** inject additional instructions into an agent's system prompt — encoding domain expertise, style rules, or institutional knowledge so the agent behaves consistently every time. Examples: Marketing Copy, Code Review, Natural Writing, Jira.
-
 * **Script skills** package a specific script an agent can execute for repeatable tasks — querying an API, processing data, reading files. Examples: Analytics Pull, Keyword Analyzer, Cohort Retention.
 
 Skills are org-wide. You add a skill to an agent by asking:
@@ -60,7 +59,7 @@ Skills don't unlock capabilities an agent doesn't otherwise have. An agent's abi
 {% endtab %}
 
 {% tab title="Workflows" %}
-#### Workflows — automation that runs itself
+**Workflows — automation that runs itself**
 
 A workflow is a sequence of steps that runs automatically. It can be triggered by a schedule, a webhook, an event, or a chat message.
 
@@ -119,10 +118,10 @@ The Runner is optional. If everything you need is cloud-based (Gmail, HubSpot, J
 
 ## What to read next
 
-| | |
-| --- | --- |
-| [🚀 Quickstart](quickstart.md) | Get your first agent running in 5 minutes |
-| [⚙️ Agents](../workflowfiesta/agents.md) | Deep dive into how agents work |
-| [🔁 Workflows](../workflowfiesta/workflows.md) | How to build automated pipelines |
-| [🔧 Skills](../workflowfiesta/skills.md) | What skills are and how to use them |
-| [👥 Discord](https://discord.gg/XEKxARDkNQ) | Ask the community |
+|                                               |                                           |
+| --------------------------------------------- | ----------------------------------------- |
+| [🚀 Quickstart](quickstart.md)                | Get your first agent running in 5 minutes |
+| [⚙️ Agents](../documentation/agents.md)       | Deep dive into how agents work            |
+| [🔁 Workflows](../documentation/workflows.md) | How to build automated pipelines          |
+| [🔧 Skills](../documentation/skills.md)       | What skills are and how to use them       |
+| [👥 Discord](https://discord.gg/XEKxARDkNQ)   | Ask the community                         |

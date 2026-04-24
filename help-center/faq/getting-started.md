@@ -52,7 +52,7 @@ Just describe what you want the agent to do:
 
 WorkflowFiesta will ask a few questions and create the agent. You can start talking to it immediately.
 
-See the [Quickstart guide](../../documentation/getting-started/quickstart.md) for a step-by-step walkthrough.
+See the [Quickstart guide](../../get-started/quickstart.md) for a step-by-step walkthrough.
 
 </details>
 
@@ -66,7 +66,7 @@ Tell WorkflowFiesta which service you want to connect:
 
 It will tell you exactly where to find your API key or token, open a secure form for you to paste it into, and save it encrypted. Your credentials are never exposed after that.
 
-See [Credentials](../../documentation/workflowfiesta/credentials.md) for more detail.
+See [Credentials](../../documentation/credentials.md) for more detail.
 
 </details>
 
@@ -76,7 +76,7 @@ See [Credentials](../../documentation/workflowfiesta/credentials.md) for more de
 
 Yes. WorkflowFiesta supports OpenAI, Anthropic, AWS Bedrock, Google Gemini, Ollama (local models), Azure OpenAI, and any other provider with an API. You connect your own API key and choose which model each agent uses.
 
-See [Models & Providers](../../documentation/workflowfiesta/models.md) for the full list.
+See [Models & Providers](../../documentation/models.md) for the full list.
 
 </details>
 
@@ -88,7 +88,7 @@ The Runner is a lightweight app you install on your own computer or server. Once
 
 It's optional. You only need it if your workflows need to touch files or systems on your own machine.
 
-See [Install the Runner](../../documentation/workflowfiesta/runner.md) for setup instructions.
+See [Install the Runner](../../documentation/runner.md) for setup instructions.
 
 </details>
 

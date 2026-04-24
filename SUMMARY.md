@@ -1,23 +1,23 @@
 # Table of contents
 
-## Documentation
+## GET STARTED
 
 * [Overview](README.md)
-* [What is WorkflowFiesta?](documentation/getting-started/what-is-workflowfiesta.md)
-* [Quickstart](documentation/getting-started/quickstart.md)
+* [What is WorkflowFiesta?](get-started/what-is-workflowfiesta.md)
+* [Quickstart](get-started/quickstart.md)
 
-## WorkflowFiesta
+## DOCUMENTATION
 
-* [Agents](documentation/workflowfiesta/agents.md)
-* [Skills](documentation/workflowfiesta/skills.md)
-* [Workflows](documentation/workflowfiesta/workflows.md)
-* [Environments](documentation/workflowfiesta/environments.md)
-* [Credentials](documentation/workflowfiesta/credentials.md)
-* [Custom Commands](documentation/workflowfiesta/custom-commands.md)
-* [Models & Providers](documentation/workflowfiesta/models.md)
-* [Runner](documentation/workflowfiesta/runner.md)
+* [Agents](documentation/agents.md)
+* [Skills](documentation/skills.md)
+* [Workflows](documentation/workflows.md)
+* [Environments](documentation/environments.md)
+* [Credentials](documentation/credentials.md)
+* [Custom Commands](documentation/custom-commands.md)
+* [Models & Providers](documentation/models.md)
+* [Runner](documentation/runner.md)
 
-## Guides
+## GUIDES
 
 * [Guides Home](guides/README.md)
 * [Marketing](guides/marketing/README.md)

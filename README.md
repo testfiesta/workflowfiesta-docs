@@ -12,34 +12,34 @@ Everything in WorkflowFiesta is created through conversation. You describe what 
 
 ## Get Started
 
-<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td>Quick Start Guide</td><td><a href="documentation/getting-started/quickstart.md">quickstart.md</a></td><td><a href=".gitbook/assets/Cover Image -YT 2560 x 1450 (1).jpg">Cover Image -YT 2560 x 1450 (1).jpg</a></td></tr><tr><td>Guides By Business Department</td><td></td><td><a href=".gitbook/assets/Cover Image -YT 2560 x 1451 (2).jpg">Cover Image -YT 2560 x 1451 (2).jpg</a></td></tr><tr><td>Help Center</td><td></td><td><a href=".gitbook/assets/Cover Image -YT 2560 x 1452 (1).jpg">Cover Image -YT 2560 x 1452 (1).jpg</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td>Quick Start Guide</td><td><a href="get-started/quickstart.md">quickstart.md</a></td><td><a href=".gitbook/assets/Cover Image -YT 2560 x 1450 (1).jpg">Cover Image -YT 2560 x 1450 (1).jpg</a></td></tr><tr><td>Guides By Business Department</td><td></td><td><a href=".gitbook/assets/Cover Image -YT 2560 x 1451 (2).jpg">Cover Image -YT 2560 x 1451 (2).jpg</a></td></tr><tr><td>Help Center</td><td></td><td><a href=".gitbook/assets/Cover Image -YT 2560 x 1452 (1).jpg">Cover Image -YT 2560 x 1452 (1).jpg</a></td></tr></tbody></table>
 
 
 
 ## Where do you want to start?
 
-{% content-ref url="documentation/getting-started/what-is-workflowfiesta.md" %}
-[what-is-workflowfiesta.md](documentation/getting-started/what-is-workflowfiesta.md)
+{% content-ref url="get-started/what-is-workflowfiesta.md" %}
+[what-is-workflowfiesta.md](get-started/what-is-workflowfiesta.md)
 {% endcontent-ref %}
 
-{% content-ref url="documentation/getting-started/quickstart.md" %}
-[quickstart.md](documentation/getting-started/quickstart.md)
+{% content-ref url="get-started/quickstart.md" %}
+[quickstart.md](get-started/quickstart.md)
 {% endcontent-ref %}
 
-{% content-ref url="documentation/workflowfiesta/agents.md" %}
-[agents.md](documentation/workflowfiesta/agents.md)
+{% content-ref url="documentation/agents.md" %}
+[agents.md](documentation/agents.md)
 {% endcontent-ref %}
 
-{% content-ref url="documentation/workflowfiesta/skills.md" %}
-[skills.md](documentation/workflowfiesta/skills.md)
+{% content-ref url="documentation/skills.md" %}
+[skills.md](documentation/skills.md)
 {% endcontent-ref %}
 
-{% content-ref url="documentation/workflowfiesta/workflows.md" %}
-[workflows.md](documentation/workflowfiesta/workflows.md)
+{% content-ref url="documentation/workflows.md" %}
+[workflows.md](documentation/workflows.md)
 {% endcontent-ref %}
 
-{% content-ref url="documentation/workflowfiesta/runner.md" %}
-[runner.md](documentation/workflowfiesta/runner.md)
+{% content-ref url="documentation/runner.md" %}
+[runner.md](documentation/runner.md)
 {% endcontent-ref %}
 
 ## The platform at a glance
