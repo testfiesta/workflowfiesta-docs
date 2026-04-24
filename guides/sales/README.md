@@ -1,57 +1,63 @@
-# 💼 Sales
+# Sales
 
-Outreach automation, prospect research, CRM updates, and pipeline reporting for sales teams.
+Use WorkflowFiesta to automate your sales pipeline — from prospecting and outreach to follow-up and reporting. Your sales agents work around the clock so your team can focus on closing.
 
-{% hint style="success" %}
-**All of these are built through conversation.** Copy any prompt below, paste it into WorkflowFiesta, and the platform will guide you through the setup.
+## What sales teams automate with WorkflowFiesta
+
+{% tabs %}
+{% tab title="Prospecting" %}
+**Research and qualify leads automatically.**
+
+- Pull company data from LinkedIn, Crunchbase, or your CRM
+- Score leads based on your ideal customer profile
+- Enrich contact records with job titles, company size, and tech stack
+- Flag high-priority accounts for immediate outreach
+
+> *"Research these 20 companies and score them against our ICP. Flag anyone in Series A–C SaaS with 50–500 employees."*
+{% endtab %}
+
+{% tab title="Outreach" %}
+**Write and send personalized outreach at scale.**
+
+- Draft personalized cold emails based on each prospect's context
+- Generate follow-up sequences automatically
+- Adapt tone and messaging by industry or persona
+- Send via Gmail, Outlook, or any connected email service
+
+> *"Write a personalized cold email for each of these 10 prospects. Use their recent LinkedIn activity as context."*
+{% endtab %}
+
+{% tab title="Pipeline" %}
+**Keep your CRM up to date without manual data entry.**
+
+- Summarize sales calls and extract action items
+- Update HubSpot or Salesforce records automatically
+- Flag deals that have gone quiet
+- Generate pipeline reports on a schedule
+
+> *"After each sales call, summarize the key points and update the HubSpot deal record."*
+{% endtab %}
+
+{% tab title="Reporting" %}
+**Get weekly pipeline visibility without building dashboards.**
+
+- Pull open deals, stage distribution, and win rates
+- Identify deals at risk of stalling
+- Track rep performance across the team
+- Email the report to leadership every Monday
+
+> *"Every Monday, pull our HubSpot pipeline, flag deals that haven't moved in 14 days, and email me a summary."*
+{% endtab %}
+{% endtabs %}
+
+## Getting started
+
+Tell WorkflowFiesta what you want to automate in your sales process. It will ask you a few questions about your CRM, email provider, and team setup — then build the workflow.
+
+{% hint style="info" %}
+**You'll need credentials** for your CRM (HubSpot, Salesforce, Pipedrive) and email provider connected before running sales workflows. WorkflowFiesta will guide you through connecting them.
 {% endhint %}
 
-## Automations
-
-### Prospect Research Agent
-
-Researches a company or contact before an outreach call. Pulls recent news, company info, and suggests talking points.
-
-**Start with this prompt:**
-
-> "Create a prospect research agent. Given a company name or LinkedIn URL, it should find recent news, company size and funding, likely pain points, and suggest 3 personalized talking points for an outreach email."
-
-**What the platform will ask:**
-- Which tools to connect (it will open secure forms for any credentials needed)
-- Specific configuration details (which channel, which project, what format)
-- Schedule or trigger preferences
-
-**What you'll have when done:**
-A working prospect research agent that runs automatically.
-
-### Cold Outreach Writer
-
-Writes personalized cold outreach emails using the prospect's company context, your product positioning, and proven email frameworks.
-
-**Start with this prompt:**
-
-> "Create an outreach email agent that writes personalized cold emails. It should use the prospect's company context, lead with their pain point, keep emails under 150 words, and end with a single low-friction CTA."
-
-**What the platform will ask:**
-- Which tools to connect (it will open secure forms for any credentials needed)
-- Specific configuration details (which channel, which project, what format)
-- Schedule or trigger preferences
-
-**What you'll have when done:**
-A working cold outreach writer that runs automatically.
-
-### Pipeline Report
-
-Pulls HubSpot deal data every Monday and sends a pipeline summary showing deals by stage, total value, and week-over-week changes.
-
-**Start with this prompt:**
-
-> "Create a workflow that runs every Monday, pulls our HubSpot pipeline data, summarizes deals by stage and total value, highlights any deals that haven't moved in 7+ days, and emails the summary to the sales team."
-
-**What the platform will ask:**
-- Which tools to connect (it will open secure forms for any credentials needed)
-- Specific configuration details (which channel, which project, what format)
-- Schedule or trigger preferences
-
-**What you'll have when done:**
-A working pipeline report that runs automatically.
+{% content-ref url="../README.md" %}
+[Back to Guides](../README.md)
+{% endcontent-ref %}
