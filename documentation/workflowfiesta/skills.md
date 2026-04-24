@@ -4,59 +4,120 @@ icon: bolt
 
 # Skills
 
-Skills are capabilities you add to agents. They define what an agent can *do* — not just what it knows.
+Skills are reusable building blocks that extend agent behavior across your organization. Once a skill exists, any agent can use it.
 
 {% hint style="success" %}
-**Skills are org-wide.** Once a skill exists in your organization, any agent can use it. You build a capability once and share it everywhere.
+**Skills are org-wide.** Build a capability once and every agent in your organization can use it — no need to repeat yourself across agents.
 {% endhint %}
 
 ## What Is a Skill?
 
-Without skills, an agent can reason, write, and answer questions — but it cannot take action in the world. Skills change that.
+An agent's ability to take action — run code, call APIs, send emails, create tickets — comes from its **platform access level and available tools**, not from skills. A fully configured agent can already do a great deal without any skills attached.
 
-A skill might let an agent:
-- Search the web for current information
-- Send an email via Gmail or Outlook
-- Create a Jira ticket
-- Query Google Analytics
-- Run a Python script
-- Read a file from your local machine
-- Call any external API
+Skills serve a different purpose: they make agent behavior **consistent, efficient, and reusable** across your organization.
 
-## Two Types of Skills
+There are two types:
 
-**Prompt Skills** inject additional instructions into an agent's system prompt. They teach the agent a new area of expertise, a set of rules, or a specific way of working. Examples: Marketing Copy, Jira, Code Review, Natural Writing. No external connections needed — they just make the agent smarter at a specific domain.
+{% tabs %}
+{% tab title="Prompt Skills" %}
+### Prompt Skills
 
-**Script Skills** let an agent execute real code. When the agent needs to take action — query a database, call an API, process a file — it runs the script. Examples: Analytics Pull (queries Intercom, GA4, Google Ads), Keyword Analyzer (calls Google Ads API), Cohort Retention (queries Intercom user data). Script skills run in a container or on your local machine via the Runner.
+A prompt skill injects additional instructions into an agent's system prompt. It encodes domain expertise, style rules, API patterns, or institutional knowledge — so the agent behaves consistently and correctly every time, without you re-prompting each conversation.
+
+**Examples:**
+- **Marketing Copy** — teaches the agent your brand voice, tone rules, and what phrases to avoid
+- **Code Review** — encodes a specific review checklist (security, performance, maintainability)
+- **Natural Writing** — injects rules to avoid AI-sounding patterns and write like a human
+- **Jira** — teaches the agent your project's issue types, field formats, and RACI ownership
+
+The agent could often reason through these domains on its own. A prompt skill locks in the *specific behavior you want every time* — no drift, no inconsistency.
+{% endtab %}
+
+{% tab title="Script Skills" %}
+### Script Skills
+
+A script skill packages a specific script (Python, bash, etc.) that an agent can execute. They're used for repeatable tasks that require real execution — querying an API, processing data, reading local files.
+
+The script lives in the skill so agents don't need to regenerate it each time. It runs in a container or on your local machine via the Runner.
+
+**Examples:**
+- **Analytics Pull** — queries Intercom, Google Analytics, and Google Ads and returns a formatted report
+- **Keyword Analyzer** — calls the Google Ads Keyword Planner API and categorizes results by tier
+- **Cohort Retention** — queries Intercom user data and outputs a retention matrix
+
+{% hint style="info" %}
+Script skills require credentials for any external services they connect to. WorkflowFiesta will walk you through connecting them securely when you add the skill.
+{% endhint %}
+{% endtab %}
+{% endtabs %}
+
+## What Skills Are Not
+
+{% hint style="warning" %}
+**Skills do not unlock capabilities an agent doesn't otherwise have.**
+
+An agent's ability to take action — run code, call APIs, send emails, create Jira tickets — comes from its platform access level and available tools. Skills make behavior consistent, efficient, and org-wide. They don't gate what an agent can do.
+{% endhint %}
+
+## Creating a Skill
+
+Start a conversation with WorkflowFiesta:
+
+> "Create a skill that teaches agents how to write in our brand voice. The tone should be direct and confident, avoid corporate jargon, and never use phrases like 'leverage' or 'synergy'."
+
+> "Create a script skill that queries our internal PostgreSQL database and returns a summary of open support tickets."
+
+WorkflowFiesta will ask clarifying questions — what the skill should do, what constraints it should follow, and whether it needs credentials to connect to any external service.
 
 ## Adding a Skill to an Agent
 
-You add skills through conversation:
+> "Add the Marketing Copy skill to the Content Agent."
 
-> "Add a web search skill to the Research Agent."
+> "Give the Support Agent the Jira skill so it can create tickets from conversations."
 
-> "Give the Marketing Agent the ability to send emails via Gmail."
+Skills are org-wide — once created, they're available to every agent. Adding a skill to a specific agent simply activates it for that agent's context.
 
-> "Add the Jira skill to the Project Manager Agent."
+## Browsing Available Skills
 
-If the skill requires credentials, the platform will prompt you to provide them securely before attaching the skill.
-
-## Creating a New Skill
-
-> "Create a skill that teaches agents how to write in our brand voice."
-
-> "Create a skill that lets agents query our internal PostgreSQL database."
-
-For script skills that connect to external tools, the platform will ask for the necessary credentials and walk you through setup.
+All skills in your organization are listed in **Settings → Skills**. From there you can:
+- See all prompt and script skills
+- View what each skill does
+- Add a skill to an agent
+- Create a new skill
 
 ## Skills vs. Credentials
 
 | | Skills | Credentials |
 |---|---|---|
-| **What it is** | A capability (what the agent can do) | A secret (how it authenticates) |
-| **Example** | Gmail SMTP skill | Gmail username + app password |
+| **What it is** | Reusable instructions or a packaged script | An encrypted secret (API key, password, token) |
+| **Example** | Jira prompt skill (teaches Jira API patterns) | Jira API token (authenticates the request) |
 | **Stored as** | Instructions or code | Encrypted key-value pairs |
+| **Scope** | Org-wide — any agent can use it | Org-wide — injected at runtime, never exposed |
 
-A skill defines *how* to send an email. A credential provides the *authentication* to actually send it. Most integration skills require a matching credential.
+A skill defines *how* to interact with a service. A credential provides the *authentication* to actually do it. Most script skills that connect to external services require a matching credential.
 
 See [Credentials](credentials.md) for how to store and manage secrets securely.
+
+## Frequently Asked Questions
+
+<details>
+<summary>Can I edit a skill after creating it?</summary>
+
+Yes. Ask WorkflowFiesta to update it:
+
+> "Update the Marketing Copy skill — add a rule that all CTAs should be under 8 words."
+
+Changes take effect immediately for all agents using the skill.
+</details>
+
+<details>
+<summary>Can I delete a skill?</summary>
+
+Yes. WorkflowFiesta will warn you if any agents are currently using it before deletion.
+</details>
+
+<details>
+<summary>Do skills affect every conversation or just specific agents?</summary>
+
+Prompt skills are injected into the system prompt of agents they're attached to. They affect every conversation that agent has. Script skills are available to any agent that has them attached and can be invoked when needed.
+</details>
