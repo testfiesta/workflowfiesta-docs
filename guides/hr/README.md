@@ -7,7 +7,7 @@ icon: address-book
 
 # HR & People
 
-{% hint style="info" %}
+{% hint style="warning" %}
 **WorkflowFiesta agents are fully self-aware.** They know the platform, its capabilities, and can take most actions for you directly. If you have a question, the fastest answer is always to ask the agent itself — just type it in the chat.
 {% endhint %}
 
@@ -87,7 +87,7 @@ WorkflowFiesta shows you exactly what it's going to build. Approve it and it sta
 
 ***
 
-{% hint style="info" %}
+{% hint style="warning" %}
 **HR & People tip:** HR agents work best when you give them context about your company culture and tone. Tell WorkflowFiesta: "We're a remote-first, async company with a direct, no-jargon communication style" — and every output will match.
 {% endhint %}
 
