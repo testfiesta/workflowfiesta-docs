@@ -4,14 +4,14 @@ icon: bolt
 
 # Skills
 
-{% hint style="warning" %}
+{% hint style="success" %}
 **WorkflowFiesta agents are fully self-aware.** They know the platform, its capabilities, and can take most actions for you directly. If you have a question, the fastest answer is always to ask the agent itself — just type it in the chat.
 {% endhint %}
 
 
 Skills are reusable building blocks that extend agent behavior across your organization. Once a skill exists, any agent can use it.
 
-{% hint style="success" %}
+{% hint style="info" %}
 **Skills are org-wide.** Build a capability once and every agent in your organization can use it — no need to repeat yourself across agents.
 {% endhint %}
 
@@ -52,7 +52,7 @@ The script lives in the skill so agents don't need to regenerate it each time. I
 * **Keyword Analyzer** — calls the Google Ads Keyword Planner API and categorizes results by tier
 * **Cohort Retention** — queries Intercom user data and outputs a retention matrix
 
-{% hint style="warning" %}
+{% hint style="info" %}
 Script skills require credentials for any external services they connect to. WorkflowFiesta will walk you through connecting them securely when you add the skill.
 {% endhint %}
 {% endtab %}
@@ -60,7 +60,7 @@ Script skills require credentials for any external services they connect to. Wor
 
 ## What Skills Are Not
 
-{% hint style="warning" %}
+{% hint style="info" %}
 **Skills do not unlock capabilities an agent doesn't otherwise have.**
 
 An agent's ability to take action — run code, call APIs, send emails, create Jira tickets — comes from its platform access level and available tools. Skills make behavior consistent, efficient, and org-wide. They don't gate what an agent can do.
