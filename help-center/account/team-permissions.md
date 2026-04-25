@@ -4,7 +4,7 @@ icon: screen-users
 
 # Team & Permissions
 
-{% hint style="info" %}
+{% hint style="warning" %}
 **WorkflowFiesta agents are fully self-aware.** They know the platform, its capabilities, and can take most actions for you directly. If you have a question, the fastest answer is always to ask the agent itself — just type it in the chat.
 {% endhint %}
 
@@ -62,6 +62,6 @@ Admins can set AI spend limits for individual users to control costs. To set a l
 
 See [Billing & Plans](billing.md) for more on spend limits.
 
-{% hint style="info" %}
+{% hint style="warning" %}
 **Need a custom permission structure?** Enterprise plans support advanced access controls. Contact us via the [Discord community](https://discord.gg/XEKxARDkNQ) or **Settings → Help**.
 {% endhint %}
