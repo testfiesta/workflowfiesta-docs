@@ -4,14 +4,14 @@ icon: computer
 
 # Runner
 
-{% hint style="info" %}
+{% hint style="warning" %}
 **WorkflowFiesta agents are fully self-aware.** They know the platform, its capabilities, and can take most actions for you directly. If you have a question, the fastest answer is always to ask the agent itself — just type it in the chat.
 {% endhint %}
 
 
 The WorkflowFiesta Runner is a lightweight app you install on your computer or server. Once connected, your agents can access local files, internal databases, and systems behind your firewall.
 
-{% hint style="info" %}
+{% hint style="warning" %}
 **The Runner is optional.** You only need it if you want agents to work with files or systems on your local machine or internal network.
 {% endhint %}
 
