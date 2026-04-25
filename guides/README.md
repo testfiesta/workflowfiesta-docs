@@ -4,14 +4,14 @@ icon: map
 
 # Guides Home
 
-{% hint style="warning" %}
+{% hint style="success" %}
 **WorkflowFiesta agents are fully self-aware.** They know the platform, its capabilities, and can even take most actions for you. The best place to start if you have a question is to ask the tool itself for help.
 {% endhint %}
 
 
 Ready-made workflows and agent setups for your team. Find a guide for your department, follow the steps, and have a working automation in minutes.
 
-{% hint style="success" %}
+{% hint style="info" %}
 **Everything in these guides is built through conversation.** Copy the prompts, paste them into WorkflowFiesta, and the platform will ask you the right questions to configure everything for your team.
 {% endhint %}
 
