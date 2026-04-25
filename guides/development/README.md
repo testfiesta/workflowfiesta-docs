@@ -4,14 +4,14 @@ icon: display-code
 
 # Development
 
-{% hint style="warning" %}
+{% hint style="success" %}
 **WorkflowFiesta agents are fully self-aware.** They know the platform, its capabilities, and can take most actions for you directly. If you have a question, the fastest answer is always to ask the agent itself — just type it in the chat.
 {% endhint %}
 
 
 Code review agents, PR summarizers, incident responders, and deployment monitors for engineering teams.
 
-{% hint style="success" %}
+{% hint style="info" %}
 **All of these are built through conversation.** Copy any prompt below, paste it into WorkflowFiesta, and the platform will guide you through the setup.
 {% endhint %}
 
