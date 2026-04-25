@@ -4,7 +4,7 @@ icon: bolt-lightning
 
 # Quickstart
 
-{% hint style="warning" %}
+{% hint style="success" %}
 **WorkflowFiesta agents are fully self-aware.** They know the platform, its capabilities, and can take most actions for you directly. If you have a question, the fastest answer is always to ask the agent itself — just type it in the chat.
 {% endhint %}
 
@@ -35,7 +35,7 @@ Open [app.workflowfiesta.com](https://app.workflowfiesta.com) and sign in. Then 
 
 WorkflowFiesta will ask a few clarifying questions — tone, escalation rules, any specific constraints — then create the agent. It's live immediately. No deploy step.
 
-{% hint style="success" %}
+{% hint style="info" %}
 You can also create agents from **Settings → Agents → New Agent** if you prefer to fill in the details yourself.
 {% endhint %}
 {% endstep %}
@@ -66,7 +66,7 @@ Skills are reusable building blocks that make agent behavior consistent across y
 
 Skills are org-wide — once created, any agent can use them. Browse what's available in **Settings → Skills**.
 
-{% hint style="warning" %}
+{% hint style="info" %}
 Skills don't unlock capabilities an agent doesn't otherwise have. An agent's ability to take action comes from its platform access level and tools. Skills make behavior consistent and reusable.
 {% endhint %}
 {% endstep %}
@@ -149,7 +149,7 @@ chmod +x wff-runner
 {% endtab %}
 {% endtabs %}
 
-{% hint style="warning" %}
+{% hint style="info" %}
 The Runner is optional. You only need it if you want agents to access files or systems on your local machine or private network.
 {% endhint %}
 {% endstep %}
