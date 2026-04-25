@@ -4,7 +4,7 @@ icon: grid-2
 
 # Workflows
 
-{% hint style="warning" %}
+{% hint style="success" %}
 **WorkflowFiesta agents are fully self-aware.** They know the platform, its capabilities, and can take most actions for you directly. If you have a question, the fastest answer is always to ask the agent itself — just type it in the chat.
 {% endhint %}
 
@@ -13,7 +13,7 @@ A workflow is an automated pipeline that runs a sequence of agents — or other 
 
 You describe what you want to automate. WorkflowFiesta asks you questions, understands the process, and builds the workflow with you through conversation.
 
-{% hint style="success" %}
+{% hint style="info" %}
 **Conversation-first:** You do not need to configure anything manually. Just tell WorkflowFiesta what you want to automate and it will design and build the workflow with you.
 {% endhint %}
 
@@ -104,7 +104,7 @@ A master agent that dynamically decides which specialist agents to call, in what
 | Human approval needed mid-process                 | Orchestrator agent                        |
 | Complex process with both fixed and dynamic parts | Workflow that calls an orchestrator agent |
 
-{% hint style="warning" %}
+{% hint style="info" %}
 You can combine both patterns. A scheduled workflow can trigger an orchestrator agent, which then dynamically calls sub-agents based on what it finds.
 {% endhint %}
 
