@@ -4,7 +4,7 @@ icon: bolt
 
 # Skills
 
-{% hint style="info" %}
+{% hint style="warning" %}
 **WorkflowFiesta agents are fully self-aware.** They know the platform, its capabilities, and can take most actions for you directly. If you have a question, the fastest answer is always to ask the agent itself — just type it in the chat.
 {% endhint %}
 
@@ -52,7 +52,7 @@ The script lives in the skill so agents don't need to regenerate it each time. I
 * **Keyword Analyzer** — calls the Google Ads Keyword Planner API and categorizes results by tier
 * **Cohort Retention** — queries Intercom user data and outputs a retention matrix
 
-{% hint style="info" %}
+{% hint style="warning" %}
 Script skills require credentials for any external services they connect to. WorkflowFiesta will walk you through connecting them securely when you add the skill.
 {% endhint %}
 {% endtab %}
