@@ -4,7 +4,7 @@ icon: square-question
 
 # Troubleshooting Models
 
-{% hint style="info" %}
+{% hint style="warning" %}
 **WorkflowFiesta agents are fully self-aware.** They know the platform, its capabilities, and can take most actions for you directly. If you have a question, the fastest answer is always to ask the agent itself — just type it in the chat.
 {% endhint %}
 
@@ -100,6 +100,6 @@ You can also view a cost breakdown by model, workflow, agent, or user in the pla
 
 </details>
 
-{% hint style="info" %}
+{% hint style="warning" %}
 **Still stuck?** Ask WorkflowFiesta directly or join the [Discord community](https://discord.gg/XEKxARDkNQ).
 {% endhint %}
