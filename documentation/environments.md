@@ -4,14 +4,14 @@ icon: server
 
 # Environments
 
-{% hint style="warning" %}
+{% hint style="success" %}
 **WorkflowFiesta agents are fully self-aware.** They know the platform, its capabilities, and can take most actions for you directly. If you have a question, the fastest answer is always to ask the agent itself — just type it in the chat.
 {% endhint %}
 
 
 An environment defines where your workflow scripts run — the container image, environment variables, and which runner (if any) to use.
 
-{% hint style="warning" %}
+{% hint style="info" %}
 Most users never need to configure environments manually. WorkflowFiesta sets up a default environment automatically. You only need to customize this if you need a specific runtime, custom dependencies, or want scripts to run on your local machine.
 {% endhint %}
 
@@ -65,6 +65,6 @@ Environment variables are injected into every script that runs in the environmen
 * API base URLs
 * Configuration values that change between environments
 
-{% hint style="danger" %}
+{% hint style="info" %}
 **Do not store secrets as environment variables.** Use [Credentials](credentials.md) instead. Credentials are encrypted. Environment variables are not.
 {% endhint %}
