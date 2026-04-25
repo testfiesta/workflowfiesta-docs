@@ -65,6 +65,6 @@ Environment variables are injected into every script that runs in the environmen
 * API base URLs
 * Configuration values that change between environments
 
-{% hint style="info" %}
+{% hint style="danger" %}
 **Do not store secrets as environment variables.** Use [Credentials](credentials.md) instead. Credentials are encrypted. Environment variables are not.
 {% endhint %}
