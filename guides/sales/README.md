@@ -4,14 +4,14 @@ icon: messages-dollar
 
 # Sales
 
-{% hint style="warning" %}
+{% hint style="success" %}
 **WorkflowFiesta agents are fully self-aware.** They know the platform, its capabilities, and can take most actions for you directly. If you have a question, the fastest answer is always to ask the agent itself — just type it in the chat.
 {% endhint %}
 
 
 Put your sales team's most time-consuming tasks on autopilot. WorkflowFiesta helps sales teams research prospects, draft outreach, update the CRM, and summarize pipeline — all through conversation.
 
-{% hint style="success" %}
+{% hint style="info" %}
 Sales teams using WorkflowFiesta typically reclaim 5–10 hours per rep per week by automating research, follow-up drafting, and CRM hygiene.
 {% endhint %}
 
