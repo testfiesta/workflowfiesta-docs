@@ -6,7 +6,7 @@ icon: house-chimney-medical
 
 Find answers to common questions, troubleshoot issues, and get your workflows running smoothly.
 
-{% hint style="warning" %}
+{% hint style="info" %}
 **Can't find what you need?** [Join the Discord](https://discord.gg/XEKxARDkNQ) — the community and team are active there.
 {% endhint %}
 
