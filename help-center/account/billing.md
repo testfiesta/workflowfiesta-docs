@@ -4,7 +4,7 @@ icon: file-invoice
 
 # Billing & Plans
 
-{% hint style="warning" %}
+{% hint style="success" %}
 **WorkflowFiesta agents are fully self-aware.** They know the platform, its capabilities, and can take most actions for you directly. If you have a question, the fastest answer is always to ask the agent itself — just type it in the chat.
 {% endhint %}
 
@@ -37,7 +37,7 @@ This means:
 * You can switch providers at any time to control costs
 * You have full visibility into exactly what each agent, workflow, and user is spending
 
-{% hint style="warning" %}
+{% hint style="info" %}
 **Bring Your Own Model (BYOM)** — WorkflowFiesta works with any AI provider. Your API keys are stored encrypted and used only for your runs.
 {% endhint %}
 
@@ -88,7 +88,7 @@ To update your billing contact, payment method, or billing address, go to **Sett
 
 To change your plan or cancel, go to **Settings → Billing** or contact the team via [Discord](https://discord.gg/XEKxARDkNQ).
 
-{% hint style="warning" %}
+{% hint style="info" %}
 Cancelling your plan will immediately revoke access for all users in your organization. Agents, workflows, and credentials are retained for 30 days in case you reactivate.
 {% endhint %}
 
