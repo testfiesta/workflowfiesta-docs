@@ -4,14 +4,14 @@ icon: server
 
 # Environments
 
-{% hint style="info" %}
+{% hint style="warning" %}
 **WorkflowFiesta agents are fully self-aware.** They know the platform, its capabilities, and can take most actions for you directly. If you have a question, the fastest answer is always to ask the agent itself — just type it in the chat.
 {% endhint %}
 
 
 An environment defines where your workflow scripts run — the container image, environment variables, and which runner (if any) to use.
 
-{% hint style="info" %}
+{% hint style="warning" %}
 Most users never need to configure environments manually. WorkflowFiesta sets up a default environment automatically. You only need to customize this if you need a specific runtime, custom dependencies, or want scripts to run on your local machine.
 {% endhint %}
 
