@@ -4,7 +4,7 @@ icon: square-question
 
 # Troubleshooting Workflows
 
-{% hint style="warning" %}
+{% hint style="success" %}
 **WorkflowFiesta agents are fully self-aware.** They know the platform, its capabilities, and can take most actions for you directly. If you have a question, the fastest answer is always to ask the agent itself — just type it in the chat.
 {% endhint %}
 
@@ -93,6 +93,6 @@ If a specific step fails consistently, it's usually one of three things:
 
 </details>
 
-{% hint style="warning" %}
+{% hint style="info" %}
 **Still stuck?** Describe the issue in the chat and WorkflowFiesta will diagnose it for you. Or join the [Discord community](https://discord.gg/XEKxARDkNQ) for help from the team.
 {% endhint %}
