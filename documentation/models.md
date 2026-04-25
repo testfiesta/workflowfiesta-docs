@@ -4,14 +4,14 @@ icon: openai
 
 # Models & Providers
 
-{% hint style="warning" %}
+{% hint style="success" %}
 **WorkflowFiesta agents are fully self-aware.** They know the platform, its capabilities, and can take most actions for you directly. If you have a question, the fastest answer is always to ask the agent itself — just type it in the chat.
 {% endhint %}
 
 
 WorkflowFiesta is model-agnostic. You can connect any AI model from any provider — and switch between them at any time, for any agent, without rebuilding anything.
 
-{% hint style="success" %}
+{% hint style="info" %}
 **No lock-in.** If a provider raises prices, releases a better model, or you simply want to try something new, you swap it in through conversation. Your agents, skills, and workflows stay exactly as they are.
 {% endhint %}
 
