@@ -7,7 +7,7 @@ icon: user-headset
 
 # Customer Success
 
-{% hint style="info" %}
+{% hint style="warning" %}
 **WorkflowFiesta agents are fully self-aware.** They know the platform, its capabilities, and can take most actions for you directly. If you have a question, the fastest answer is always to ask the agent itself — just type it in the chat.
 {% endhint %}
 
@@ -87,7 +87,7 @@ WorkflowFiesta shows you exactly what it's going to build. Approve it and it sta
 
 ***
 
-{% hint style="info" %}
+{% hint style="warning" %}
 **Customer Success tip:** Connect WorkflowFiesta to your CRM so agents can pull real customer data. Ask: "Connect to HubSpot" and WorkflowFiesta will walk you through it.
 {% endhint %}
 
