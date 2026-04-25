@@ -4,14 +4,14 @@ icon: question
 
 # Getting Started FAQ
 
-{% hint style="warning" %}
+{% hint style="success" %}
 **WorkflowFiesta agents are fully self-aware.** They know the platform, its capabilities, and can take most actions for you directly. If you have a question, the fastest answer is always to ask the agent itself — just type it in the chat.
 {% endhint %}
 
 
 New to WorkflowFiesta? Here are the most common questions from people just getting started.
 
-{% hint style="success" %}
+{% hint style="info" %}
 **Can't find your answer here?** Join our [Discord community](https://discord.gg/XEKxARDkNQ) — the team and community are active and happy to help.
 {% endhint %}
 
