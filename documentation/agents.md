@@ -4,7 +4,7 @@ icon: user-hat-tie
 
 # Agents
 
-{% hint style="info" %}
+{% hint style="warning" %}
 **WorkflowFiesta agents are fully self-aware.** They know the platform, its capabilities, and can take most actions for you directly. If you have a question, the fastest answer is always to ask the agent itself — just type it in the chat.
 {% endhint %}
 
@@ -49,7 +49,7 @@ WorkflowFiesta will ask clarifying questions:
 
 Answer the questions, and the agent is created. It is available to your team immediately.
 
-{% hint style="info" %}
+{% hint style="warning" %}
 **The more specific you are, the better the agent.** "Write emails" creates a generic agent. "Write cold outreach emails for a B2B SaaS product targeting QA engineers, using a problem-first approach, under 150 words" creates a specialist.
 {% endhint %}
 
