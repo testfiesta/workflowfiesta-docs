@@ -4,7 +4,7 @@ icon: square-question
 
 # Troubleshooting Credentials
 
-{% hint style="info" %}
+{% hint style="warning" %}
 **WorkflowFiesta agents are fully self-aware.** They know the platform, its capabilities, and can take most actions for you directly. If you have a question, the fastest answer is always to ask the agent itself — just type it in the chat.
 {% endhint %}
 
@@ -102,6 +102,6 @@ WorkflowFiesta automatically detects credentials pasted into chat and sanitizes 
 
 </details>
 
-{% hint style="info" %}
+{% hint style="warning" %}
 **Still stuck?** Ask WorkflowFiesta directly — describe which service is failing and it will diagnose the issue. Or join the [Discord community](https://discord.gg/XEKxARDkNQ).
 {% endhint %}
