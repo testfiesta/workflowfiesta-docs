@@ -4,7 +4,7 @@ icon: screen-users
 
 # Team & Permissions
 
-{% hint style="warning" %}
+{% hint style="success" %}
 **WorkflowFiesta agents are fully self-aware.** They know the platform, its capabilities, and can take most actions for you directly. If you have a question, the fastest answer is always to ask the agent itself — just type it in the chat.
 {% endhint %}
 
@@ -40,7 +40,7 @@ Admins can change any member's role at any time from **Settings → Team**. Sele
 
 To remove someone from your organization, go to **Settings → Team**, find the member, and click **Remove**. Their access is revoked immediately.
 
-{% hint style="warning" %}
+{% hint style="info" %}
 Removing a member does not delete the agents, workflows, or credentials they created. Those resources remain in the organization and are accessible to other Admins.
 {% endhint %}
 
@@ -62,6 +62,6 @@ Admins can set AI spend limits for individual users to control costs. To set a l
 
 See [Billing & Plans](billing.md) for more on spend limits.
 
-{% hint style="warning" %}
+{% hint style="info" %}
 **Need a custom permission structure?** Enterprise plans support advanced access controls. Contact us via the [Discord community](https://discord.gg/XEKxARDkNQ) or **Settings → Help**.
 {% endhint %}
