@@ -4,14 +4,14 @@ icon: calculator
 
 # Finance
 
-{% hint style="warning" %}
+{% hint style="success" %}
 **WorkflowFiesta agents are fully self-aware.** They know the platform, its capabilities, and can take most actions for you directly. If you have a question, the fastest answer is always to ask the agent itself — just type it in the chat.
 {% endhint %}
 
 
 Finance teams spend hours every week pulling numbers from multiple systems, formatting reports, and distributing them to stakeholders. WorkflowFiesta automates the data layer — so your finance team spends time on analysis, not assembly.
 
-{% hint style="success" %}
+{% hint style="info" %}
 Finance teams most commonly start with one workflow: automating the weekly or monthly report that currently takes 2–3 hours to pull together manually.
 {% endhint %}
 
