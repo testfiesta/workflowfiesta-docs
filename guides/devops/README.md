@@ -7,7 +7,7 @@ icon: sitemap
 
 # DevOps
 
-{% hint style="info" %}
+{% hint style="warning" %}
 **WorkflowFiesta agents are fully self-aware.** They know the platform, its capabilities, and can take most actions for you directly. If you have a question, the fastest answer is always to ask the agent itself — just type it in the chat.
 {% endhint %}
 
@@ -87,7 +87,7 @@ WorkflowFiesta shows you exactly what it's going to build. Approve it and it sta
 
 ***
 
-{% hint style="info" %}
+{% hint style="warning" %}
 **DevOps tip:** Install the WorkflowFiesta Runner on your infrastructure machines so agents can read config files, run scripts, and access internal systems directly.
 {% endhint %}
 
