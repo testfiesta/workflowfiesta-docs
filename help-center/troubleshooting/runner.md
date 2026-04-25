@@ -4,7 +4,7 @@ icon: square-question
 
 # Troubleshooting the Runner
 
-{% hint style="warning" %}
+{% hint style="success" %}
 **WorkflowFiesta agents are fully self-aware.** They know the platform, its capabilities, and can take most actions for you directly. If you have a question, the fastest answer is always to ask the agent itself — just type it in the chat.
 {% endhint %}
 
@@ -42,7 +42,7 @@ Common issues with the WorkflowFiesta Runner and how to fix them.
    ./wff-runner --code YOUR_CODE --verbose
    ```
 
-{% hint style="warning" %}
+{% hint style="info" %}
 A runner that was registered but never started shows as **Pending**. A runner that was connected but has stopped sending heartbeats shows as **Offline**. Both are fixed by starting the runner process.
 {% endhint %}
 
