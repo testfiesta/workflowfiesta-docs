@@ -4,14 +4,14 @@ icon: microchip-ai
 
 # What is WorkflowFiesta?
 
-{% hint style="info" %}
+{% hint style="warning" %}
 **WorkflowFiesta agents are fully self-aware.** They know the platform, its capabilities, and can take most actions for you directly. If you have a question, the fastest answer is always to ask the agent itself — just type it in the chat.
 {% endhint %}
 
 
 WorkflowFiesta is a conversational AI automation platform for business teams. You describe what you want automated — a report, a workflow, an AI assistant — and WorkflowFiesta builds it through conversation.
 
-{% hint style="info" %}
+{% hint style="warning" %}
 WorkflowFiesta is not a no-code app builder. It's a platform where AI agents do real work: reading emails, updating CRMs, analyzing data, writing content, and running multi-step workflows — all triggered by conversation or schedule.
 {% endhint %}
 
@@ -58,7 +58,7 @@ Skills are org-wide. You add a skill to an agent by asking:
 
 If the skill requires credentials (an API key, OAuth connection, etc.), WorkflowFiesta walks you through connecting it securely — it opens a form, you paste the key, it's encrypted and stored. The key is never exposed in chat.
 
-{% hint style="info" %}
+{% hint style="warning" %}
 Skills don't unlock capabilities an agent doesn't otherwise have. An agent's ability to take action comes from its platform access level and tools. Skills make behavior consistent and reusable.
 {% endhint %}
 {% endtab %}
