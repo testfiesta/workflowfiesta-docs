@@ -4,14 +4,14 @@ icon: user-hat-tie
 
 # Agents
 
-{% hint style="warning" %}
+{% hint style="success" %}
 **WorkflowFiesta agents are fully self-aware.** They know the platform, its capabilities, and can take most actions for you directly. If you have a question, the fastest answer is always to ask the agent itself — just type it in the chat.
 {% endhint %}
 
 
 An agent is an AI specialist you create through conversation. It has a defined purpose, a set of instructions, and access to the tools it needs to do its job.
 
-{% hint style="success" %}
+{% hint style="info" %}
 **Agents are created through conversation.** You don't fill out a form or write a config file. You describe what you want, and WorkflowFiesta builds it with you.
 {% endhint %}
 
@@ -49,7 +49,7 @@ WorkflowFiesta will ask clarifying questions:
 
 Answer the questions, and the agent is created. It is available to your team immediately.
 
-{% hint style="warning" %}
+{% hint style="info" %}
 **The more specific you are, the better the agent.** "Write emails" creates a generic agent. "Write cold outreach emails for a B2B SaaS product targeting QA engineers, using a problem-first approach, under 150 words" creates a specialist.
 {% endhint %}
 
@@ -175,7 +175,7 @@ All agents in your organization are listed in the **Agents** section of the plat
 * View an agent's configuration
 * Edit or delete agents
 
-{% hint style="warning" %}
+{% hint style="info" %}
 **Agents are org-wide.** Any agent you create is available to everyone in your organization. If you want a private agent, create a separate workspace.
 {% endhint %}
 
