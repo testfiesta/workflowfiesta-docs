@@ -4,6 +4,11 @@ icon: book-open
 
 # Overview
 
+{% hint style="warning" %}
+**WorkflowFiesta agents are fully self-aware.** They know the platform, its capabilities, and can even take most actions for you. The best place to start if you have a question is to ask the tool itself for help.
+{% endhint %}
+
+
 Welcome to WorkflowFiesta. This is your complete reference for building AI agents, automating workflows, and connecting your business tools — all through conversation.
 
 {% hint style="success" %}
