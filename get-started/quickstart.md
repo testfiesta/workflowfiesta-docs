@@ -4,14 +4,14 @@ icon: bolt-lightning
 
 # Quickstart
 
-{% hint style="info" %}
+{% hint style="warning" %}
 **WorkflowFiesta agents are fully self-aware.** They know the platform, its capabilities, and can take most actions for you directly. If you have a question, the fastest answer is always to ask the agent itself — just type it in the chat.
 {% endhint %}
 
 
 Get your first AI agent running in five minutes. No code. No configuration files. Just a conversation.
 
-{% hint style="info" %}
+{% hint style="warning" %}
 **Prerequisites:** A WorkflowFiesta account. Don't have one yet? [Book a consultation](https://workflowfiesta.com) to get started — WorkflowFiesta is a fully managed AI transformation platform and we will get you set up personally.
 {% endhint %}
 
@@ -66,7 +66,7 @@ Skills are reusable building blocks that make agent behavior consistent across y
 
 Skills are org-wide — once created, any agent can use them. Browse what's available in **Settings → Skills**.
 
-{% hint style="info" %}
+{% hint style="warning" %}
 Skills don't unlock capabilities an agent doesn't otherwise have. An agent's ability to take action comes from its platform access level and tools. Skills make behavior consistent and reusable.
 {% endhint %}
 {% endstep %}
